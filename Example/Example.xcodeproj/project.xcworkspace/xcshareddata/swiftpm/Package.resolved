@@ -1,0 +1,15 @@
+{
+  "originHash" : "27371bd428549f030a55918c59e4c8ea49e1086f5376024a9c4b867fa4b5643a",
+  "pins" : [
+    {
+      "identity" : "setgreet-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/setgreet/setgreet-ios-sdk.git",
+      "state" : {
+        "revision" : "60e5fe97efd9bc00fc77d53769b679861b9704c4",
+        "version" : "0.1.0"
+      }
+    }
+  ],
+  "version" : 3
+}

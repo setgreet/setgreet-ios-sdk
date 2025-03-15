@@ -1,0 +1,140 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
+// swift-module-flags: -target x86_64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name SetgreetSDK
+import CoreGraphics
+import CoreText
+import DeveloperToolsSupport
+import Foundation
+@_exported import SetgreetSDK
+import Swift
+import SwiftUI
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import os.log
+import os
+
+public protocol SetgreetNetworkInterface {
+  func request<R>(for endpoint: any SetgreetSDK.Endpoint, completion: @escaping (Swift.Result<R, SetgreetSDK.NetworkDomainError>) -> Swift.Void) where R : Swift.Decodable, R : Swift.Encodable
+  func request<R>(for endpoint: any SetgreetSDK.Endpoint) async throws -> R? where R : Swift.Decodable, R : Swift.Encodable
+}
+
+public enum NetworkDomainError : Swift.Error {
+  case statusCode(_: Swift.Int? = nil)
+  case decodingError
+  case taskError
+  case urlRequestCreationFailed
+  case unknown
+}
+public class SetgreetNetwork : SetgreetSDK.SetgreetNetworkInterface {
+  public init()
+  public func request<R>(for endpoint: any SetgreetSDK.Endpoint, completion: @escaping (Swift.Result<R, SetgreetSDK.NetworkDomainError>) -> Swift.Void) where R : Swift.Decodable, R : Swift.Encodable
+  public func request<R>(for endpoint: any SetgreetSDK.Endpoint) async throws -> R? where R : Swift.Decodable, R : Swift.Encodable
+  @objc deinit
+}
+public protocol HTTPBodyEncoder {
+  func encode<D>(for data: D) -> Foundation.Data? where D : Swift.Decodable, D : Swift.Encodable
+}
+public struct HTTPBodyEncoderImpl : SetgreetSDK.HTTPBodyEncoder {
+  public init()
+  public func encode<D>(for data: D) -> Foundation.Data? where D : Swift.Decodable, D : Swift.Encodable
+}
+public enum HTTPMethod : Swift.String {
+  case GET
+  case POST
+  case PUT
+  case DELETE
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension Foundation.Data {
+  public var prettyPrintedJSONString: Foundation.NSString? {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class Setgreet {
+  public static let shared: SetgreetSDK.Setgreet
+  public func initialize(appKey: Swift.String, config: SetgreetSDK.SetgreetConfig)
+  public func showFlow(flowId: Swift.String)
+  @objc deinit
+}
+public enum TemplateType : Swift.String {
+  case TEMPLATE_1
+  case TEMPLATE_2
+  case TEMPLATE_3
+  case TEMPLATE_4
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct SetgreetConfig {
+  public let debugMode: Swift.Bool
+  public init(debugMode: Swift.Bool)
+}
+
+public struct SetgreetFlowModel : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public protocol Endpoint {
+  var base: Swift.String { get }
+  var path: Swift.String { get }
+  var apiVersion: Swift.String { get }
+  var parameters: [Swift.String : Any]? { get }
+  var type: SetgreetSDK.HTTPMethod { get }
+  var headers: [Swift.String : Swift.String] { get }
+  var mimeType: Swift.String? { get }
+  var queryItems: [Foundation.URLQueryItem]? { get }
+  var apiKey: Swift.String { get }
+  var httpBody: Foundation.Data? { get }
+  var appKey: Swift.String { get }
+}
+extension SetgreetSDK.Endpoint {
+  public var scheme: Swift.String {
+    get
+  }
+  public var httpBody: Foundation.Data? {
+    get
+  }
+  public var mimeType: Swift.String? {
+    get
+  }
+  public var apiKey: Swift.String {
+    get
+  }
+  public var parameters: [Swift.String : Any]? {
+    get
+  }
+  public var base: Swift.String {
+    get
+  }
+  public var apiVersion: Swift.String {
+    get
+  }
+  public var urlComponents: Foundation.URLComponents {
+    get
+  }
+}
+
+@_hasMissingDesignatedInitializers public class DynamicFontLoader {
+  public static func loadFont(from urlString: Swift.String, fontName: Swift.String, completion: @escaping (Swift.Bool) -> Swift.Void)
+  @objc deinit
+}
+public var setgreetVersion: Swift.String
+
+@_hasMissingDesignatedInitializers final public class FontLoader {
+  public static func loadFontsFromDirectory()
+  @objc deinit
+}
+extension SetgreetSDK.HTTPMethod : Swift.Equatable {}
+extension SetgreetSDK.HTTPMethod : Swift.Hashable {}
+extension SetgreetSDK.HTTPMethod : Swift.RawRepresentable {}
+extension SetgreetSDK.TemplateType : Swift.Equatable {}
+extension SetgreetSDK.TemplateType : Swift.Hashable {}
+extension SetgreetSDK.TemplateType : Swift.RawRepresentable {}
