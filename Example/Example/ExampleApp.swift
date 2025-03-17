@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Setgreet
+import SetgreetSDK
 
 @main
 struct ExampleApp: App {

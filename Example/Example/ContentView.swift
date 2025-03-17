@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Setgreet
+import SetgreetSDK
 
 struct ContentView: View {
     @AppStorage("flowId") private var flowId: String = ""

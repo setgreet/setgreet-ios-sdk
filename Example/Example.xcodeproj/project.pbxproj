@@ -6,10 +6,6 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		904C455D2D85DA440002EA63 /* Setgreet in Frameworks */ = {isa = PBXBuildFile; productRef = 904C455C2D85DA440002EA63 /* Setgreet */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
 		904C45322D85D64E0002EA63 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -27,7 +23,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				904C455D2D85DA440002EA63 /* Setgreet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,7 +73,6 @@
 			);
 			name = Example;
 			packageProductDependencies = (
-				904C455C2D85DA440002EA63 /* Setgreet */,
 			);
 			productName = Example;
 			productReference = 904C45322D85D64E0002EA63 /* Example.app */;
@@ -109,7 +103,6 @@
 			mainGroup = 904C45292D85D64E0002EA63;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				904C455B2D85DA440002EA63 /* XCRemoteSwiftPackageReference "setgreet-ios-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 904C45332D85D64E0002EA63 /* Products */;
@@ -343,25 +336,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		904C455B2D85DA440002EA63 /* XCRemoteSwiftPackageReference "setgreet-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/setgreet/setgreet-ios-sdk.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		904C455C2D85DA440002EA63 /* Setgreet */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 904C455B2D85DA440002EA63 /* XCRemoteSwiftPackageReference "setgreet-ios-sdk" */;
-			productName = Setgreet;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 904C452A2D85D64E0002EA63 /* Project object */;
 }
