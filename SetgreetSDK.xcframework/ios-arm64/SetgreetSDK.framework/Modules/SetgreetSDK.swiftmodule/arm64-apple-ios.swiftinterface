@@ -60,9 +60,19 @@ extension Foundation.Data {
 @_hasMissingDesignatedInitializers public class Setgreet {
   public static let shared: SetgreetSDK.Setgreet
   public func initialize(appKey: Swift.String, config: SetgreetSDK.SetgreetConfig)
+  public func identifyUser(userId: Swift.String, attributes: [Swift.String : Any]? = nil, operation: SetgreetSDK.Operation = .create)
+  public func identifyUser(userId: Swift.String, attributes: [Swift.String : Any]? = nil)
   public func showFlow(flowId: Swift.String)
+  public func trackEvent(eventName: Swift.String, properties: [Swift.String : Any]? = nil)
+  public func trackScreen(screenName: Swift.String, properties: [Swift.String : Any]? = nil)
+  public func resetUser()
   @objc deinit
 }
+public struct SetgreetConfig {
+  public let debugMode: Swift.Bool
+  public init(debugMode: Swift.Bool)
+}
+
 public enum TemplateType : Swift.String {
   case TEMPLATE_1
   case TEMPLATE_2
@@ -74,11 +84,6 @@ public enum TemplateType : Swift.String {
     get
   }
 }
-public struct SetgreetConfig {
-  public let debugMode: Swift.Bool
-  public init(debugMode: Swift.Bool)
-}
-
 public struct SetgreetFlowModel : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
@@ -122,6 +127,69 @@ extension SetgreetSDK.Endpoint {
     get
   }
 }
+public enum EventType : Swift.String, Swift.CaseIterable {
+  case flowStarted
+  case flowCompleted
+  case flowDismissed
+  case flowError
+  case screen
+  case screenEnter
+  case screenExit
+  case buttonClick
+  case inputFocus
+  case inputBlur
+  case scroll
+  case swipe
+  case mediaPlay
+  case mediaPause
+  case mediaComplete
+  case mediaError
+  case nextPage
+  case previousPage
+  case skipPage
+  case formSubmit
+  case formValidation
+  case fieldChange
+  case sdkInit
+  case userIdentified
+  case configChanged
+  case networkError
+  public var eventName: Swift.String {
+    get
+  }
+  public static func fromEventName(_ eventName: Swift.String) -> SetgreetSDK.EventType?
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [SetgreetSDK.EventType]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [SetgreetSDK.EventType] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum EventPropertyKey : Swift.String, Swift.CaseIterable {
+  case screenName
+  case buttonId
+  case flowId
+  case appVersion
+  case sdkVersion
+  case errorMessage
+  case userId
+  public var key: Swift.String {
+    get
+  }
+  public static func fromKey(_ key: Swift.String) -> SetgreetSDK.EventPropertyKey?
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [SetgreetSDK.EventPropertyKey]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [SetgreetSDK.EventPropertyKey] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
 
 @_hasMissingDesignatedInitializers public class DynamicFontLoader {
   public static func loadFont(from urlString: Swift.String, fontName: Swift.String, completion: @escaping (Swift.Bool) -> Swift.Void)
@@ -129,6 +197,15 @@ extension SetgreetSDK.Endpoint {
 }
 public var setgreetVersion: Swift.String
 
+public enum Operation : Swift.String, Swift.Codable {
+  case create
+  case update
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
 @_hasMissingDesignatedInitializers final public class FontLoader {
   public static func loadFontsFromDirectory()
   @objc deinit
@@ -139,3 +216,12 @@ extension SetgreetSDK.HTTPMethod : Swift.RawRepresentable {}
 extension SetgreetSDK.TemplateType : Swift.Equatable {}
 extension SetgreetSDK.TemplateType : Swift.Hashable {}
 extension SetgreetSDK.TemplateType : Swift.RawRepresentable {}
+extension SetgreetSDK.EventType : Swift.Equatable {}
+extension SetgreetSDK.EventType : Swift.Hashable {}
+extension SetgreetSDK.EventType : Swift.RawRepresentable {}
+extension SetgreetSDK.EventPropertyKey : Swift.Equatable {}
+extension SetgreetSDK.EventPropertyKey : Swift.Hashable {}
+extension SetgreetSDK.EventPropertyKey : Swift.RawRepresentable {}
+extension SetgreetSDK.Operation : Swift.Equatable {}
+extension SetgreetSDK.Operation : Swift.Hashable {}
+extension SetgreetSDK.Operation : Swift.RawRepresentable {}

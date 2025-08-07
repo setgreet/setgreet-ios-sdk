@@ -1187,6 +1187,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "SwiftUI",
         "printedName": "SwiftUI",
         "declKind": "Import",
@@ -1219,16 +1229,6 @@
         "kind": "Import",
         "name": "SwiftUI",
         "printedName": "SwiftUI",
-        "declKind": "Import",
-        "moduleName": "SetgreetSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "SetgreetSDK",
         "declAttributes": [
@@ -1342,6 +1342,123 @@
           },
           {
             "kind": "Function",
+            "name": "identifyUser",
+            "printedName": "identifyUser(userId:attributes:operation:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Operation",
+                "printedName": "SetgreetSDK.Operation",
+                "hasDefaultArg": true,
+                "usr": "s:11SetgreetSDK9OperationO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11SetgreetSDK0A0C12identifyUser6userId10attributes9operationySS_SDySSypGSgAA9OperationOtF",
+            "mangledName": "$s11SetgreetSDK0A0C12identifyUser6userId10attributes9operationySS_SDySSypGSgAA9OperationOtF",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "identifyUser",
+            "printedName": "identifyUser(userId:attributes:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11SetgreetSDK0A0C12identifyUser6userId10attributesySS_SDySSypGSgtF",
+            "mangledName": "$s11SetgreetSDK0A0C12identifyUser6userId10attributesySS_SDySSypGSgtF",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "showFlow",
             "printedName": "showFlow(flowId:)",
             "children": [
@@ -1362,7 +1479,139 @@
             "mangledName": "$s11SetgreetSDK0A0C8showFlow6flowIdySS_tF",
             "moduleName": "SetgreetSDK",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "trackEvent",
+            "printedName": "trackEvent(eventName:properties:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11SetgreetSDK0A0C10trackEvent9eventName10propertiesySS_SDySSypGSgtF",
+            "mangledName": "$s11SetgreetSDK0A0C10trackEvent9eventName10propertiesySS_SDySSypGSgtF",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "trackScreen",
+            "printedName": "trackScreen(screenName:properties:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11SetgreetSDK0A0C11trackScreen10screenName10propertiesySS_SDySSypGSgtF",
+            "mangledName": "$s11SetgreetSDK0A0C11trackScreen10screenName10propertiesySS_SDySSypGSgtF",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "resetUser",
+            "printedName": "resetUser()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11SetgreetSDK0A0C9resetUseryyF",
+            "mangledName": "$s11SetgreetSDK0A0C9resetUseryyF",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           }
@@ -1390,6 +1639,194 @@
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SetgreetConfig",
+        "printedName": "SetgreetConfig",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "debugMode",
+            "printedName": "debugMode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK0A6ConfigV9debugModeSbvp",
+            "mangledName": "$s11SetgreetSDK0A6ConfigV9debugModeSbvp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK0A6ConfigV9debugModeSbvg",
+                "mangledName": "$s11SetgreetSDK0A6ConfigV9debugModeSbvg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(debugMode:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SetgreetConfig",
+                "printedName": "SetgreetSDK.SetgreetConfig",
+                "usr": "s:11SetgreetSDK0A6ConfigV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11SetgreetSDK0A6ConfigV9debugModeACSb_tcfc",
+            "mangledName": "$s11SetgreetSDK0A6ConfigV9debugModeACSb_tcfc",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:11SetgreetSDK0A6ConfigV",
+        "mangledName": "$s11SetgreetSDK0A6ConfigV",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "SetgreetSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "BottomSheet",
+        "printedName": "BottomSheet",
+        "declKind": "Import",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "os.log",
+        "printedName": "os.log",
+        "declKind": "Import",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -1677,184 +2114,6 @@
             "usr": "s:SY",
             "mangledName": "$sSY"
           }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "SetgreetSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "SetgreetConfig",
-        "printedName": "SetgreetConfig",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "debugMode",
-            "printedName": "debugMode",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11SetgreetSDK0A6ConfigV9debugModeSbvp",
-            "mangledName": "$s11SetgreetSDK0A6ConfigV9debugModeSbvp",
-            "moduleName": "SetgreetSDK",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11SetgreetSDK0A6ConfigV9debugModeSbvg",
-                "mangledName": "$s11SetgreetSDK0A6ConfigV9debugModeSbvg",
-                "moduleName": "SetgreetSDK",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(debugMode:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "SetgreetConfig",
-                "printedName": "SetgreetSDK.SetgreetConfig",
-                "usr": "s:11SetgreetSDK0A6ConfigV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:11SetgreetSDK0A6ConfigV9debugModeACSb_tcfc",
-            "mangledName": "$s11SetgreetSDK0A6ConfigV9debugModeACSb_tcfc",
-            "moduleName": "SetgreetSDK",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "init_kind": "Designated"
-          }
-        ],
-        "declKind": "Struct",
-        "usr": "s:11SetgreetSDK0A6ConfigV",
-        "mangledName": "$s11SetgreetSDK0A6ConfigV",
-        "moduleName": "SetgreetSDK",
-        "declAttributes": [
-          "AccessControl"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "SetgreetSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "SwiftUI",
-        "printedName": "SwiftUI",
-        "declKind": "Import",
-        "moduleName": "SetgreetSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "SwiftUI",
-        "printedName": "SwiftUI",
-        "declKind": "Import",
-        "moduleName": "SetgreetSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "BottomSheet",
-        "printedName": "BottomSheet",
-        "declKind": "Import",
-        "moduleName": "SetgreetSDK",
-        "declAttributes": [
-          "AccessControl"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "SwiftUI",
-        "printedName": "SwiftUI",
-        "declKind": "Import",
-        "moduleName": "SetgreetSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "SetgreetSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "os.log",
-        "printedName": "os.log",
-        "declKind": "Import",
-        "moduleName": "SetgreetSDK",
-        "declAttributes": [
-          "RawDocComment"
         ]
       },
       {
@@ -3087,6 +3346,23 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SetgreetSDK"
+      },
+      {
+        "kind": "Import",
         "name": "SwiftUI",
         "printedName": "SwiftUI",
         "declKind": "Import",
@@ -3113,6 +3389,1880 @@
         "moduleName": "SetgreetSDK",
         "declAttributes": [
           "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "EventType",
+        "printedName": "EventType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "flowStarted",
+            "printedName": "flowStarted",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.EventType.Type) -> SetgreetSDK.EventType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventType",
+                    "printedName": "SetgreetSDK.EventType",
+                    "usr": "s:11SetgreetSDK9EventTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.EventType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventType",
+                        "printedName": "SetgreetSDK.EventType",
+                        "usr": "s:11SetgreetSDK9EventTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK9EventTypeO11flowStartedyA2CmF",
+            "mangledName": "$s11SetgreetSDK9EventTypeO11flowStartedyA2CmF",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "flowCompleted",
+            "printedName": "flowCompleted",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.EventType.Type) -> SetgreetSDK.EventType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventType",
+                    "printedName": "SetgreetSDK.EventType",
+                    "usr": "s:11SetgreetSDK9EventTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.EventType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventType",
+                        "printedName": "SetgreetSDK.EventType",
+                        "usr": "s:11SetgreetSDK9EventTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK9EventTypeO13flowCompletedyA2CmF",
+            "mangledName": "$s11SetgreetSDK9EventTypeO13flowCompletedyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "flowDismissed",
+            "printedName": "flowDismissed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.EventType.Type) -> SetgreetSDK.EventType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventType",
+                    "printedName": "SetgreetSDK.EventType",
+                    "usr": "s:11SetgreetSDK9EventTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.EventType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventType",
+                        "printedName": "SetgreetSDK.EventType",
+                        "usr": "s:11SetgreetSDK9EventTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK9EventTypeO13flowDismissedyA2CmF",
+            "mangledName": "$s11SetgreetSDK9EventTypeO13flowDismissedyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "flowError",
+            "printedName": "flowError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.EventType.Type) -> SetgreetSDK.EventType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventType",
+                    "printedName": "SetgreetSDK.EventType",
+                    "usr": "s:11SetgreetSDK9EventTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.EventType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventType",
+                        "printedName": "SetgreetSDK.EventType",
+                        "usr": "s:11SetgreetSDK9EventTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK9EventTypeO9flowErroryA2CmF",
+            "mangledName": "$s11SetgreetSDK9EventTypeO9flowErroryA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "screen",
+            "printedName": "screen",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.EventType.Type) -> SetgreetSDK.EventType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventType",
+                    "printedName": "SetgreetSDK.EventType",
+                    "usr": "s:11SetgreetSDK9EventTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.EventType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventType",
+                        "printedName": "SetgreetSDK.EventType",
+                        "usr": "s:11SetgreetSDK9EventTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK9EventTypeO6screenyA2CmF",
+            "mangledName": "$s11SetgreetSDK9EventTypeO6screenyA2CmF",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "screenEnter",
+            "printedName": "screenEnter",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.EventType.Type) -> SetgreetSDK.EventType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventType",
+                    "printedName": "SetgreetSDK.EventType",
+                    "usr": "s:11SetgreetSDK9EventTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.EventType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventType",
+                        "printedName": "SetgreetSDK.EventType",
+                        "usr": "s:11SetgreetSDK9EventTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK9EventTypeO11screenEnteryA2CmF",
+            "mangledName": "$s11SetgreetSDK9EventTypeO11screenEnteryA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "screenExit",
+            "printedName": "screenExit",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.EventType.Type) -> SetgreetSDK.EventType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventType",
+                    "printedName": "SetgreetSDK.EventType",
+                    "usr": "s:11SetgreetSDK9EventTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.EventType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventType",
+                        "printedName": "SetgreetSDK.EventType",
+                        "usr": "s:11SetgreetSDK9EventTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK9EventTypeO10screenExityA2CmF",
+            "mangledName": "$s11SetgreetSDK9EventTypeO10screenExityA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "buttonClick",
+            "printedName": "buttonClick",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.EventType.Type) -> SetgreetSDK.EventType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventType",
+                    "printedName": "SetgreetSDK.EventType",
+                    "usr": "s:11SetgreetSDK9EventTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.EventType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventType",
+                        "printedName": "SetgreetSDK.EventType",
+                        "usr": "s:11SetgreetSDK9EventTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK9EventTypeO11buttonClickyA2CmF",
+            "mangledName": "$s11SetgreetSDK9EventTypeO11buttonClickyA2CmF",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "inputFocus",
+            "printedName": "inputFocus",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.EventType.Type) -> SetgreetSDK.EventType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventType",
+                    "printedName": "SetgreetSDK.EventType",
+                    "usr": "s:11SetgreetSDK9EventTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.EventType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventType",
+                        "printedName": "SetgreetSDK.EventType",
+                        "usr": "s:11SetgreetSDK9EventTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK9EventTypeO10inputFocusyA2CmF",
+            "mangledName": "$s11SetgreetSDK9EventTypeO10inputFocusyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "inputBlur",
+            "printedName": "inputBlur",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.EventType.Type) -> SetgreetSDK.EventType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventType",
+                    "printedName": "SetgreetSDK.EventType",
+                    "usr": "s:11SetgreetSDK9EventTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.EventType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventType",
+                        "printedName": "SetgreetSDK.EventType",
+                        "usr": "s:11SetgreetSDK9EventTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK9EventTypeO9inputBluryA2CmF",
+            "mangledName": "$s11SetgreetSDK9EventTypeO9inputBluryA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "scroll",
+            "printedName": "scroll",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.EventType.Type) -> SetgreetSDK.EventType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventType",
+                    "printedName": "SetgreetSDK.EventType",
+                    "usr": "s:11SetgreetSDK9EventTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.EventType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventType",
+                        "printedName": "SetgreetSDK.EventType",
+                        "usr": "s:11SetgreetSDK9EventTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK9EventTypeO6scrollyA2CmF",
+            "mangledName": "$s11SetgreetSDK9EventTypeO6scrollyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "swipe",
+            "printedName": "swipe",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.EventType.Type) -> SetgreetSDK.EventType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventType",
+                    "printedName": "SetgreetSDK.EventType",
+                    "usr": "s:11SetgreetSDK9EventTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.EventType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventType",
+                        "printedName": "SetgreetSDK.EventType",
+                        "usr": "s:11SetgreetSDK9EventTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK9EventTypeO5swipeyA2CmF",
+            "mangledName": "$s11SetgreetSDK9EventTypeO5swipeyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "mediaPlay",
+            "printedName": "mediaPlay",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.EventType.Type) -> SetgreetSDK.EventType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventType",
+                    "printedName": "SetgreetSDK.EventType",
+                    "usr": "s:11SetgreetSDK9EventTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.EventType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventType",
+                        "printedName": "SetgreetSDK.EventType",
+                        "usr": "s:11SetgreetSDK9EventTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK9EventTypeO9mediaPlayyA2CmF",
+            "mangledName": "$s11SetgreetSDK9EventTypeO9mediaPlayyA2CmF",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "mediaPause",
+            "printedName": "mediaPause",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.EventType.Type) -> SetgreetSDK.EventType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventType",
+                    "printedName": "SetgreetSDK.EventType",
+                    "usr": "s:11SetgreetSDK9EventTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.EventType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventType",
+                        "printedName": "SetgreetSDK.EventType",
+                        "usr": "s:11SetgreetSDK9EventTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK9EventTypeO10mediaPauseyA2CmF",
+            "mangledName": "$s11SetgreetSDK9EventTypeO10mediaPauseyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "mediaComplete",
+            "printedName": "mediaComplete",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.EventType.Type) -> SetgreetSDK.EventType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventType",
+                    "printedName": "SetgreetSDK.EventType",
+                    "usr": "s:11SetgreetSDK9EventTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.EventType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventType",
+                        "printedName": "SetgreetSDK.EventType",
+                        "usr": "s:11SetgreetSDK9EventTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK9EventTypeO13mediaCompleteyA2CmF",
+            "mangledName": "$s11SetgreetSDK9EventTypeO13mediaCompleteyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "mediaError",
+            "printedName": "mediaError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.EventType.Type) -> SetgreetSDK.EventType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventType",
+                    "printedName": "SetgreetSDK.EventType",
+                    "usr": "s:11SetgreetSDK9EventTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.EventType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventType",
+                        "printedName": "SetgreetSDK.EventType",
+                        "usr": "s:11SetgreetSDK9EventTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK9EventTypeO10mediaErroryA2CmF",
+            "mangledName": "$s11SetgreetSDK9EventTypeO10mediaErroryA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "nextPage",
+            "printedName": "nextPage",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.EventType.Type) -> SetgreetSDK.EventType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventType",
+                    "printedName": "SetgreetSDK.EventType",
+                    "usr": "s:11SetgreetSDK9EventTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.EventType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventType",
+                        "printedName": "SetgreetSDK.EventType",
+                        "usr": "s:11SetgreetSDK9EventTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK9EventTypeO8nextPageyA2CmF",
+            "mangledName": "$s11SetgreetSDK9EventTypeO8nextPageyA2CmF",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "previousPage",
+            "printedName": "previousPage",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.EventType.Type) -> SetgreetSDK.EventType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventType",
+                    "printedName": "SetgreetSDK.EventType",
+                    "usr": "s:11SetgreetSDK9EventTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.EventType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventType",
+                        "printedName": "SetgreetSDK.EventType",
+                        "usr": "s:11SetgreetSDK9EventTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK9EventTypeO12previousPageyA2CmF",
+            "mangledName": "$s11SetgreetSDK9EventTypeO12previousPageyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "skipPage",
+            "printedName": "skipPage",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.EventType.Type) -> SetgreetSDK.EventType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventType",
+                    "printedName": "SetgreetSDK.EventType",
+                    "usr": "s:11SetgreetSDK9EventTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.EventType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventType",
+                        "printedName": "SetgreetSDK.EventType",
+                        "usr": "s:11SetgreetSDK9EventTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK9EventTypeO8skipPageyA2CmF",
+            "mangledName": "$s11SetgreetSDK9EventTypeO8skipPageyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "formSubmit",
+            "printedName": "formSubmit",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.EventType.Type) -> SetgreetSDK.EventType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventType",
+                    "printedName": "SetgreetSDK.EventType",
+                    "usr": "s:11SetgreetSDK9EventTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.EventType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventType",
+                        "printedName": "SetgreetSDK.EventType",
+                        "usr": "s:11SetgreetSDK9EventTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK9EventTypeO10formSubmityA2CmF",
+            "mangledName": "$s11SetgreetSDK9EventTypeO10formSubmityA2CmF",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "formValidation",
+            "printedName": "formValidation",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.EventType.Type) -> SetgreetSDK.EventType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventType",
+                    "printedName": "SetgreetSDK.EventType",
+                    "usr": "s:11SetgreetSDK9EventTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.EventType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventType",
+                        "printedName": "SetgreetSDK.EventType",
+                        "usr": "s:11SetgreetSDK9EventTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK9EventTypeO14formValidationyA2CmF",
+            "mangledName": "$s11SetgreetSDK9EventTypeO14formValidationyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "fieldChange",
+            "printedName": "fieldChange",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.EventType.Type) -> SetgreetSDK.EventType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventType",
+                    "printedName": "SetgreetSDK.EventType",
+                    "usr": "s:11SetgreetSDK9EventTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.EventType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventType",
+                        "printedName": "SetgreetSDK.EventType",
+                        "usr": "s:11SetgreetSDK9EventTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK9EventTypeO11fieldChangeyA2CmF",
+            "mangledName": "$s11SetgreetSDK9EventTypeO11fieldChangeyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "sdkInit",
+            "printedName": "sdkInit",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.EventType.Type) -> SetgreetSDK.EventType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventType",
+                    "printedName": "SetgreetSDK.EventType",
+                    "usr": "s:11SetgreetSDK9EventTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.EventType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventType",
+                        "printedName": "SetgreetSDK.EventType",
+                        "usr": "s:11SetgreetSDK9EventTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK9EventTypeO7sdkInityA2CmF",
+            "mangledName": "$s11SetgreetSDK9EventTypeO7sdkInityA2CmF",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "userIdentified",
+            "printedName": "userIdentified",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.EventType.Type) -> SetgreetSDK.EventType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventType",
+                    "printedName": "SetgreetSDK.EventType",
+                    "usr": "s:11SetgreetSDK9EventTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.EventType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventType",
+                        "printedName": "SetgreetSDK.EventType",
+                        "usr": "s:11SetgreetSDK9EventTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK9EventTypeO14userIdentifiedyA2CmF",
+            "mangledName": "$s11SetgreetSDK9EventTypeO14userIdentifiedyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "configChanged",
+            "printedName": "configChanged",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.EventType.Type) -> SetgreetSDK.EventType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventType",
+                    "printedName": "SetgreetSDK.EventType",
+                    "usr": "s:11SetgreetSDK9EventTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.EventType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventType",
+                        "printedName": "SetgreetSDK.EventType",
+                        "usr": "s:11SetgreetSDK9EventTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK9EventTypeO13configChangedyA2CmF",
+            "mangledName": "$s11SetgreetSDK9EventTypeO13configChangedyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "networkError",
+            "printedName": "networkError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.EventType.Type) -> SetgreetSDK.EventType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventType",
+                    "printedName": "SetgreetSDK.EventType",
+                    "usr": "s:11SetgreetSDK9EventTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.EventType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventType",
+                        "printedName": "SetgreetSDK.EventType",
+                        "usr": "s:11SetgreetSDK9EventTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK9EventTypeO12networkErroryA2CmF",
+            "mangledName": "$s11SetgreetSDK9EventTypeO12networkErroryA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "eventName",
+            "printedName": "eventName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK9EventTypeO9eventNameSSvp",
+            "mangledName": "$s11SetgreetSDK9EventTypeO9eventNameSSvp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK9EventTypeO9eventNameSSvg",
+                "mangledName": "$s11SetgreetSDK9EventTypeO9eventNameSSvg",
+                "moduleName": "SetgreetSDK",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "fromEventName",
+            "printedName": "fromEventName(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SetgreetSDK.EventType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventType",
+                    "printedName": "SetgreetSDK.EventType",
+                    "usr": "s:11SetgreetSDK9EventTypeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11SetgreetSDK9EventTypeO04fromC4NameyACSgSSFZ",
+            "mangledName": "$s11SetgreetSDK9EventTypeO04fromC4NameyACSgSSFZ",
+            "moduleName": "SetgreetSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SetgreetSDK.EventType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventType",
+                    "printedName": "SetgreetSDK.EventType",
+                    "usr": "s:11SetgreetSDK9EventTypeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11SetgreetSDK9EventTypeO8rawValueACSgSS_tcfc",
+            "mangledName": "$s11SetgreetSDK9EventTypeO8rawValueACSgSS_tcfc",
+            "moduleName": "SetgreetSDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK9EventTypeO8rawValueSSvp",
+            "mangledName": "$s11SetgreetSDK9EventTypeO8rawValueSSvp",
+            "moduleName": "SetgreetSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK9EventTypeO8rawValueSSvg",
+                "mangledName": "$s11SetgreetSDK9EventTypeO8rawValueSSvg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[SetgreetSDK.EventType]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventType",
+                    "printedName": "SetgreetSDK.EventType",
+                    "usr": "s:11SetgreetSDK9EventTypeO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK9EventTypeO8allCasesSayACGvpZ",
+            "mangledName": "$s11SetgreetSDK9EventTypeO8allCasesSayACGvpZ",
+            "moduleName": "SetgreetSDK",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Nonisolated"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[SetgreetSDK.EventType]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventType",
+                        "printedName": "SetgreetSDK.EventType",
+                        "usr": "s:11SetgreetSDK9EventTypeO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK9EventTypeO8allCasesSayACGvgZ",
+                "mangledName": "$s11SetgreetSDK9EventTypeO8allCasesSayACGvgZ",
+                "moduleName": "SetgreetSDK",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:11SetgreetSDK9EventTypeO",
+        "mangledName": "$s11SetgreetSDK9EventTypeO",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[SetgreetSDK.EventType]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventType",
+                        "printedName": "SetgreetSDK.EventType",
+                        "usr": "s:11SetgreetSDK9EventTypeO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "EventPropertyKey",
+        "printedName": "EventPropertyKey",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "screenName",
+            "printedName": "screenName",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.EventPropertyKey.Type) -> SetgreetSDK.EventPropertyKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventPropertyKey",
+                    "printedName": "SetgreetSDK.EventPropertyKey",
+                    "usr": "s:11SetgreetSDK16EventPropertyKeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.EventPropertyKey.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventPropertyKey",
+                        "printedName": "SetgreetSDK.EventPropertyKey",
+                        "usr": "s:11SetgreetSDK16EventPropertyKeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK16EventPropertyKeyO10screenNameyA2CmF",
+            "mangledName": "$s11SetgreetSDK16EventPropertyKeyO10screenNameyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "buttonId",
+            "printedName": "buttonId",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.EventPropertyKey.Type) -> SetgreetSDK.EventPropertyKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventPropertyKey",
+                    "printedName": "SetgreetSDK.EventPropertyKey",
+                    "usr": "s:11SetgreetSDK16EventPropertyKeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.EventPropertyKey.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventPropertyKey",
+                        "printedName": "SetgreetSDK.EventPropertyKey",
+                        "usr": "s:11SetgreetSDK16EventPropertyKeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK16EventPropertyKeyO8buttonIdyA2CmF",
+            "mangledName": "$s11SetgreetSDK16EventPropertyKeyO8buttonIdyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "flowId",
+            "printedName": "flowId",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.EventPropertyKey.Type) -> SetgreetSDK.EventPropertyKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventPropertyKey",
+                    "printedName": "SetgreetSDK.EventPropertyKey",
+                    "usr": "s:11SetgreetSDK16EventPropertyKeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.EventPropertyKey.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventPropertyKey",
+                        "printedName": "SetgreetSDK.EventPropertyKey",
+                        "usr": "s:11SetgreetSDK16EventPropertyKeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK16EventPropertyKeyO6flowIdyA2CmF",
+            "mangledName": "$s11SetgreetSDK16EventPropertyKeyO6flowIdyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "appVersion",
+            "printedName": "appVersion",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.EventPropertyKey.Type) -> SetgreetSDK.EventPropertyKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventPropertyKey",
+                    "printedName": "SetgreetSDK.EventPropertyKey",
+                    "usr": "s:11SetgreetSDK16EventPropertyKeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.EventPropertyKey.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventPropertyKey",
+                        "printedName": "SetgreetSDK.EventPropertyKey",
+                        "usr": "s:11SetgreetSDK16EventPropertyKeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK16EventPropertyKeyO10appVersionyA2CmF",
+            "mangledName": "$s11SetgreetSDK16EventPropertyKeyO10appVersionyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "sdkVersion",
+            "printedName": "sdkVersion",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.EventPropertyKey.Type) -> SetgreetSDK.EventPropertyKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventPropertyKey",
+                    "printedName": "SetgreetSDK.EventPropertyKey",
+                    "usr": "s:11SetgreetSDK16EventPropertyKeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.EventPropertyKey.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventPropertyKey",
+                        "printedName": "SetgreetSDK.EventPropertyKey",
+                        "usr": "s:11SetgreetSDK16EventPropertyKeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK16EventPropertyKeyO10sdkVersionyA2CmF",
+            "mangledName": "$s11SetgreetSDK16EventPropertyKeyO10sdkVersionyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "errorMessage",
+            "printedName": "errorMessage",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.EventPropertyKey.Type) -> SetgreetSDK.EventPropertyKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventPropertyKey",
+                    "printedName": "SetgreetSDK.EventPropertyKey",
+                    "usr": "s:11SetgreetSDK16EventPropertyKeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.EventPropertyKey.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventPropertyKey",
+                        "printedName": "SetgreetSDK.EventPropertyKey",
+                        "usr": "s:11SetgreetSDK16EventPropertyKeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK16EventPropertyKeyO12errorMessageyA2CmF",
+            "mangledName": "$s11SetgreetSDK16EventPropertyKeyO12errorMessageyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "userId",
+            "printedName": "userId",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.EventPropertyKey.Type) -> SetgreetSDK.EventPropertyKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventPropertyKey",
+                    "printedName": "SetgreetSDK.EventPropertyKey",
+                    "usr": "s:11SetgreetSDK16EventPropertyKeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.EventPropertyKey.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventPropertyKey",
+                        "printedName": "SetgreetSDK.EventPropertyKey",
+                        "usr": "s:11SetgreetSDK16EventPropertyKeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK16EventPropertyKeyO6userIdyA2CmF",
+            "mangledName": "$s11SetgreetSDK16EventPropertyKeyO6userIdyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "key",
+            "printedName": "key",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK16EventPropertyKeyO3keySSvp",
+            "mangledName": "$s11SetgreetSDK16EventPropertyKeyO3keySSvp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK16EventPropertyKeyO3keySSvg",
+                "mangledName": "$s11SetgreetSDK16EventPropertyKeyO3keySSvg",
+                "moduleName": "SetgreetSDK",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "fromKey",
+            "printedName": "fromKey(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SetgreetSDK.EventPropertyKey?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventPropertyKey",
+                    "printedName": "SetgreetSDK.EventPropertyKey",
+                    "usr": "s:11SetgreetSDK16EventPropertyKeyO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11SetgreetSDK16EventPropertyKeyO04fromE0yACSgSSFZ",
+            "mangledName": "$s11SetgreetSDK16EventPropertyKeyO04fromE0yACSgSSFZ",
+            "moduleName": "SetgreetSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SetgreetSDK.EventPropertyKey?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventPropertyKey",
+                    "printedName": "SetgreetSDK.EventPropertyKey",
+                    "usr": "s:11SetgreetSDK16EventPropertyKeyO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11SetgreetSDK16EventPropertyKeyO8rawValueACSgSS_tcfc",
+            "mangledName": "$s11SetgreetSDK16EventPropertyKeyO8rawValueACSgSS_tcfc",
+            "moduleName": "SetgreetSDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK16EventPropertyKeyO8rawValueSSvp",
+            "mangledName": "$s11SetgreetSDK16EventPropertyKeyO8rawValueSSvp",
+            "moduleName": "SetgreetSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK16EventPropertyKeyO8rawValueSSvg",
+                "mangledName": "$s11SetgreetSDK16EventPropertyKeyO8rawValueSSvg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[SetgreetSDK.EventPropertyKey]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventPropertyKey",
+                    "printedName": "SetgreetSDK.EventPropertyKey",
+                    "usr": "s:11SetgreetSDK16EventPropertyKeyO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK16EventPropertyKeyO8allCasesSayACGvpZ",
+            "mangledName": "$s11SetgreetSDK16EventPropertyKeyO8allCasesSayACGvpZ",
+            "moduleName": "SetgreetSDK",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Nonisolated"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[SetgreetSDK.EventPropertyKey]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventPropertyKey",
+                        "printedName": "SetgreetSDK.EventPropertyKey",
+                        "usr": "s:11SetgreetSDK16EventPropertyKeyO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK16EventPropertyKeyO8allCasesSayACGvgZ",
+                "mangledName": "$s11SetgreetSDK16EventPropertyKeyO8allCasesSayACGvgZ",
+                "moduleName": "SetgreetSDK",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:11SetgreetSDK16EventPropertyKeyO",
+        "mangledName": "$s11SetgreetSDK16EventPropertyKeyO",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[SetgreetSDK.EventPropertyKey]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventPropertyKey",
+                        "printedName": "SetgreetSDK.EventPropertyKey",
+                        "usr": "s:11SetgreetSDK16EventPropertyKeyO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
+          }
         ]
       },
       {
@@ -3371,6 +5521,243 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Operation",
+        "printedName": "Operation",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "create",
+            "printedName": "create",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.Operation.Type) -> SetgreetSDK.Operation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Operation",
+                    "printedName": "SetgreetSDK.Operation",
+                    "usr": "s:11SetgreetSDK9OperationO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.Operation.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Operation",
+                        "printedName": "SetgreetSDK.Operation",
+                        "usr": "s:11SetgreetSDK9OperationO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK9OperationO6createyA2CmF",
+            "mangledName": "$s11SetgreetSDK9OperationO6createyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "update",
+            "printedName": "update",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.Operation.Type) -> SetgreetSDK.Operation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Operation",
+                    "printedName": "SetgreetSDK.Operation",
+                    "usr": "s:11SetgreetSDK9OperationO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.Operation.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Operation",
+                        "printedName": "SetgreetSDK.Operation",
+                        "usr": "s:11SetgreetSDK9OperationO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK9OperationO6updateyA2CmF",
+            "mangledName": "$s11SetgreetSDK9OperationO6updateyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SetgreetSDK.Operation?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Operation",
+                    "printedName": "SetgreetSDK.Operation",
+                    "usr": "s:11SetgreetSDK9OperationO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11SetgreetSDK9OperationO8rawValueACSgSS_tcfc",
+            "mangledName": "$s11SetgreetSDK9OperationO8rawValueACSgSS_tcfc",
+            "moduleName": "SetgreetSDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK9OperationO8rawValueSSvp",
+            "mangledName": "$s11SetgreetSDK9OperationO8rawValueSSvp",
+            "moduleName": "SetgreetSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK9OperationO8rawValueSSvg",
+                "mangledName": "$s11SetgreetSDK9OperationO8rawValueSSvg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:11SetgreetSDK9OperationO",
+        "mangledName": "$s11SetgreetSDK9OperationO",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "SwiftUI",
         "printedName": "SwiftUI",
         "declKind": "Import",
@@ -3501,6 +5888,26 @@
         "kind": "Import",
         "name": "SwiftUI",
         "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "SetgreetSDK",
         "declAttributes": [
@@ -4173,34 +6580,6 @@
       "value": "200"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetFontWeight.swift",
-      "kind": "StringLiteral",
-      "offset": 174,
-      "length": 6,
-      "value": "\"BOLD\""
-    },
-    {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetFontWeight.swift",
-      "kind": "StringLiteral",
-      "offset": 200,
-      "length": 9,
-      "value": "\"REGULAR\""
-    },
-    {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetFontWeight.swift",
-      "kind": "StringLiteral",
-      "offset": 228,
-      "length": 8,
-      "value": "\"MEDIUM\""
-    },
-    {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetFontWeight.swift",
-      "kind": "StringLiteral",
-      "offset": 257,
-      "length": 10,
-      "value": "\"SEMIBOLD\""
-    },
-    {
       "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetTextAlign.swift",
       "kind": "StringLiteral",
       "offset": 131,
@@ -4243,34 +6622,6 @@
       "value": "0"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/Setgreet\/Setgreet.swift",
-      "kind": "StringLiteral",
-      "offset": 1847,
-      "length": 26,
-      "value": "\"6831eba4fcadd7e4468954d1\""
-    },
-    {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/Setgreet\/Setgreet.swift",
-      "kind": "StringLiteral",
-      "offset": 1896,
-      "length": 26,
-      "value": "\"6831eba4fcadd7e4468954cf\""
-    },
-    {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/Setgreet\/Setgreet.swift",
-      "kind": "StringLiteral",
-      "offset": 1945,
-      "length": 26,
-      "value": "\"6831eba4fcadd7e4468954d0\""
-    },
-    {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/Setgreet\/Setgreet.swift",
-      "kind": "StringLiteral",
-      "offset": 1994,
-      "length": 26,
-      "value": "\"6831eba4fcadd7e4468954ce\""
-    },
-    {
       "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetContentScaleType.swift",
       "kind": "StringLiteral",
       "offset": 175,
@@ -4294,21 +6645,35 @@
     {
       "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/SetgreetView.swift",
       "kind": "IntegerLiteral",
-      "offset": 303,
+      "offset": 312,
       "length": 3,
       "value": "400"
     },
     {
       "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/SetgreetView.swift",
       "kind": "StringLiteral",
-      "offset": 2085,
-      "length": 2,
-      "value": "\"\""
+      "offset": 2111,
+      "length": 14,
+      "value": "\"preview-flow\""
     },
     {
       "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/SetgreetView.swift",
       "kind": "StringLiteral",
-      "offset": 2141,
+      "offset": 2139,
+      "length": 11,
+      "value": "\"template1\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/SetgreetView.swift",
+      "kind": "Array",
+      "offset": 2161,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/SetgreetView.swift",
+      "kind": "StringLiteral",
+      "offset": 2218,
       "length": 2,
       "value": "\"\""
     },
@@ -4329,44 +6694,79 @@
     {
       "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetLogger.swift",
       "kind": "StringLiteral",
-      "offset": 272,
+      "offset": 349,
       "length": 10,
       "value": "\"Setgreet\""
     },
     {
       "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetLogger.swift",
       "kind": "StringLiteral",
-      "offset": 303,
+      "offset": 380,
       "length": 5,
       "value": "\"Log\""
     },
     {
       "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetLogger.swift",
       "kind": "BooleanLiteral",
-      "offset": 328,
-      "length": 4,
-      "value": "true"
+      "offset": 405,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/TemplateType.swift",
+      "kind": "StringLiteral",
+      "offset": 156,
+      "length": 26,
+      "value": "\"6831eba4fcadd7e4468954d1\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/TemplateType.swift",
+      "kind": "StringLiteral",
+      "offset": 205,
+      "length": 26,
+      "value": "\"6831eba4fcadd7e4468954cf\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/TemplateType.swift",
+      "kind": "StringLiteral",
+      "offset": 254,
+      "length": 26,
+      "value": "\"6831eba4fcadd7e4468954d0\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/TemplateType.swift",
+      "kind": "StringLiteral",
+      "offset": 303,
+      "length": 26,
+      "value": "\"6831eba4fcadd7e4468954ce\""
     },
     {
       "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetFlowModel.swift",
       "kind": "StringLiteral",
-      "offset": 421,
+      "offset": 444,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetFlowModel.swift",
       "kind": "StringLiteral",
-      "offset": 454,
+      "offset": 477,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetFlowModel.swift",
       "kind": "Array",
-      "offset": 501,
+      "offset": 524,
       "length": 2,
       "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetFlowModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 553,
+      "length": 1,
+      "value": "1"
     },
     {
       "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Templates\/Template4\/Template4ContentView.swift",
@@ -4411,6 +6811,55 @@
       "value": "\"KUFAM\""
     },
     {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/SetgreetViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1591,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/FlowManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 555,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/FlowManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 575,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/FlowManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 593,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/FlowManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 615,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/FlowManager.swift",
+      "kind": "Array",
+      "offset": 994,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/FlowManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1146,
+      "length": 26,
+      "value": "\"com.setgreet.flowmanager\""
+    },
+    {
       "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/CommonUI Elements\/HeightPreferenceKey.swift",
       "kind": "IntegerLiteral",
       "offset": 196,
@@ -4446,11 +6895,242 @@
       "value": "\"SKIP\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/Setgreet\/SetgreetVersion.swift",
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "kind": "StringLiteral",
+      "offset": 270,
+      "length": 22,
+      "value": "\"setgreet:flowStarted\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "kind": "StringLiteral",
+      "offset": 318,
+      "length": 24,
+      "value": "\"setgreet:flowCompleted\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "kind": "StringLiteral",
+      "offset": 368,
+      "length": 24,
+      "value": "\"setgreet:flowDismissed\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "kind": "StringLiteral",
+      "offset": 414,
+      "length": 20,
+      "value": "\"setgreet:flowError\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "kind": "StringLiteral",
+      "offset": 479,
+      "length": 17,
+      "value": "\"setgreet:screen\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "kind": "StringLiteral",
+      "offset": 520,
+      "length": 22,
+      "value": "\"setgreet:screenEnter\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "kind": "StringLiteral",
+      "offset": 565,
+      "length": 21,
+      "value": "\"setgreet:screenExit\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "kind": "StringLiteral",
+      "offset": 641,
+      "length": 22,
+      "value": "\"setgreet:buttonClick\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "kind": "StringLiteral",
+      "offset": 686,
+      "length": 21,
+      "value": "\"setgreet:inputFocus\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "kind": "StringLiteral",
+      "offset": 729,
+      "length": 20,
+      "value": "\"setgreet:inputBlur\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "kind": "StringLiteral",
+      "offset": 768,
+      "length": 17,
+      "value": "\"setgreet:scroll\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "kind": "StringLiteral",
+      "offset": 803,
+      "length": 16,
+      "value": "\"setgreet:swipe\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "kind": "StringLiteral",
+      "offset": 866,
+      "length": 20,
+      "value": "\"setgreet:mediaPlay\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "kind": "StringLiteral",
+      "offset": 909,
+      "length": 21,
+      "value": "\"setgreet:mediaPause\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "kind": "StringLiteral",
+      "offset": 956,
+      "length": 24,
+      "value": "\"setgreet:mediaComplete\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "kind": "StringLiteral",
+      "offset": 1003,
+      "length": 21,
+      "value": "\"setgreet:mediaError\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "kind": "StringLiteral",
+      "offset": 1075,
+      "length": 19,
+      "value": "\"setgreet:nextPage\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "kind": "StringLiteral",
+      "offset": 1119,
+      "length": 23,
+      "value": "\"setgreet:previousPage\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "kind": "StringLiteral",
+      "offset": 1163,
+      "length": 19,
+      "value": "\"setgreet:skipPage\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "kind": "StringLiteral",
+      "offset": 1229,
+      "length": 21,
+      "value": "\"setgreet:formSubmit\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "kind": "StringLiteral",
+      "offset": 1277,
+      "length": 25,
+      "value": "\"setgreet:formValidation\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "kind": "StringLiteral",
+      "offset": 1326,
+      "length": 22,
+      "value": "\"setgreet:fieldChange\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "kind": "StringLiteral",
+      "offset": 1394,
+      "length": 18,
+      "value": "\"setgreet:sdkInit\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "kind": "StringLiteral",
+      "offset": 1439,
+      "length": 25,
+      "value": "\"setgreet:userIdentified\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "kind": "StringLiteral",
+      "offset": 1490,
+      "length": 24,
+      "value": "\"setgreet:configChanged\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "kind": "StringLiteral",
+      "offset": 1539,
+      "length": 23,
+      "value": "\"setgreet:networkError\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventPropertyKey.swift",
+      "kind": "StringLiteral",
+      "offset": 245,
+      "length": 12,
+      "value": "\"screenName\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventPropertyKey.swift",
+      "kind": "StringLiteral",
+      "offset": 278,
+      "length": 10,
+      "value": "\"buttonId\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventPropertyKey.swift",
+      "kind": "StringLiteral",
+      "offset": 307,
+      "length": 8,
+      "value": "\"flowId\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventPropertyKey.swift",
+      "kind": "StringLiteral",
+      "offset": 338,
+      "length": 12,
+      "value": "\"appVersion\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventPropertyKey.swift",
+      "kind": "StringLiteral",
+      "offset": 373,
+      "length": 12,
+      "value": "\"sdkVersion\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventPropertyKey.swift",
+      "kind": "StringLiteral",
+      "offset": 410,
+      "length": 14,
+      "value": "\"errorMessage\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventPropertyKey.swift",
+      "kind": "StringLiteral",
+      "offset": 443,
+      "length": 8,
+      "value": "\"userId\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetVersion.swift",
       "kind": "StringLiteral",
       "offset": 120,
       "length": 7,
-      "value": "\"0.2.0\""
+      "value": "\"0.3.0\""
     },
     {
       "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/CommonUI Elements\/Indicators\/SetgreetDotIndicator.swift",
@@ -4460,21 +7140,35 @@
       "value": "12"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/Setgreet\/FontLoader.swift",
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/Operation.swift",
+      "kind": "StringLiteral",
+      "offset": 161,
+      "length": 8,
+      "value": "\"create\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/Operation.swift",
+      "kind": "StringLiteral",
+      "offset": 188,
+      "length": 8,
+      "value": "\"update\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/FontLoader.swift",
       "kind": "StringLiteral",
       "offset": 219,
       "length": 21,
       "value": "\"Setgreet.FontLoader\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/Setgreet\/FontLoader.swift",
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/FontLoader.swift",
       "kind": "StringLiteral",
       "offset": 252,
       "length": 23,
       "value": "\"Setgreet-Internal-Log\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/Setgreet\/FontLoader.swift",
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/FontLoader.swift",
       "kind": "BooleanLiteral",
       "offset": 288,
       "length": 4,
@@ -4488,9 +7182,9 @@
       "value": "true"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/Setgreet\/SetgreetSettings.swift",
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetSettings.swift",
       "kind": "StringLiteral",
-      "offset": 356,
+      "offset": 412,
       "length": 18,
       "value": "\"com.setgreet.sdk\""
     }
