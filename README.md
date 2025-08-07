@@ -51,11 +51,90 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 ```
 
+### Identify User
+
+Identifies a user for Setgreet analytics and flow management.
+
+**Parameters:**
+
+- `userId` (String): The unique identifier for the user
+- `attributes` (Optional): Additional user attributes
+- `operation` (Optional): The operation type for user attributes (CREATE or UPDATE)
+
+**Example:**
+
+```swift
+Setgreet.shared.identifyUser(
+    userId: "user123",
+    attributes: [
+        "name": "John Doe",
+        "email": "john@example.com",
+        "plan": "premium"
+    ],
+    operation: .create
+)
+```
+
+### Reset User
+
+Clears user identification data and resets user session state for logout scenarios.
+
+**Example:**
+
+```swift
+Setgreet.shared.resetUser()
+```
+
 ### Show Flow
 - Setgreet Flow ID: The flow ID is a unique identifier for the flow you want to show. You can get the flow ID from the flow's URL at the web app. For example, if the flow URL is `https://app.setgreet.com/flows/1234`, the flow ID is `1234`.
 
 To show the Setgreet flow, call the following method:
 
 ```Swift
-Setgreet.showFlow(flowId = "FLOW_ID")
+Setgreet.shared.showFlow(flowId = "FLOW_ID")
+```
+
+### Track Screen
+
+Tracks a screen view for analytics and potential flow triggers.
+
+**Parameters:**
+
+- `screenName` (String): The name of the screen being viewed
+- `properties` (Optional): Additional properties associated with the screen view
+
+**Example:**
+
+```swift
+Setgreet.shared.trackScreen(
+    screenName: "product_detail",
+    properties: [
+        "product_id": "prod_123",
+        "category": "electronics",
+        "price": 299.99
+    ]
+)
+```
+
+### Track Event
+
+Tracks custom events for analytics and flow triggers.
+
+**Parameters:**
+
+- `eventName` (String): The name of the custom event
+- `properties` (Optional): Additional properties associated with the event
+
+**Example:**
+
+```swift
+Setgreet.shared.trackEvent(
+    eventName: "purchase_completed",
+    properties: [
+        "order_id": "ord_456",
+        "total_amount": 299.99,
+        "payment_method": "credit_card",
+        "items_count": 3
+    ]
+)
 ```
