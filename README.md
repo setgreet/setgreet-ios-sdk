@@ -26,7 +26,7 @@ Or you can add it directly within Xcode:
 ### Initialization
 - Setgreet App Key: You can get the app key while creating a new app in the Setgreet flow editor.
 
-Initialize the SDK in your AppDelegate or SceneDelegate:
+Initialize the SDK in your AppDelegate / SceneDelegate or anywhere you want:
 
 ```Swift
 import UIKit
@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        Setgreet.initialize(
+        Setgreet.shared.initialize(
             appKey: "APP_KEY",
             config: SetgreetConfig(
                 debugMode: false
