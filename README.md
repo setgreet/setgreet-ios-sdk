@@ -30,7 +30,7 @@ Initialize the SDK in your AppDelegate / SceneDelegate or anywhere you want:
 
 ```Swift
 import UIKit
-import Setgreet
+import SetgreetSDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
