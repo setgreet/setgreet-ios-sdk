@@ -435,6 +435,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -1343,7 +1350,7 @@
           {
             "kind": "Function",
             "name": "identifyUser",
-            "printedName": "identifyUser(userId:attributes:operation:)",
+            "printedName": "identifyUser(userId:attributes:operation:locale:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1390,11 +1397,26 @@
                 "printedName": "SetgreetSDK.Operation",
                 "hasDefaultArg": true,
                 "usr": "s:11SetgreetSDK9OperationO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:11SetgreetSDK0A0C12identifyUser6userId10attributes9operationySS_SDySSypGSgAA9OperationOtF",
-            "mangledName": "$s11SetgreetSDK0A0C12identifyUser6userId10attributes9operationySS_SDySSypGSgAA9OperationOtF",
+            "usr": "s:11SetgreetSDK0A0C12identifyUser6userId10attributes9operation6localeySS_SDySSypGSgAA9OperationOSSSgtF",
+            "mangledName": "$s11SetgreetSDK0A0C12identifyUser6userId10attributes9operation6localeySS_SDySSypGSgAA9OperationOSSSgtF",
             "moduleName": "SetgreetSDK",
             "declAttributes": [
               "AccessControl",
@@ -1405,7 +1427,7 @@
           {
             "kind": "Function",
             "name": "identifyUser",
-            "printedName": "identifyUser(userId:attributes:)",
+            "printedName": "identifyUser(userId:attributes:locale:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1445,11 +1467,26 @@
                 ],
                 "hasDefaultArg": true,
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:11SetgreetSDK0A0C12identifyUser6userId10attributesySS_SDySSypGSgtF",
-            "mangledName": "$s11SetgreetSDK0A0C12identifyUser6userId10attributesySS_SDySSypGSgtF",
+            "usr": "s:11SetgreetSDK0A0C12identifyUser6userId10attributes6localeySS_SDySSypGSgSSSgtF",
+            "mangledName": "$s11SetgreetSDK0A0C12identifyUser6userId10attributes6localeySS_SDySSypGSgSSSgtF",
             "moduleName": "SetgreetSDK",
             "declAttributes": [
               "AccessControl",
@@ -5879,6 +5916,13 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
+        "moduleName": "SetgreetSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
         "moduleName": "SetgreetSDK",
         "declAttributes": [
           "RawDocComment"
@@ -6032,6 +6076,7 @@
         "intro_tvOS": "9.0",
         "intro_watchOS": "2.0",
         "declAttributes": [
+          "AddressableForDependencies",
           "Frozen",
           "Available",
           "Available",
@@ -6397,6 +6442,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Sequence",
             "printedName": "Sequence",
             "children": [
@@ -6568,7 +6620,7 @@
     {
       "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/CommonUI Elements\/Indicators\/SetgreetLinearIndicator.swift",
       "kind": "FloatLiteral",
-      "offset": 370,
+      "offset": 371,
       "length": 3,
       "value": "0.3"
     },
@@ -7130,7 +7182,7 @@
       "kind": "StringLiteral",
       "offset": 120,
       "length": 7,
-      "value": "\"0.3.1\""
+      "value": "\"0.4.0\""
     },
     {
       "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/CommonUI Elements\/Indicators\/SetgreetDotIndicator.swift",
@@ -7180,6 +7232,13 @@
       "offset": 167,
       "length": 4,
       "value": "true"
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/TrackRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 312,
+      "length": 11,
+      "value": "\"endUserId\""
     },
     {
       "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetSettings.swift",

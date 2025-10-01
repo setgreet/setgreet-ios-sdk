@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
 // swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name SetgreetSDK
-// swift-module-flags-ignorable:  -interface-compiler-version 6.1.2
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
 import CoreGraphics
 import CoreText
 import DeveloperToolsSupport
@@ -17,8 +17,12 @@ import os.log
 import os
 
 public protocol SetgreetNetworkInterface {
+  #if compiler(>=5.3) && $NonescapableTypes
   func request<R>(for endpoint: any SetgreetSDK.Endpoint, completion: @escaping (Swift.Result<R, SetgreetSDK.NetworkDomainError>) -> Swift.Void) where R : Swift.Decodable, R : Swift.Encodable
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func request<R>(for endpoint: any SetgreetSDK.Endpoint) async throws -> R? where R : Swift.Decodable, R : Swift.Encodable
+  #endif
 }
 
 public enum NetworkDomainError : Swift.Error {
@@ -30,41 +34,61 @@ public enum NetworkDomainError : Swift.Error {
 }
 public class SetgreetNetwork : SetgreetSDK.SetgreetNetworkInterface {
   public init()
+  #if compiler(>=5.3) && $NonescapableTypes
   public func request<R>(for endpoint: any SetgreetSDK.Endpoint, completion: @escaping (Swift.Result<R, SetgreetSDK.NetworkDomainError>) -> Swift.Void) where R : Swift.Decodable, R : Swift.Encodable
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func request<R>(for endpoint: any SetgreetSDK.Endpoint) async throws -> R? where R : Swift.Decodable, R : Swift.Encodable
+  #endif
   @objc deinit
 }
 public protocol HTTPBodyEncoder {
+  #if compiler(>=5.3) && $NonescapableTypes
   func encode<D>(for data: D) -> Foundation.Data? where D : Swift.Decodable, D : Swift.Encodable
+  #endif
 }
 public struct HTTPBodyEncoderImpl : SetgreetSDK.HTTPBodyEncoder {
   public init()
+  #if compiler(>=5.3) && $NonescapableTypes
   public func encode<D>(for data: D) -> Foundation.Data? where D : Swift.Decodable, D : Swift.Encodable
+  #endif
 }
 public enum HTTPMethod : Swift.String {
   case GET
   case POST
   case PUT
   case DELETE
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
   }
 }
 extension Foundation.Data {
+  #if compiler(>=5.3) && $NonescapableTypes
   public var prettyPrintedJSONString: Foundation.NSString? {
     get
   }
+  #endif
 }
 @_hasMissingDesignatedInitializers public class Setgreet {
   public static let shared: SetgreetSDK.Setgreet
   public func initialize(appKey: Swift.String, config: SetgreetSDK.SetgreetConfig)
-  public func identifyUser(userId: Swift.String, attributes: [Swift.String : Any]? = nil, operation: SetgreetSDK.Operation = .create)
-  public func identifyUser(userId: Swift.String, attributes: [Swift.String : Any]? = nil)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func identifyUser(userId: Swift.String, attributes: [Swift.String : Any]? = nil, operation: SetgreetSDK.Operation = .create, locale: Swift.String? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func identifyUser(userId: Swift.String, attributes: [Swift.String : Any]? = nil, locale: Swift.String? = nil)
+  #endif
   public func showFlow(flowId: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func trackEvent(eventName: Swift.String, properties: [Swift.String : Any]? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func trackScreen(screenName: Swift.String, properties: [Swift.String : Any]? = nil)
+  #endif
   public func resetUser()
   @objc deinit
 }
@@ -78,7 +102,9 @@ public enum TemplateType : Swift.String {
   case TEMPLATE_2
   case TEMPLATE_3
   case TEMPLATE_4
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -92,31 +118,45 @@ public protocol Endpoint {
   var base: Swift.String { get }
   var path: Swift.String { get }
   var apiVersion: Swift.String { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   var parameters: [Swift.String : Any]? { get }
+  #endif
   var type: SetgreetSDK.HTTPMethod { get }
   var headers: [Swift.String : Swift.String] { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   var mimeType: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var queryItems: [Foundation.URLQueryItem]? { get }
+  #endif
   var apiKey: Swift.String { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   var httpBody: Foundation.Data? { get }
+  #endif
   var appKey: Swift.String { get }
 }
 extension SetgreetSDK.Endpoint {
   public var scheme: Swift.String {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public var httpBody: Foundation.Data? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var mimeType: Swift.String? {
     get
   }
+  #endif
   public var apiKey: Swift.String {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public var parameters: [Swift.String : Any]? {
     get
   }
+  #endif
   public var base: Swift.String {
     get
   }
@@ -157,8 +197,12 @@ public enum EventType : Swift.String, Swift.CaseIterable {
   public var eventName: Swift.String {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func fromEventName(_ eventName: Swift.String) -> SetgreetSDK.EventType?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias AllCases = [SetgreetSDK.EventType]
   public typealias RawValue = Swift.String
   nonisolated public static var allCases: [SetgreetSDK.EventType] {
@@ -179,8 +223,12 @@ public enum EventPropertyKey : Swift.String, Swift.CaseIterable {
   public var key: Swift.String {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func fromKey(_ key: Swift.String) -> SetgreetSDK.EventPropertyKey?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias AllCases = [SetgreetSDK.EventPropertyKey]
   public typealias RawValue = Swift.String
   nonisolated public static var allCases: [SetgreetSDK.EventPropertyKey] {
@@ -200,7 +248,9 @@ public var setgreetVersion: Swift.String
 public enum Operation : Swift.String, Swift.Codable {
   case create
   case update
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
