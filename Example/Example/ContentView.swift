@@ -97,6 +97,9 @@ struct ContentView: View {
                     }
                     addLog(log)
                 }
+                .onPermissionRequested { event in
+                    addLog("Permission: \(event.permissionType) -> \(event.result)")
+                }
                 .onError { event in
                     addLog("Error: \(event.errorType.rawValue) - \(event.message)")
                 }
