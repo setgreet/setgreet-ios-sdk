@@ -1651,6 +1651,48 @@
               "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setFlowCallbacks",
+            "printedName": "setFlowCallbacks(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.SetgreetFlowCallbacks) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SetgreetFlowCallbacks",
+                    "printedName": "SetgreetSDK.SetgreetFlowCallbacks",
+                    "usr": "s:11SetgreetSDK0A13FlowCallbacksC"
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11SetgreetSDK0A0C16setFlowCallbacksyyyAA0adE0CXEF",
+            "mangledName": "$s11SetgreetSDK0A0C16setFlowCallbacksyyyAA0adE0CXEF",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -5983,6 +6025,3021 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SetgreetFlowEvent",
+        "printedName": "SetgreetFlowEvent",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "flowStarted",
+            "printedName": "flowStarted",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.SetgreetFlowEvent.Type) -> (SetgreetSDK.FlowStartedEvent) -> SetgreetSDK.SetgreetFlowEvent",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SetgreetSDK.FlowStartedEvent) -> SetgreetSDK.SetgreetFlowEvent",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SetgreetFlowEvent",
+                        "printedName": "SetgreetSDK.SetgreetFlowEvent",
+                        "usr": "s:11SetgreetSDK0A9FlowEventO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FlowStartedEvent",
+                        "printedName": "SetgreetSDK.FlowStartedEvent",
+                        "usr": "s:11SetgreetSDK16FlowStartedEventV"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.SetgreetFlowEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SetgreetFlowEvent",
+                        "printedName": "SetgreetSDK.SetgreetFlowEvent",
+                        "usr": "s:11SetgreetSDK0A9FlowEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK0A9FlowEventO11flowStartedyAcA0cfD0VcACmF",
+            "mangledName": "$s11SetgreetSDK0A9FlowEventO11flowStartedyAcA0cfD0VcACmF",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "flowCompleted",
+            "printedName": "flowCompleted",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.SetgreetFlowEvent.Type) -> (SetgreetSDK.FlowCompletedEvent) -> SetgreetSDK.SetgreetFlowEvent",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SetgreetSDK.FlowCompletedEvent) -> SetgreetSDK.SetgreetFlowEvent",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SetgreetFlowEvent",
+                        "printedName": "SetgreetSDK.SetgreetFlowEvent",
+                        "usr": "s:11SetgreetSDK0A9FlowEventO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FlowCompletedEvent",
+                        "printedName": "SetgreetSDK.FlowCompletedEvent",
+                        "usr": "s:11SetgreetSDK18FlowCompletedEventV"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.SetgreetFlowEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SetgreetFlowEvent",
+                        "printedName": "SetgreetSDK.SetgreetFlowEvent",
+                        "usr": "s:11SetgreetSDK0A9FlowEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK0A9FlowEventO13flowCompletedyAcA0cfD0VcACmF",
+            "mangledName": "$s11SetgreetSDK0A9FlowEventO13flowCompletedyAcA0cfD0VcACmF",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "flowDismissed",
+            "printedName": "flowDismissed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.SetgreetFlowEvent.Type) -> (SetgreetSDK.FlowDismissedEvent) -> SetgreetSDK.SetgreetFlowEvent",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SetgreetSDK.FlowDismissedEvent) -> SetgreetSDK.SetgreetFlowEvent",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SetgreetFlowEvent",
+                        "printedName": "SetgreetSDK.SetgreetFlowEvent",
+                        "usr": "s:11SetgreetSDK0A9FlowEventO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FlowDismissedEvent",
+                        "printedName": "SetgreetSDK.FlowDismissedEvent",
+                        "usr": "s:11SetgreetSDK18FlowDismissedEventV"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.SetgreetFlowEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SetgreetFlowEvent",
+                        "printedName": "SetgreetSDK.SetgreetFlowEvent",
+                        "usr": "s:11SetgreetSDK0A9FlowEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK0A9FlowEventO13flowDismissedyAcA0cfD0VcACmF",
+            "mangledName": "$s11SetgreetSDK0A9FlowEventO13flowDismissedyAcA0cfD0VcACmF",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "screenChanged",
+            "printedName": "screenChanged",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.SetgreetFlowEvent.Type) -> (SetgreetSDK.ScreenChangedEvent) -> SetgreetSDK.SetgreetFlowEvent",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SetgreetSDK.ScreenChangedEvent) -> SetgreetSDK.SetgreetFlowEvent",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SetgreetFlowEvent",
+                        "printedName": "SetgreetSDK.SetgreetFlowEvent",
+                        "usr": "s:11SetgreetSDK0A9FlowEventO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ScreenChangedEvent",
+                        "printedName": "SetgreetSDK.ScreenChangedEvent",
+                        "usr": "s:11SetgreetSDK18ScreenChangedEventV"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.SetgreetFlowEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SetgreetFlowEvent",
+                        "printedName": "SetgreetSDK.SetgreetFlowEvent",
+                        "usr": "s:11SetgreetSDK0A9FlowEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK0A9FlowEventO13screenChangedyAcA06ScreenfD0VcACmF",
+            "mangledName": "$s11SetgreetSDK0A9FlowEventO13screenChangedyAcA06ScreenfD0VcACmF",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "actionTriggered",
+            "printedName": "actionTriggered",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.SetgreetFlowEvent.Type) -> (SetgreetSDK.ActionTriggeredEvent) -> SetgreetSDK.SetgreetFlowEvent",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SetgreetSDK.ActionTriggeredEvent) -> SetgreetSDK.SetgreetFlowEvent",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SetgreetFlowEvent",
+                        "printedName": "SetgreetSDK.SetgreetFlowEvent",
+                        "usr": "s:11SetgreetSDK0A9FlowEventO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ActionTriggeredEvent",
+                        "printedName": "SetgreetSDK.ActionTriggeredEvent",
+                        "usr": "s:11SetgreetSDK20ActionTriggeredEventV"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.SetgreetFlowEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SetgreetFlowEvent",
+                        "printedName": "SetgreetSDK.SetgreetFlowEvent",
+                        "usr": "s:11SetgreetSDK0A9FlowEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK0A9FlowEventO15actionTriggeredyAcA06ActionfD0VcACmF",
+            "mangledName": "$s11SetgreetSDK0A9FlowEventO15actionTriggeredyAcA06ActionfD0VcACmF",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "flowError",
+            "printedName": "flowError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.SetgreetFlowEvent.Type) -> (SetgreetSDK.FlowErrorEvent) -> SetgreetSDK.SetgreetFlowEvent",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SetgreetSDK.FlowErrorEvent) -> SetgreetSDK.SetgreetFlowEvent",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SetgreetFlowEvent",
+                        "printedName": "SetgreetSDK.SetgreetFlowEvent",
+                        "usr": "s:11SetgreetSDK0A9FlowEventO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FlowErrorEvent",
+                        "printedName": "SetgreetSDK.FlowErrorEvent",
+                        "usr": "s:11SetgreetSDK14FlowErrorEventV"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.SetgreetFlowEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SetgreetFlowEvent",
+                        "printedName": "SetgreetSDK.SetgreetFlowEvent",
+                        "usr": "s:11SetgreetSDK0A9FlowEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK0A9FlowEventO9flowErroryAcA0cfD0VcACmF",
+            "mangledName": "$s11SetgreetSDK0A9FlowEventO9flowErroryAcA0cfD0VcACmF",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "flowId",
+            "printedName": "flowId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK0A9FlowEventO6flowIdSSvp",
+            "mangledName": "$s11SetgreetSDK0A9FlowEventO6flowIdSSvp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK0A9FlowEventO6flowIdSSvg",
+                "mangledName": "$s11SetgreetSDK0A9FlowEventO6flowIdSSvg",
+                "moduleName": "SetgreetSDK",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:11SetgreetSDK0A9FlowEventO",
+        "mangledName": "$s11SetgreetSDK0A9FlowEventO",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FlowStartedEvent",
+        "printedName": "FlowStartedEvent",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "flowId",
+            "printedName": "flowId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK16FlowStartedEventV6flowIdSSvp",
+            "mangledName": "$s11SetgreetSDK16FlowStartedEventV6flowIdSSvp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK16FlowStartedEventV6flowIdSSvg",
+                "mangledName": "$s11SetgreetSDK16FlowStartedEventV6flowIdSSvg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "screenCount",
+            "printedName": "screenCount",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK16FlowStartedEventV11screenCountSivp",
+            "mangledName": "$s11SetgreetSDK16FlowStartedEventV11screenCountSivp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK16FlowStartedEventV11screenCountSivg",
+                "mangledName": "$s11SetgreetSDK16FlowStartedEventV11screenCountSivg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "timestamp",
+            "printedName": "timestamp",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK16FlowStartedEventV9timestampSdvp",
+            "mangledName": "$s11SetgreetSDK16FlowStartedEventV9timestampSdvp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK16FlowStartedEventV9timestampSdvg",
+                "mangledName": "$s11SetgreetSDK16FlowStartedEventV9timestampSdvg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(flowId:screenCount:timestamp:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FlowStartedEvent",
+                "printedName": "SetgreetSDK.FlowStartedEvent",
+                "usr": "s:11SetgreetSDK16FlowStartedEventV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "hasDefaultArg": true,
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11SetgreetSDK16FlowStartedEventV6flowId11screenCount9timestampACSS_SiSdtcfc",
+            "mangledName": "$s11SetgreetSDK16FlowStartedEventV6flowId11screenCount9timestampACSS_SiSdtcfc",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:11SetgreetSDK16FlowStartedEventV",
+        "mangledName": "$s11SetgreetSDK16FlowStartedEventV",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FlowCompletedEvent",
+        "printedName": "FlowCompletedEvent",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "flowId",
+            "printedName": "flowId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK18FlowCompletedEventV6flowIdSSvp",
+            "mangledName": "$s11SetgreetSDK18FlowCompletedEventV6flowIdSSvp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK18FlowCompletedEventV6flowIdSSvg",
+                "mangledName": "$s11SetgreetSDK18FlowCompletedEventV6flowIdSSvg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "screenCount",
+            "printedName": "screenCount",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK18FlowCompletedEventV11screenCountSivp",
+            "mangledName": "$s11SetgreetSDK18FlowCompletedEventV11screenCountSivp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK18FlowCompletedEventV11screenCountSivg",
+                "mangledName": "$s11SetgreetSDK18FlowCompletedEventV11screenCountSivg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "durationMs",
+            "printedName": "durationMs",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int64",
+                "printedName": "Swift.Int64",
+                "usr": "s:s5Int64V"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK18FlowCompletedEventV10durationMss5Int64Vvp",
+            "mangledName": "$s11SetgreetSDK18FlowCompletedEventV10durationMss5Int64Vvp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int64",
+                    "printedName": "Swift.Int64",
+                    "usr": "s:s5Int64V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK18FlowCompletedEventV10durationMss5Int64Vvg",
+                "mangledName": "$s11SetgreetSDK18FlowCompletedEventV10durationMss5Int64Vvg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "timestamp",
+            "printedName": "timestamp",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK18FlowCompletedEventV9timestampSdvp",
+            "mangledName": "$s11SetgreetSDK18FlowCompletedEventV9timestampSdvp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK18FlowCompletedEventV9timestampSdvg",
+                "mangledName": "$s11SetgreetSDK18FlowCompletedEventV9timestampSdvg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(flowId:screenCount:durationMs:timestamp:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FlowCompletedEvent",
+                "printedName": "SetgreetSDK.FlowCompletedEvent",
+                "usr": "s:11SetgreetSDK18FlowCompletedEventV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int64",
+                "printedName": "Swift.Int64",
+                "usr": "s:s5Int64V"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "hasDefaultArg": true,
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11SetgreetSDK18FlowCompletedEventV6flowId11screenCount10durationMs9timestampACSS_Sis5Int64VSdtcfc",
+            "mangledName": "$s11SetgreetSDK18FlowCompletedEventV6flowId11screenCount10durationMs9timestampACSS_Sis5Int64VSdtcfc",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:11SetgreetSDK18FlowCompletedEventV",
+        "mangledName": "$s11SetgreetSDK18FlowCompletedEventV",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FlowDismissedEvent",
+        "printedName": "FlowDismissedEvent",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "flowId",
+            "printedName": "flowId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK18FlowDismissedEventV6flowIdSSvp",
+            "mangledName": "$s11SetgreetSDK18FlowDismissedEventV6flowIdSSvp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK18FlowDismissedEventV6flowIdSSvg",
+                "mangledName": "$s11SetgreetSDK18FlowDismissedEventV6flowIdSSvg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "reason",
+            "printedName": "reason",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DismissReason",
+                "printedName": "SetgreetSDK.DismissReason",
+                "usr": "s:11SetgreetSDK13DismissReasonO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK18FlowDismissedEventV6reasonAA13DismissReasonOvp",
+            "mangledName": "$s11SetgreetSDK18FlowDismissedEventV6reasonAA13DismissReasonOvp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DismissReason",
+                    "printedName": "SetgreetSDK.DismissReason",
+                    "usr": "s:11SetgreetSDK13DismissReasonO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK18FlowDismissedEventV6reasonAA13DismissReasonOvg",
+                "mangledName": "$s11SetgreetSDK18FlowDismissedEventV6reasonAA13DismissReasonOvg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "screenIndex",
+            "printedName": "screenIndex",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK18FlowDismissedEventV11screenIndexSivp",
+            "mangledName": "$s11SetgreetSDK18FlowDismissedEventV11screenIndexSivp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK18FlowDismissedEventV11screenIndexSivg",
+                "mangledName": "$s11SetgreetSDK18FlowDismissedEventV11screenIndexSivg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "screenCount",
+            "printedName": "screenCount",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK18FlowDismissedEventV11screenCountSivp",
+            "mangledName": "$s11SetgreetSDK18FlowDismissedEventV11screenCountSivp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK18FlowDismissedEventV11screenCountSivg",
+                "mangledName": "$s11SetgreetSDK18FlowDismissedEventV11screenCountSivg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "durationMs",
+            "printedName": "durationMs",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int64",
+                "printedName": "Swift.Int64",
+                "usr": "s:s5Int64V"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK18FlowDismissedEventV10durationMss5Int64Vvp",
+            "mangledName": "$s11SetgreetSDK18FlowDismissedEventV10durationMss5Int64Vvp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int64",
+                    "printedName": "Swift.Int64",
+                    "usr": "s:s5Int64V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK18FlowDismissedEventV10durationMss5Int64Vvg",
+                "mangledName": "$s11SetgreetSDK18FlowDismissedEventV10durationMss5Int64Vvg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "timestamp",
+            "printedName": "timestamp",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK18FlowDismissedEventV9timestampSdvp",
+            "mangledName": "$s11SetgreetSDK18FlowDismissedEventV9timestampSdvp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK18FlowDismissedEventV9timestampSdvg",
+                "mangledName": "$s11SetgreetSDK18FlowDismissedEventV9timestampSdvg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(flowId:reason:screenIndex:screenCount:durationMs:timestamp:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FlowDismissedEvent",
+                "printedName": "SetgreetSDK.FlowDismissedEvent",
+                "usr": "s:11SetgreetSDK18FlowDismissedEventV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DismissReason",
+                "printedName": "SetgreetSDK.DismissReason",
+                "usr": "s:11SetgreetSDK13DismissReasonO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int64",
+                "printedName": "Swift.Int64",
+                "usr": "s:s5Int64V"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "hasDefaultArg": true,
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11SetgreetSDK18FlowDismissedEventV6flowId6reason11screenIndex0I5Count10durationMs9timestampACSS_AA13DismissReasonOS2is5Int64VSdtcfc",
+            "mangledName": "$s11SetgreetSDK18FlowDismissedEventV6flowId6reason11screenIndex0I5Count10durationMs9timestampACSS_AA13DismissReasonOS2is5Int64VSdtcfc",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:11SetgreetSDK18FlowDismissedEventV",
+        "mangledName": "$s11SetgreetSDK18FlowDismissedEventV",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ScreenChangedEvent",
+        "printedName": "ScreenChangedEvent",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "flowId",
+            "printedName": "flowId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK18ScreenChangedEventV6flowIdSSvp",
+            "mangledName": "$s11SetgreetSDK18ScreenChangedEventV6flowIdSSvp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK18ScreenChangedEventV6flowIdSSvg",
+                "mangledName": "$s11SetgreetSDK18ScreenChangedEventV6flowIdSSvg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "fromIndex",
+            "printedName": "fromIndex",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK18ScreenChangedEventV9fromIndexSivp",
+            "mangledName": "$s11SetgreetSDK18ScreenChangedEventV9fromIndexSivp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK18ScreenChangedEventV9fromIndexSivg",
+                "mangledName": "$s11SetgreetSDK18ScreenChangedEventV9fromIndexSivg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "toIndex",
+            "printedName": "toIndex",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK18ScreenChangedEventV7toIndexSivp",
+            "mangledName": "$s11SetgreetSDK18ScreenChangedEventV7toIndexSivp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK18ScreenChangedEventV7toIndexSivg",
+                "mangledName": "$s11SetgreetSDK18ScreenChangedEventV7toIndexSivg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "screenCount",
+            "printedName": "screenCount",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK18ScreenChangedEventV11screenCountSivp",
+            "mangledName": "$s11SetgreetSDK18ScreenChangedEventV11screenCountSivp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK18ScreenChangedEventV11screenCountSivg",
+                "mangledName": "$s11SetgreetSDK18ScreenChangedEventV11screenCountSivg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "timestamp",
+            "printedName": "timestamp",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK18ScreenChangedEventV9timestampSdvp",
+            "mangledName": "$s11SetgreetSDK18ScreenChangedEventV9timestampSdvp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK18ScreenChangedEventV9timestampSdvg",
+                "mangledName": "$s11SetgreetSDK18ScreenChangedEventV9timestampSdvg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(flowId:fromIndex:toIndex:screenCount:timestamp:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ScreenChangedEvent",
+                "printedName": "SetgreetSDK.ScreenChangedEvent",
+                "usr": "s:11SetgreetSDK18ScreenChangedEventV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "hasDefaultArg": true,
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11SetgreetSDK18ScreenChangedEventV6flowId9fromIndex02toI011screenCount9timestampACSS_S3iSdtcfc",
+            "mangledName": "$s11SetgreetSDK18ScreenChangedEventV6flowId9fromIndex02toI011screenCount9timestampACSS_S3iSdtcfc",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:11SetgreetSDK18ScreenChangedEventV",
+        "mangledName": "$s11SetgreetSDK18ScreenChangedEventV",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ActionTriggeredEvent",
+        "printedName": "ActionTriggeredEvent",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "flowId",
+            "printedName": "flowId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK20ActionTriggeredEventV6flowIdSSvp",
+            "mangledName": "$s11SetgreetSDK20ActionTriggeredEventV6flowIdSSvp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK20ActionTriggeredEventV6flowIdSSvg",
+                "mangledName": "$s11SetgreetSDK20ActionTriggeredEventV6flowIdSSvg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "actionType",
+            "printedName": "actionType",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK20ActionTriggeredEventV10actionTypeSSvp",
+            "mangledName": "$s11SetgreetSDK20ActionTriggeredEventV10actionTypeSSvp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK20ActionTriggeredEventV10actionTypeSSvg",
+                "mangledName": "$s11SetgreetSDK20ActionTriggeredEventV10actionTypeSSvg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "actionName",
+            "printedName": "actionName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK20ActionTriggeredEventV10actionNameSSSgvp",
+            "mangledName": "$s11SetgreetSDK20ActionTriggeredEventV10actionNameSSSgvp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK20ActionTriggeredEventV10actionNameSSSgvg",
+                "mangledName": "$s11SetgreetSDK20ActionTriggeredEventV10actionNameSSSgvg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "screenIndex",
+            "printedName": "screenIndex",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK20ActionTriggeredEventV11screenIndexSivp",
+            "mangledName": "$s11SetgreetSDK20ActionTriggeredEventV11screenIndexSivp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK20ActionTriggeredEventV11screenIndexSivg",
+                "mangledName": "$s11SetgreetSDK20ActionTriggeredEventV11screenIndexSivg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "timestamp",
+            "printedName": "timestamp",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK20ActionTriggeredEventV9timestampSdvp",
+            "mangledName": "$s11SetgreetSDK20ActionTriggeredEventV9timestampSdvp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK20ActionTriggeredEventV9timestampSdvg",
+                "mangledName": "$s11SetgreetSDK20ActionTriggeredEventV9timestampSdvg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(flowId:actionType:actionName:screenIndex:timestamp:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ActionTriggeredEvent",
+                "printedName": "SetgreetSDK.ActionTriggeredEvent",
+                "usr": "s:11SetgreetSDK20ActionTriggeredEventV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "hasDefaultArg": true,
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11SetgreetSDK20ActionTriggeredEventV6flowId10actionType0H4Name11screenIndex9timestampACSS_S2SSgSiSdtcfc",
+            "mangledName": "$s11SetgreetSDK20ActionTriggeredEventV6flowId10actionType0H4Name11screenIndex9timestampACSS_S2SSgSiSdtcfc",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:11SetgreetSDK20ActionTriggeredEventV",
+        "mangledName": "$s11SetgreetSDK20ActionTriggeredEventV",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FlowErrorEvent",
+        "printedName": "FlowErrorEvent",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "flowId",
+            "printedName": "flowId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK14FlowErrorEventV6flowIdSSvp",
+            "mangledName": "$s11SetgreetSDK14FlowErrorEventV6flowIdSSvp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK14FlowErrorEventV6flowIdSSvg",
+                "mangledName": "$s11SetgreetSDK14FlowErrorEventV6flowIdSSvg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "errorType",
+            "printedName": "errorType",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FlowErrorType",
+                "printedName": "SetgreetSDK.FlowErrorType",
+                "usr": "s:11SetgreetSDK13FlowErrorTypeO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK14FlowErrorEventV9errorTypeAA0cdG0Ovp",
+            "mangledName": "$s11SetgreetSDK14FlowErrorEventV9errorTypeAA0cdG0Ovp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FlowErrorType",
+                    "printedName": "SetgreetSDK.FlowErrorType",
+                    "usr": "s:11SetgreetSDK13FlowErrorTypeO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK14FlowErrorEventV9errorTypeAA0cdG0Ovg",
+                "mangledName": "$s11SetgreetSDK14FlowErrorEventV9errorTypeAA0cdG0Ovg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "message",
+            "printedName": "message",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK14FlowErrorEventV7messageSSvp",
+            "mangledName": "$s11SetgreetSDK14FlowErrorEventV7messageSSvp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK14FlowErrorEventV7messageSSvg",
+                "mangledName": "$s11SetgreetSDK14FlowErrorEventV7messageSSvg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "timestamp",
+            "printedName": "timestamp",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK14FlowErrorEventV9timestampSdvp",
+            "mangledName": "$s11SetgreetSDK14FlowErrorEventV9timestampSdvp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK14FlowErrorEventV9timestampSdvg",
+                "mangledName": "$s11SetgreetSDK14FlowErrorEventV9timestampSdvg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(flowId:errorType:message:timestamp:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FlowErrorEvent",
+                "printedName": "SetgreetSDK.FlowErrorEvent",
+                "usr": "s:11SetgreetSDK14FlowErrorEventV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FlowErrorType",
+                "printedName": "SetgreetSDK.FlowErrorType",
+                "usr": "s:11SetgreetSDK13FlowErrorTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "hasDefaultArg": true,
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11SetgreetSDK14FlowErrorEventV6flowId9errorType7message9timestampACSS_AA0cdI0OSSSdtcfc",
+            "mangledName": "$s11SetgreetSDK14FlowErrorEventV6flowId9errorType7message9timestampACSS_AA0cdI0OSSSdtcfc",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:11SetgreetSDK14FlowErrorEventV",
+        "mangledName": "$s11SetgreetSDK14FlowErrorEventV",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DismissReason",
+        "printedName": "DismissReason",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "userClose",
+            "printedName": "userClose",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.DismissReason.Type) -> SetgreetSDK.DismissReason",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DismissReason",
+                    "printedName": "SetgreetSDK.DismissReason",
+                    "usr": "s:11SetgreetSDK13DismissReasonO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.DismissReason.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DismissReason",
+                        "printedName": "SetgreetSDK.DismissReason",
+                        "usr": "s:11SetgreetSDK13DismissReasonO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK13DismissReasonO9userCloseyA2CmF",
+            "mangledName": "$s11SetgreetSDK13DismissReasonO9userCloseyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "userSkip",
+            "printedName": "userSkip",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.DismissReason.Type) -> SetgreetSDK.DismissReason",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DismissReason",
+                    "printedName": "SetgreetSDK.DismissReason",
+                    "usr": "s:11SetgreetSDK13DismissReasonO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.DismissReason.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DismissReason",
+                        "printedName": "SetgreetSDK.DismissReason",
+                        "usr": "s:11SetgreetSDK13DismissReasonO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK13DismissReasonO8userSkipyA2CmF",
+            "mangledName": "$s11SetgreetSDK13DismissReasonO8userSkipyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "backPress",
+            "printedName": "backPress",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.DismissReason.Type) -> SetgreetSDK.DismissReason",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DismissReason",
+                    "printedName": "SetgreetSDK.DismissReason",
+                    "usr": "s:11SetgreetSDK13DismissReasonO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.DismissReason.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DismissReason",
+                        "printedName": "SetgreetSDK.DismissReason",
+                        "usr": "s:11SetgreetSDK13DismissReasonO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK13DismissReasonO9backPressyA2CmF",
+            "mangledName": "$s11SetgreetSDK13DismissReasonO9backPressyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "replaced",
+            "printedName": "replaced",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.DismissReason.Type) -> SetgreetSDK.DismissReason",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DismissReason",
+                    "printedName": "SetgreetSDK.DismissReason",
+                    "usr": "s:11SetgreetSDK13DismissReasonO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.DismissReason.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DismissReason",
+                        "printedName": "SetgreetSDK.DismissReason",
+                        "usr": "s:11SetgreetSDK13DismissReasonO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK13DismissReasonO8replacedyA2CmF",
+            "mangledName": "$s11SetgreetSDK13DismissReasonO8replacedyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "programmatic",
+            "printedName": "programmatic",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.DismissReason.Type) -> SetgreetSDK.DismissReason",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DismissReason",
+                    "printedName": "SetgreetSDK.DismissReason",
+                    "usr": "s:11SetgreetSDK13DismissReasonO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.DismissReason.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DismissReason",
+                        "printedName": "SetgreetSDK.DismissReason",
+                        "usr": "s:11SetgreetSDK13DismissReasonO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK13DismissReasonO12programmaticyA2CmF",
+            "mangledName": "$s11SetgreetSDK13DismissReasonO12programmaticyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SetgreetSDK.DismissReason?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DismissReason",
+                    "printedName": "SetgreetSDK.DismissReason",
+                    "usr": "s:11SetgreetSDK13DismissReasonO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11SetgreetSDK13DismissReasonO8rawValueACSgSS_tcfc",
+            "mangledName": "$s11SetgreetSDK13DismissReasonO8rawValueACSgSS_tcfc",
+            "moduleName": "SetgreetSDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK13DismissReasonO8rawValueSSvp",
+            "mangledName": "$s11SetgreetSDK13DismissReasonO8rawValueSSvp",
+            "moduleName": "SetgreetSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK13DismissReasonO8rawValueSSvg",
+                "mangledName": "$s11SetgreetSDK13DismissReasonO8rawValueSSvg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:11SetgreetSDK13DismissReasonO",
+        "mangledName": "$s11SetgreetSDK13DismissReasonO",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FlowErrorType",
+        "printedName": "FlowErrorType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "network",
+            "printedName": "network",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.FlowErrorType.Type) -> SetgreetSDK.FlowErrorType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FlowErrorType",
+                    "printedName": "SetgreetSDK.FlowErrorType",
+                    "usr": "s:11SetgreetSDK13FlowErrorTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.FlowErrorType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FlowErrorType",
+                        "printedName": "SetgreetSDK.FlowErrorType",
+                        "usr": "s:11SetgreetSDK13FlowErrorTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK13FlowErrorTypeO7networkyA2CmF",
+            "mangledName": "$s11SetgreetSDK13FlowErrorTypeO7networkyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "parse",
+            "printedName": "parse",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.FlowErrorType.Type) -> SetgreetSDK.FlowErrorType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FlowErrorType",
+                    "printedName": "SetgreetSDK.FlowErrorType",
+                    "usr": "s:11SetgreetSDK13FlowErrorTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.FlowErrorType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FlowErrorType",
+                        "printedName": "SetgreetSDK.FlowErrorType",
+                        "usr": "s:11SetgreetSDK13FlowErrorTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK13FlowErrorTypeO5parseyA2CmF",
+            "mangledName": "$s11SetgreetSDK13FlowErrorTypeO5parseyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "display",
+            "printedName": "display",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.FlowErrorType.Type) -> SetgreetSDK.FlowErrorType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FlowErrorType",
+                    "printedName": "SetgreetSDK.FlowErrorType",
+                    "usr": "s:11SetgreetSDK13FlowErrorTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.FlowErrorType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FlowErrorType",
+                        "printedName": "SetgreetSDK.FlowErrorType",
+                        "usr": "s:11SetgreetSDK13FlowErrorTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK13FlowErrorTypeO7displayyA2CmF",
+            "mangledName": "$s11SetgreetSDK13FlowErrorTypeO7displayyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "unknown",
+            "printedName": "unknown",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.FlowErrorType.Type) -> SetgreetSDK.FlowErrorType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FlowErrorType",
+                    "printedName": "SetgreetSDK.FlowErrorType",
+                    "usr": "s:11SetgreetSDK13FlowErrorTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.FlowErrorType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FlowErrorType",
+                        "printedName": "SetgreetSDK.FlowErrorType",
+                        "usr": "s:11SetgreetSDK13FlowErrorTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK13FlowErrorTypeO7unknownyA2CmF",
+            "mangledName": "$s11SetgreetSDK13FlowErrorTypeO7unknownyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SetgreetSDK.FlowErrorType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FlowErrorType",
+                    "printedName": "SetgreetSDK.FlowErrorType",
+                    "usr": "s:11SetgreetSDK13FlowErrorTypeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11SetgreetSDK13FlowErrorTypeO8rawValueACSgSS_tcfc",
+            "mangledName": "$s11SetgreetSDK13FlowErrorTypeO8rawValueACSgSS_tcfc",
+            "moduleName": "SetgreetSDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK13FlowErrorTypeO8rawValueSSvp",
+            "mangledName": "$s11SetgreetSDK13FlowErrorTypeO8rawValueSSvp",
+            "moduleName": "SetgreetSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK13FlowErrorTypeO8rawValueSSvg",
+                "mangledName": "$s11SetgreetSDK13FlowErrorTypeO8rawValueSSvg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:11SetgreetSDK13FlowErrorTypeO",
+        "mangledName": "$s11SetgreetSDK13FlowErrorTypeO",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SetgreetFlowCallbacks",
+        "printedName": "SetgreetFlowCallbacks",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SetgreetFlowCallbacks",
+                "printedName": "SetgreetSDK.SetgreetFlowCallbacks",
+                "usr": "s:11SetgreetSDK0A13FlowCallbacksC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11SetgreetSDK0A13FlowCallbacksCACycfc",
+            "mangledName": "$s11SetgreetSDK0A13FlowCallbacksCACycfc",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "onFlowStarted",
+            "printedName": "onFlowStarted(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DynamicSelf",
+                "printedName": "Self"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.FlowStartedEvent) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FlowStartedEvent",
+                    "printedName": "SetgreetSDK.FlowStartedEvent",
+                    "usr": "s:11SetgreetSDK16FlowStartedEventV"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11SetgreetSDK0A13FlowCallbacksC02onC7StartedyACXDyAA0cF5EventVcF",
+            "mangledName": "$s11SetgreetSDK0A13FlowCallbacksC02onC7StartedyACXDyAA0cF5EventVcF",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onFlowCompleted",
+            "printedName": "onFlowCompleted(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DynamicSelf",
+                "printedName": "Self"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.FlowCompletedEvent) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FlowCompletedEvent",
+                    "printedName": "SetgreetSDK.FlowCompletedEvent",
+                    "usr": "s:11SetgreetSDK18FlowCompletedEventV"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11SetgreetSDK0A13FlowCallbacksC02onC9CompletedyACXDyAA0cF5EventVcF",
+            "mangledName": "$s11SetgreetSDK0A13FlowCallbacksC02onC9CompletedyACXDyAA0cF5EventVcF",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onFlowDismissed",
+            "printedName": "onFlowDismissed(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DynamicSelf",
+                "printedName": "Self"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.FlowDismissedEvent) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FlowDismissedEvent",
+                    "printedName": "SetgreetSDK.FlowDismissedEvent",
+                    "usr": "s:11SetgreetSDK18FlowDismissedEventV"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11SetgreetSDK0A13FlowCallbacksC02onC9DismissedyACXDyAA0cF5EventVcF",
+            "mangledName": "$s11SetgreetSDK0A13FlowCallbacksC02onC9DismissedyACXDyAA0cF5EventVcF",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onScreenChanged",
+            "printedName": "onScreenChanged(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DynamicSelf",
+                "printedName": "Self"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.ScreenChangedEvent) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ScreenChangedEvent",
+                    "printedName": "SetgreetSDK.ScreenChangedEvent",
+                    "usr": "s:11SetgreetSDK18ScreenChangedEventV"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11SetgreetSDK0A13FlowCallbacksC15onScreenChangedyACXDyAA0fG5EventVcF",
+            "mangledName": "$s11SetgreetSDK0A13FlowCallbacksC15onScreenChangedyACXDyAA0fG5EventVcF",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onActionTriggered",
+            "printedName": "onActionTriggered(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DynamicSelf",
+                "printedName": "Self"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.ActionTriggeredEvent) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ActionTriggeredEvent",
+                    "printedName": "SetgreetSDK.ActionTriggeredEvent",
+                    "usr": "s:11SetgreetSDK20ActionTriggeredEventV"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11SetgreetSDK0A13FlowCallbacksC17onActionTriggeredyACXDyAA0fG5EventVcF",
+            "mangledName": "$s11SetgreetSDK0A13FlowCallbacksC17onActionTriggeredyACXDyAA0fG5EventVcF",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onError",
+            "printedName": "onError(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DynamicSelf",
+                "printedName": "Self"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.FlowErrorEvent) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FlowErrorEvent",
+                    "printedName": "SetgreetSDK.FlowErrorEvent",
+                    "usr": "s:11SetgreetSDK14FlowErrorEventV"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11SetgreetSDK0A13FlowCallbacksC7onErroryACXDyAA0cF5EventVcF",
+            "mangledName": "$s11SetgreetSDK0A13FlowCallbacksC7onErroryACXDyAA0cF5EventVcF",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:11SetgreetSDK0A13FlowCallbacksC",
+        "mangledName": "$s11SetgreetSDK0A13FlowCallbacksC",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
         "moduleName": "SetgreetSDK"
       },
       {
@@ -6655,21 +9712,35 @@
     {
       "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Templates\/SetgreetViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 374,
+      "offset": 370,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Templates\/SetgreetViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 491,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Templates\/SetgreetViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 631,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Templates\/SetgreetViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 487,
+      "offset": 740,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Templates\/SetgreetViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 508,
+      "offset": 761,
       "length": 1,
       "value": "0"
     },
@@ -7182,7 +10253,7 @@
       "kind": "StringLiteral",
       "offset": 120,
       "length": 7,
-      "value": "\"0.4.0\""
+      "value": "\"0.5.0\""
     },
     {
       "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/CommonUI Elements\/Indicators\/SetgreetDotIndicator.swift",
@@ -7246,6 +10317,76 @@
       "offset": 412,
       "length": 18,
       "value": "\"com.setgreet.sdk\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 4236,
+      "length": 12,
+      "value": "\"USER_CLOSE\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 4269,
+      "length": 11,
+      "value": "\"USER_SKIP\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 4302,
+      "length": 12,
+      "value": "\"BACK_PRESS\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 4335,
+      "length": 10,
+      "value": "\"REPLACED\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 4370,
+      "length": 14,
+      "value": "\"PROGRAMMATIC\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 4443,
+      "length": 9,
+      "value": "\"NETWORK\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 4470,
+      "length": 7,
+      "value": "\"PARSE\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 4497,
+      "length": 9,
+      "value": "\"DISPLAY\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 4526,
+      "length": 9,
+      "value": "\"UNKNOWN\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/FlowSession.swift",
+      "kind": "IntegerLiteral",
+      "offset": 240,
+      "length": 1,
+      "value": "0"
     }
   ]
 }

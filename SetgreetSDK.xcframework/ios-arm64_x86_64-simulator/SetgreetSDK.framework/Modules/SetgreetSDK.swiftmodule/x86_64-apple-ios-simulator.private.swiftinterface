@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
+// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
 // swift-module-flags: -target x86_64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name SetgreetSDK
-// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
 import CoreGraphics
 import CoreText
 import DeveloperToolsSupport
@@ -90,6 +90,7 @@ extension Foundation.Data {
   public func trackScreen(screenName: Swift.String, properties: [Swift.String : Any]? = nil)
   #endif
   public func resetUser()
+  public func setFlowCallbacks(_ builder: (SetgreetSDK.SetgreetFlowCallbacks) -> Swift.Void)
   @objc deinit
 }
 public struct SetgreetConfig {
@@ -260,6 +261,107 @@ public enum Operation : Swift.String, Swift.Codable {
   public static func loadFontsFromDirectory()
   @objc deinit
 }
+public enum SetgreetFlowEvent {
+  case flowStarted(SetgreetSDK.FlowStartedEvent)
+  case flowCompleted(SetgreetSDK.FlowCompletedEvent)
+  case flowDismissed(SetgreetSDK.FlowDismissedEvent)
+  case screenChanged(SetgreetSDK.ScreenChangedEvent)
+  case actionTriggered(SetgreetSDK.ActionTriggeredEvent)
+  case flowError(SetgreetSDK.FlowErrorEvent)
+  public var flowId: Swift.String {
+    get
+  }
+}
+public struct FlowStartedEvent {
+  public let flowId: Swift.String
+  public let screenCount: Swift.Int
+  public let timestamp: Foundation.TimeInterval
+  public init(flowId: Swift.String, screenCount: Swift.Int, timestamp: Foundation.TimeInterval = Date().timeIntervalSince1970)
+}
+public struct FlowCompletedEvent {
+  public let flowId: Swift.String
+  public let screenCount: Swift.Int
+  public let durationMs: Swift.Int64
+  public let timestamp: Foundation.TimeInterval
+  public init(flowId: Swift.String, screenCount: Swift.Int, durationMs: Swift.Int64, timestamp: Foundation.TimeInterval = Date().timeIntervalSince1970)
+}
+public struct FlowDismissedEvent {
+  public let flowId: Swift.String
+  public let reason: SetgreetSDK.DismissReason
+  public let screenIndex: Swift.Int
+  public let screenCount: Swift.Int
+  public let durationMs: Swift.Int64
+  public let timestamp: Foundation.TimeInterval
+  public init(flowId: Swift.String, reason: SetgreetSDK.DismissReason, screenIndex: Swift.Int, screenCount: Swift.Int, durationMs: Swift.Int64, timestamp: Foundation.TimeInterval = Date().timeIntervalSince1970)
+}
+public struct ScreenChangedEvent {
+  public let flowId: Swift.String
+  public let fromIndex: Swift.Int
+  public let toIndex: Swift.Int
+  public let screenCount: Swift.Int
+  public let timestamp: Foundation.TimeInterval
+  public init(flowId: Swift.String, fromIndex: Swift.Int, toIndex: Swift.Int, screenCount: Swift.Int, timestamp: Foundation.TimeInterval = Date().timeIntervalSince1970)
+}
+public struct ActionTriggeredEvent {
+  public let flowId: Swift.String
+  public let actionType: Swift.String
+  public let actionName: Swift.String?
+  public let screenIndex: Swift.Int
+  public let timestamp: Foundation.TimeInterval
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(flowId: Swift.String, actionType: Swift.String, actionName: Swift.String?, screenIndex: Swift.Int, timestamp: Foundation.TimeInterval = Date().timeIntervalSince1970)
+  #endif
+}
+public struct FlowErrorEvent {
+  public let flowId: Swift.String
+  public let errorType: SetgreetSDK.FlowErrorType
+  public let message: Swift.String
+  public let timestamp: Foundation.TimeInterval
+  public init(flowId: Swift.String, errorType: SetgreetSDK.FlowErrorType, message: Swift.String, timestamp: Foundation.TimeInterval = Date().timeIntervalSince1970)
+}
+public enum DismissReason : Swift.String {
+  case userClose
+  case userSkip
+  case backPress
+  case replaced
+  case programmatic
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum FlowErrorType : Swift.String {
+  case network
+  case parse
+  case display
+  case unknown
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public class SetgreetFlowCallbacks {
+  public init()
+  @discardableResult
+  public func onFlowStarted(_ callback: @escaping (SetgreetSDK.FlowStartedEvent) -> Swift.Void) -> Self
+  @discardableResult
+  public func onFlowCompleted(_ callback: @escaping (SetgreetSDK.FlowCompletedEvent) -> Swift.Void) -> Self
+  @discardableResult
+  public func onFlowDismissed(_ callback: @escaping (SetgreetSDK.FlowDismissedEvent) -> Swift.Void) -> Self
+  @discardableResult
+  public func onScreenChanged(_ callback: @escaping (SetgreetSDK.ScreenChangedEvent) -> Swift.Void) -> Self
+  @discardableResult
+  public func onActionTriggered(_ callback: @escaping (SetgreetSDK.ActionTriggeredEvent) -> Swift.Void) -> Self
+  @discardableResult
+  public func onError(_ callback: @escaping (SetgreetSDK.FlowErrorEvent) -> Swift.Void) -> Self
+  @objc deinit
+}
 extension SetgreetSDK.HTTPMethod : Swift.Equatable {}
 extension SetgreetSDK.HTTPMethod : Swift.Hashable {}
 extension SetgreetSDK.HTTPMethod : Swift.RawRepresentable {}
@@ -275,3 +377,9 @@ extension SetgreetSDK.EventPropertyKey : Swift.RawRepresentable {}
 extension SetgreetSDK.Operation : Swift.Equatable {}
 extension SetgreetSDK.Operation : Swift.Hashable {}
 extension SetgreetSDK.Operation : Swift.RawRepresentable {}
+extension SetgreetSDK.DismissReason : Swift.Equatable {}
+extension SetgreetSDK.DismissReason : Swift.Hashable {}
+extension SetgreetSDK.DismissReason : Swift.RawRepresentable {}
+extension SetgreetSDK.FlowErrorType : Swift.Equatable {}
+extension SetgreetSDK.FlowErrorType : Swift.Hashable {}
+extension SetgreetSDK.FlowErrorType : Swift.RawRepresentable {}

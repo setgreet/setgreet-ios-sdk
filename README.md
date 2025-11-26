@@ -140,3 +140,59 @@ Setgreet.shared.trackEvent(
     ]
 )
 ```
+
+### Flow Callbacks
+
+Listen to flow lifecycle events to track user interactions and flow completion.
+
+**Available Callbacks:**
+
+- `onFlowStarted`: Called when a flow begins displaying
+- `onFlowCompleted`: Called when user completes all screens in the flow
+- `onFlowDismissed`: Called when user dismisses the flow before completion
+- `onScreenChanged`: Called when user navigates between screens
+- `onActionTriggered`: Called when user interacts with buttons
+- `onError`: Called when an error occurs during flow operations
+
+**Example:**
+
+```swift
+Setgreet.shared.setFlowCallbacks { callbacks in
+    callbacks
+        .onFlowStarted { event in
+            print("Flow started: \(event.flowId)")
+            print("Total screens: \(event.screenCount)")
+        }
+        .onFlowCompleted { event in
+            print("Flow completed: \(event.flowId)")
+            print("Duration: \(event.durationMs)ms")
+        }
+        .onFlowDismissed { event in
+            print("Flow dismissed: \(event.flowId)")
+            print("Reason: \(event.reason.rawValue)")
+            print("Screen: \(event.screenIndex + 1)/\(event.screenCount)")
+        }
+        .onScreenChanged { event in
+            print("Screen changed: \(event.fromIndex + 1) -> \(event.toIndex + 1)")
+        }
+        .onActionTriggered { event in
+            print("Action: \(event.actionType)")
+            if let name = event.actionName {
+                print("Custom event name: \(name)")
+            }
+        }
+        .onError { event in
+            print("Error: \(event.errorType.rawValue) - \(event.message)")
+        }
+}
+```
+
+**Dismiss Reasons:**
+
+| Reason | Description |
+|--------|-------------|
+| `USER_CLOSE` | User tapped the close button |
+| `USER_SKIP` | User tapped the skip button |
+| `BACK_PRESS` | User pressed the back button (hardware) |
+| `REPLACED` | Flow was replaced by a higher priority flow |
+| `PROGRAMMATIC` | Flow was dismissed programmatically |
