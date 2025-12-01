@@ -6302,6 +6302,59 @@
           },
           {
             "kind": "Var",
+            "name": "permissionRequested",
+            "printedName": "permissionRequested",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.SetgreetFlowEvent.Type) -> (SetgreetSDK.PermissionRequestedEvent) -> SetgreetSDK.SetgreetFlowEvent",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SetgreetSDK.PermissionRequestedEvent) -> SetgreetSDK.SetgreetFlowEvent",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SetgreetFlowEvent",
+                        "printedName": "SetgreetSDK.SetgreetFlowEvent",
+                        "usr": "s:11SetgreetSDK0A9FlowEventO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PermissionRequestedEvent",
+                        "printedName": "SetgreetSDK.PermissionRequestedEvent",
+                        "usr": "s:11SetgreetSDK24PermissionRequestedEventV"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.SetgreetFlowEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SetgreetFlowEvent",
+                        "printedName": "SetgreetSDK.SetgreetFlowEvent",
+                        "usr": "s:11SetgreetSDK0A9FlowEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK0A9FlowEventO19permissionRequestedyAcA010PermissionfD0VcACmF",
+            "mangledName": "$s11SetgreetSDK0A9FlowEventO19permissionRequestedyAcA010PermissionfD0VcACmF",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "flowError",
             "printedName": "flowError",
             "children": [
@@ -8721,6 +8774,310 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "PermissionRequestedEvent",
+        "printedName": "PermissionRequestedEvent",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "flowId",
+            "printedName": "flowId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK24PermissionRequestedEventV6flowIdSSvp",
+            "mangledName": "$s11SetgreetSDK24PermissionRequestedEventV6flowIdSSvp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK24PermissionRequestedEventV6flowIdSSvg",
+                "mangledName": "$s11SetgreetSDK24PermissionRequestedEventV6flowIdSSvg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "permissionType",
+            "printedName": "permissionType",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK24PermissionRequestedEventV14permissionTypeSSvp",
+            "mangledName": "$s11SetgreetSDK24PermissionRequestedEventV14permissionTypeSSvp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK24PermissionRequestedEventV14permissionTypeSSvg",
+                "mangledName": "$s11SetgreetSDK24PermissionRequestedEventV14permissionTypeSSvg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "result",
+            "printedName": "result",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK24PermissionRequestedEventV6resultSSvp",
+            "mangledName": "$s11SetgreetSDK24PermissionRequestedEventV6resultSSvp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK24PermissionRequestedEventV6resultSSvg",
+                "mangledName": "$s11SetgreetSDK24PermissionRequestedEventV6resultSSvg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "screenIndex",
+            "printedName": "screenIndex",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK24PermissionRequestedEventV11screenIndexSivp",
+            "mangledName": "$s11SetgreetSDK24PermissionRequestedEventV11screenIndexSivp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK24PermissionRequestedEventV11screenIndexSivg",
+                "mangledName": "$s11SetgreetSDK24PermissionRequestedEventV11screenIndexSivg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "timestamp",
+            "printedName": "timestamp",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK24PermissionRequestedEventV9timestampSdvp",
+            "mangledName": "$s11SetgreetSDK24PermissionRequestedEventV9timestampSdvp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK24PermissionRequestedEventV9timestampSdvg",
+                "mangledName": "$s11SetgreetSDK24PermissionRequestedEventV9timestampSdvg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(flowId:permissionType:result:screenIndex:timestamp:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PermissionRequestedEvent",
+                "printedName": "SetgreetSDK.PermissionRequestedEvent",
+                "usr": "s:11SetgreetSDK24PermissionRequestedEventV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "hasDefaultArg": true,
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11SetgreetSDK24PermissionRequestedEventV6flowId14permissionType6result11screenIndex9timestampACSS_S2SSiSdtcfc",
+            "mangledName": "$s11SetgreetSDK24PermissionRequestedEventV6flowId14permissionType6result11screenIndex9timestampACSS_S2SSiSdtcfc",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:11SetgreetSDK24PermissionRequestedEventV",
+        "mangledName": "$s11SetgreetSDK24PermissionRequestedEventV",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -8953,6 +9310,45 @@
           },
           {
             "kind": "Function",
+            "name": "onPermissionRequested",
+            "printedName": "onPermissionRequested(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DynamicSelf",
+                "printedName": "Self"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.PermissionRequestedEvent) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PermissionRequestedEvent",
+                    "printedName": "SetgreetSDK.PermissionRequestedEvent",
+                    "usr": "s:11SetgreetSDK24PermissionRequestedEventV"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11SetgreetSDK0A13FlowCallbacksC21onPermissionRequestedyACXDyAA0fG5EventVcF",
+            "mangledName": "$s11SetgreetSDK0A13FlowCallbacksC21onPermissionRequestedyACXDyAA0fG5EventVcF",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "onError",
             "printedName": "onError(_:)",
             "children": [
@@ -9034,6 +9430,57 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UserNotifications",
+        "printedName": "UserNotifications",
+        "declKind": "Import",
+        "moduleName": "SetgreetSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "SetgreetSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreLocation",
+        "printedName": "CoreLocation",
+        "declKind": "Import",
+        "moduleName": "SetgreetSDK"
       },
       {
         "kind": "Import",
@@ -10018,6 +10465,27 @@
       "value": "\"SKIP\""
     },
     {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetButtonActionType.swift",
+      "kind": "StringLiteral",
+      "offset": 299,
+      "length": 25,
+      "value": "\"NOTIFICATION_PERMISSION\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetButtonActionType.swift",
+      "kind": "StringLiteral",
+      "offset": 355,
+      "length": 21,
+      "value": "\"LOCATION_PERMISSION\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetButtonActionType.swift",
+      "kind": "StringLiteral",
+      "offset": 405,
+      "length": 19,
+      "value": "\"CAMERA_PERMISSION\""
+    },
+    {
       "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
       "kind": "StringLiteral",
       "offset": 270,
@@ -10253,7 +10721,7 @@
       "kind": "StringLiteral",
       "offset": 120,
       "length": 7,
-      "value": "\"0.5.0\""
+      "value": "\"0.6.0\""
     },
     {
       "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/CommonUI Elements\/Indicators\/SetgreetDotIndicator.swift",
@@ -10321,63 +10789,63 @@
     {
       "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
       "kind": "StringLiteral",
-      "offset": 4236,
+      "offset": 4383,
       "length": 12,
       "value": "\"USER_CLOSE\""
     },
     {
       "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
       "kind": "StringLiteral",
-      "offset": 4269,
+      "offset": 4416,
       "length": 11,
       "value": "\"USER_SKIP\""
     },
     {
       "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
       "kind": "StringLiteral",
-      "offset": 4302,
+      "offset": 4449,
       "length": 12,
       "value": "\"BACK_PRESS\""
     },
     {
       "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
       "kind": "StringLiteral",
-      "offset": 4335,
+      "offset": 4482,
       "length": 10,
       "value": "\"REPLACED\""
     },
     {
       "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
       "kind": "StringLiteral",
-      "offset": 4370,
+      "offset": 4517,
       "length": 14,
       "value": "\"PROGRAMMATIC\""
     },
     {
       "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
       "kind": "StringLiteral",
-      "offset": 4443,
+      "offset": 4590,
       "length": 9,
       "value": "\"NETWORK\""
     },
     {
       "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
       "kind": "StringLiteral",
-      "offset": 4470,
+      "offset": 4617,
       "length": 7,
       "value": "\"PARSE\""
     },
     {
       "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
       "kind": "StringLiteral",
-      "offset": 4497,
+      "offset": 4644,
       "length": 9,
       "value": "\"DISPLAY\""
     },
     {
       "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
       "kind": "StringLiteral",
-      "offset": 4526,
+      "offset": 4673,
       "length": 9,
       "value": "\"UNKNOWN\""
     },
@@ -10387,6 +10855,62 @@
       "offset": 240,
       "length": 1,
       "value": "0"
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Permission\/PermissionResult.swift",
+      "kind": "StringLiteral",
+      "offset": 210,
+      "length": 9,
+      "value": "\"granted\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Permission\/PermissionResult.swift",
+      "kind": "StringLiteral",
+      "offset": 238,
+      "length": 8,
+      "value": "\"denied\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Permission\/PermissionResult.swift",
+      "kind": "StringLiteral",
+      "offset": 276,
+      "length": 20,
+      "value": "\"permanently_denied\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Permission\/PermissionResult.swift",
+      "kind": "StringLiteral",
+      "offset": 323,
+      "length": 17,
+      "value": "\"already_granted\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Permission\/PermissionResult.swift",
+      "kind": "StringLiteral",
+      "offset": 364,
+      "length": 14,
+      "value": "\"not_required\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Permission\/PermissionType.swift",
+      "kind": "StringLiteral",
+      "offset": 203,
+      "length": 14,
+      "value": "\"notification\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Permission\/PermissionType.swift",
+      "kind": "StringLiteral",
+      "offset": 238,
+      "length": 10,
+      "value": "\"location\""
+    },
+    {
+      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Permission\/PermissionType.swift",
+      "kind": "StringLiteral",
+      "offset": 267,
+      "length": 8,
+      "value": "\"camera\""
     }
   ]
 }
