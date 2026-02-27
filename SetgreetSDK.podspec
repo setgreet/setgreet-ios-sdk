@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "SetgreetSDK"
-  spec.version      = "0.6.0"
+  spec.version      = "1.0.0"
   spec.summary      = "Setgreet iOS SDK allows you to show Setgreet flows in your iOS app."
   spec.description  = <<-DESC
                       Setgreet iOS SDK is a powerful framework that enables you to integrate Setgreet flows 
@@ -15,10 +15,7 @@ Pod::Spec.new do |spec|
   
   spec.vendored_frameworks = "SetgreetSDK.xcframework"
   spec.source_files = "SetgreetSDK.xcframework/**/*.h"
-  
-  # Include font files from the simulator framework to avoid duplicates
-  spec.resources = "SetgreetSDK.xcframework/ios-arm64_x86_64-simulator/SetgreetSDK.framework/*.ttf", "SetgreetSDK.xcframework/ios-arm64_x86_64-simulator/SetgreetSDK.framework/*.otf"
-  
+
   # Preserve the framework structure
   spec.preserve_paths = "SetgreetSDK.xcframework"
   

@@ -1,12 +1,17 @@
 # Setgreet iOS SDK
 
+[![CocoaPods](https://img.shields.io/cocoapods/v/SetgreetSDK.svg?label=CocoaPods)](https://cocoapods.org/pods/SetgreetSDK)
+
 Setgreet iOS SDK allows you to show Setgreet flows in your iOS app.
 
 ## Requirements
+
 - iOS 15.0 and above
 
 ## Installation
+
 ### Swift Package Manager
+
 You can add Setgreet to your project using Swift Package Manager. Add the following to your `Package.swift` file:
 
 ```swift
@@ -16,19 +21,29 @@ dependencies: [
 ```
 
 Or you can add it directly within Xcode:
+
 1. Open your project in Xcode.
 2. Go to `File` > `Add Packages`.
 3. Enter the URL: `https://github.com/setgreet/setgreet-ios-sdk.git`.
 4. Select the version rule and click `Add Package`.
 
+### CocoaPods
+
+Add to your `Podfile`:
+
+```ruby
+pod 'SetgreetSDK', '~> 1.0.0'
+```
+
 ## Usage
 
 ### Initialization
+
 - Setgreet App Key: You can find your App Key at [Apps page](https://app.setgreet.com/apps).
 
 Initialize the SDK in your AppDelegate / SceneDelegate or anywhere you want:
 
-```Swift
+```swift
 import UIKit
 import SetgreetSDK
 
@@ -38,14 +53,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+
         Setgreet.shared.initialize(
             appKey: "APP_KEY",
             config: SetgreetConfig(
                 debugMode: false
             )
         )
-        
+
         return true
     }
 }
@@ -79,7 +94,7 @@ Setgreet.shared.identifyUser(
 
 ### Reset User
 
-Clears user identification data and resets user session state for logout scenarios.
+Clears user identification data and resets user session state for logout scenarios. A new anonymous ID is generated after reset.
 
 **Example:**
 
@@ -87,13 +102,22 @@ Clears user identification data and resets user session state for logout scenari
 Setgreet.shared.resetUser()
 ```
 
+### Anonymous ID
+
+The SDK automatically generates an anonymous ID on initialization, which persists across app launches. When `identifyUser` is called, the anonymous identity is merged with the identified user. A new anonymous ID is generated when `resetUser()` is called.
+
+```swift
+let anonId = Setgreet.shared.anonymousId
+```
+
 ### Show Flow
+
 - Setgreet Flow ID: The flow ID is a unique identifier for the flow you want to show. You can get the flow ID from the flow's URL at the web app. For example, if the flow URL is `https://app.setgreet.com/flows/1234`, the flow ID is `1234`.
 
 To show the Setgreet flow, call the following method:
 
-```Swift
-Setgreet.shared.showFlow(flowId = "FLOW_ID")
+```swift
+Setgreet.shared.showFlow(flowId: "FLOW_ID")
 ```
 
 ### Track Screen
@@ -141,7 +165,7 @@ Setgreet.shared.trackEvent(
 )
 ```
 
-### Flow Callbacks
+## Flow Callbacks
 
 Listen to flow lifecycle events to track user interactions and flow completion.
 
@@ -191,33 +215,63 @@ Setgreet.shared.setFlowCallbacks { callbacks in
 }
 ```
 
-**Dismiss Reasons:**
+### Event Types
 
-| Reason | Description |
-|--------|-------------|
-| `userClose` | User tapped the close button |
-| `userSkip` | User tapped the skip button |
-| `backPress` | User pressed the back button (hardware) |
-| `replaced` | Flow was replaced by a higher priority flow |
-| `programmatic` | Flow was dismissed programmatically |
+| Event                 | Description                      | Key Properties                    |
+| --------------------- | -------------------------------- | --------------------------------- |
+| `FlowStarted`         | Flow begins presenting           | `flowId`, `screenCount`           |
+| `FlowCompleted`       | User completes the flow          | `flowId`, `durationMs`            |
+| `FlowDismissed`       | Flow dismissed before completion | `flowId`, `reason`, `screenIndex` |
+| `ScreenChanged`       | User navigates between screens   | `fromIndex`, `toIndex`            |
+| `ActionTriggered`     | Button action triggered          | `actionType`, `actionName`        |
+| `PermissionRequested` | Permission request completed     | `permissionType`, `result`        |
+| `FlowError`           | Error during flow operations     | `errorType`, `message`            |
 
-**Permission Types:**
+### Dismiss Reasons
 
-| Type | Description |
-|------|-------------|
+| Reason         | Description                                 |
+| -------------- | ------------------------------------------- |
+| `userClose`    | User tapped the close button                |
+| `userSkip`     | User tapped the skip button                 |
+| `backPress`    | User pressed the back button (hardware)     |
+| `swipeDown`    | User swiped down to dismiss                 |
+| `replaced`     | Flow was replaced by a higher priority flow |
+| `programmatic` | Flow was dismissed programmatically         |
+| `completed`    | Flow reached its end node                   |
+
+### Action Types
+
+| Action                    | Description                     |
+| ------------------------- | ------------------------------- |
+| `next`                    | Navigate to next screen         |
+| `previous`                | Navigate to previous screen     |
+| `skip`                    | Skip the current screen         |
+| `close`                   | Close/dismiss the flow          |
+| `url`                     | Open a URL                      |
+| `notification_permission` | Request notification permission |
+| `location_permission`     | Request location permission     |
+| `camera_permission`       | Request camera permission       |
+| `request_review`          | Request app store review        |
+| `share`                   | Open share sheet                |
+| `open_settings`           | Open app settings               |
+
+### Permission Types
+
+| Type           | Description                  |
+| -------------- | ---------------------------- |
 | `notification` | Push notification permission |
-| `location` | Location access permission |
-| `camera` | Camera access permission |
+| `location`     | Location access permission   |
+| `camera`       | Camera access permission     |
 
-**Permission Results:**
+### Permission Results
 
-| Result | Description |
-|--------|-------------|
-| `granted` | Permission was granted by the user |
-| `denied` | Permission was denied by the user |
-| `permanently_denied` | Permission was permanently denied |
-| `already_granted` | Permission was already granted |
-| `not_required` | Permission request was not required |
+| Result               | Description                         |
+| -------------------- | ----------------------------------- |
+| `granted`            | Permission was granted by the user  |
+| `denied`             | Permission was denied by the user   |
+| `permanently_denied` | Permission was permanently denied   |
+| `already_granted`    | Permission was already granted      |
+| `not_required`       | Permission request was not required |
 
 ## Permissions Setup
 
@@ -234,3 +288,18 @@ If your flows use permission buttons, add the required keys to your `Info.plist`
 ```
 
 Note: Notification permission doesn't require an Info.plist key.
+
+## Configuration
+
+### SetgreetConfig
+
+```swift
+SetgreetConfig(
+    debugMode: Bool     // Enable debug logging (default: false)
+)
+```
+
+### Operation Types
+
+- `.create`: Create a new user record
+- `.update`: Update an existing user record

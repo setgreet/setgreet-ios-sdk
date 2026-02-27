@@ -1,24 +1,30 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
+// swift-compiler-version: Apple Swift version 6.2.4 effective-5.10 (swiftlang-6.2.4.1.4 clang-1700.6.4.2)
 // swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name SetgreetSDK
-// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.4
 import AVFoundation
+import AVKit
+import Combine
 import CoreGraphics
 import CoreLocation
 import CoreText
 import DeveloperToolsSupport
 import Foundation
+import Lottie
 @_exported import SetgreetSDK
+import StoreKit
 import Swift
 import SwiftUI
 import UIKit
 import UserNotifications
+import WebKit
+import _AVKit_SwiftUI
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+import _WebKit_SwiftUI
 import os.log
 import os
-
 public protocol SetgreetNetworkInterface {
   #if compiler(>=5.3) && $NonescapableTypes
   func request<R>(for endpoint: any SetgreetSDK.Endpoint, completion: @escaping (Swift.Result<R, SetgreetSDK.NetworkDomainError>) -> Swift.Void) where R : Swift.Decodable, R : Swift.Encodable
@@ -27,7 +33,6 @@ public protocol SetgreetNetworkInterface {
   func request<R>(for endpoint: any SetgreetSDK.Endpoint) async throws -> R? where R : Swift.Decodable, R : Swift.Encodable
   #endif
 }
-
 public enum NetworkDomainError : Swift.Error {
   case statusCode(_: Swift.Int? = nil)
   case decodingError
@@ -76,8 +81,17 @@ extension Foundation.Data {
   }
   #endif
 }
+@_hasMissingDesignatedInitializers final public class SetgreetViewModel : Foundation.ObservableObject {
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
 @_hasMissingDesignatedInitializers public class Setgreet {
   public static let shared: SetgreetSDK.Setgreet
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var anonymousId: Swift.String? {
+    get
+  }
+  #endif
   public func initialize(appKey: Swift.String, config: SetgreetSDK.SetgreetConfig)
   #if compiler(>=5.3) && $NonescapableTypes
   public func identifyUser(userId: Swift.String, attributes: [Swift.String : Any]? = nil, operation: SetgreetSDK.Operation = .create, locale: Swift.String? = nil)
@@ -86,6 +100,7 @@ extension Foundation.Data {
   public func identifyUser(userId: Swift.String, attributes: [Swift.String : Any]? = nil, locale: Swift.String? = nil)
   #endif
   public func showFlow(flowId: Swift.String)
+  @_spi(SetgreetInternal) public func showSharedPreview(token: Swift.String)
   #if compiler(>=5.3) && $NonescapableTypes
   public func trackEvent(eventName: Swift.String, properties: [Swift.String : Any]? = nil)
   #endif
@@ -94,18 +109,15 @@ extension Foundation.Data {
   #endif
   public func resetUser()
   public func setFlowCallbacks(_ builder: (SetgreetSDK.SetgreetFlowCallbacks) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func setFlowListener(_ listener: (any SetgreetSDK.SetgreetFlowListener)?)
+  #endif
   @objc deinit
 }
-public struct SetgreetConfig {
-  public let debugMode: Swift.Bool
-  public init(debugMode: Swift.Bool)
-}
-
-public enum TemplateType : Swift.String {
-  case TEMPLATE_1
-  case TEMPLATE_2
-  case TEMPLATE_3
-  case TEMPLATE_4
+public enum EvaluationMode : Swift.String {
+  case clientSide
+  case serverSide
+  case hybrid
   #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
   #endif
@@ -113,6 +125,32 @@ public enum TemplateType : Swift.String {
   public var rawValue: Swift.String {
     get
   }
+}
+public struct SetgreetConfig {
+  public let debugMode: Swift.Bool
+  public let evaluationMode: SetgreetSDK.EvaluationMode
+  public init(debugMode: Swift.Bool, evaluationMode: SetgreetSDK.EvaluationMode = .clientSide)
+}
+public enum SetgreetContentScaleType : Swift.String, Swift.Codable {
+  case scaleToFill
+  case scaleToFit
+  case none
+  public init(from decoder: any Swift.Decoder) throws
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+
+public struct SetgreetScreenBackgroundModel : Swift.Codable {
+  public let color: Swift.String?
+  public let imageUrl: Swift.String?
+  public let contentScale: SetgreetSDK.SetgreetContentScaleType?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct SetgreetFlowModel : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
@@ -191,6 +229,9 @@ public enum EventType : Swift.String, Swift.CaseIterable {
   case nextPage
   case previousPage
   case skipPage
+  case conditionEvaluated
+  case pathSelected
+  case branchNavigation
   case formSubmit
   case formValidation
   case fieldChange
@@ -242,13 +283,481 @@ public enum EventPropertyKey : Swift.String, Swift.CaseIterable {
     get
   }
 }
-
-@_hasMissingDesignatedInitializers public class DynamicFontLoader {
-  public static func loadFont(from urlString: Swift.String, fontName: Swift.String, completion: @escaping (Swift.Bool) -> Swift.Void)
+@_hasMissingDesignatedInitializers final public class DynamicFontLoader {
+  public static let shared: SetgreetSDK.DynamicFontLoader
   @objc deinit
 }
 public var setgreetVersion: Swift.String
-
+@_Concurrency.MainActor @preconcurrency public struct DynamicScreenView : SwiftUICore.View {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public init(components: [SetgreetSDK.ComponentInstance], userData: [Swift.String : Any] = [:], eventData: [Swift.String : Any] = [:], screenId: Swift.String = "", background: SetgreetSDK.SetgreetScreenBackgroundModel? = nil, isContentScrollable: Swift.Bool = true, forceScrollable: Swift.Bool = false)
+  #endif
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s11SetgreetSDK17DynamicScreenViewV4bodyQrvp", 0) __
+}
+public struct ScreenWithComponents : Swift.Codable, Swift.Identifiable, Swift.Hashable {
+  public let id: Swift.String
+  public let orderId: Swift.Int
+  public let name: Swift.String?
+  public let components: [SetgreetSDK.ComponentInstance]
+  public let background: SetgreetSDK.SetgreetScreenBackgroundModel?
+  public let presentationStyle: SetgreetSDK.PresentationStyle?
+  public let bottomSheetConfig: SetgreetSDK.BottomSheetConfig?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(id: Swift.String, orderId: Swift.Int, name: Swift.String? = nil, components: [SetgreetSDK.ComponentInstance] = [], background: SetgreetSDK.SetgreetScreenBackgroundModel? = nil, presentationStyle: SetgreetSDK.PresentationStyle? = nil, bottomSheetConfig: SetgreetSDK.BottomSheetConfig? = nil)
+  #endif
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (lhs: SetgreetSDK.ScreenWithComponents, rhs: SetgreetSDK.ScreenWithComponents) -> Swift.Bool
+  public typealias ID = Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct FlowNode : Swift.Codable, Swift.Identifiable {
+  public let id: Swift.String
+  public let type: SetgreetSDK.FlowNodeType
+  public let position: SetgreetSDK.NodePosition?
+  public let data: SetgreetSDK.FlowNodeData
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(id: Swift.String, type: SetgreetSDK.FlowNodeType, position: SetgreetSDK.NodePosition? = nil, data: SetgreetSDK.FlowNodeData = FlowNodeData())
+  #endif
+  public init(from decoder: any Swift.Decoder) throws
+  public typealias ID = Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public enum FlowNodeType : Swift.String, Swift.Codable {
+  case screen
+  case condition
+  case branch
+  case start
+  case end
+  case unknown
+  public init(from decoder: any Swift.Decoder) throws
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct NodePosition : Swift.Codable {
+  public let x: CoreFoundation.CGFloat
+  public let y: CoreFoundation.CGFloat
+  public init(x: CoreFoundation.CGFloat, y: CoreFoundation.CGFloat)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct SaveToAttributeConfig : Swift.Codable {
+  public let enabled: Swift.Bool
+  public let attributeName: Swift.String
+  public init(enabled: Swift.Bool = false, attributeName: Swift.String = "")
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct FlowNodeData : Swift.Codable {
+  public let screenId: Swift.String?
+  public let trigger: SetgreetSDK.FlowTrigger?
+  public let label: Swift.String?
+  public let componentId: Swift.String?
+  public let componentType: Swift.String?
+  public let saveToAttribute: SetgreetSDK.SaveToAttributeConfig?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(screenId: Swift.String? = nil, trigger: SetgreetSDK.FlowTrigger? = nil, label: Swift.String? = nil, componentId: Swift.String? = nil, componentType: Swift.String? = nil, saveToAttribute: SetgreetSDK.SaveToAttributeConfig? = nil)
+  #endif
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct FlowEdge : Swift.Codable, Swift.Identifiable {
+  public let id: Swift.String
+  public let source: Swift.String
+  public let target: Swift.String
+  public let sourceHandle: Swift.String?
+  public let data: SetgreetSDK.FlowEdgeData?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(id: Swift.String, source: Swift.String, target: Swift.String, sourceHandle: Swift.String? = nil, data: SetgreetSDK.FlowEdgeData? = nil)
+  #endif
+  public typealias ID = Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct FlowEdgeData : Swift.Codable {
+  public let label: Swift.String?
+  public let conditionResult: Swift.Bool?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(label: Swift.String? = nil, conditionResult: Swift.Bool? = nil)
+  #endif
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct FlowTrigger : Swift.Codable {
+  public let `operator`: SetgreetSDK.TriggerOperator
+  public let conditions: [SetgreetSDK.TriggerCondition]
+  public init(operator: SetgreetSDK.TriggerOperator, conditions: [SetgreetSDK.TriggerCondition])
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum TriggerOperator : Swift.String, Swift.Codable {
+  case AND
+  case OR
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct TriggerCondition : Swift.Codable {
+  public let type: Swift.String
+  public let key: Swift.String?
+  public let keyType: Swift.String?
+  public let `operator`: Swift.String?
+  public let value: SetgreetSDK.AnyCodable?
+  public let dataType: Swift.String?
+  public let conditions: [SetgreetSDK.TriggerCondition]?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(type: Swift.String, key: Swift.String? = nil, keyType: Swift.String? = nil, operator: Swift.String? = nil, value: SetgreetSDK.AnyCodable? = nil, dataType: Swift.String? = nil, conditions: [SetgreetSDK.TriggerCondition]? = nil)
+  #endif
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ButtonComponent : SetgreetSDK.SetgreetComponentProtocol {
+  public static var componentType: Swift.String {
+    get
+  }
+  public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
+}
+public struct TextComponent : SetgreetSDK.SetgreetComponentProtocol {
+  public static var componentType: Swift.String {
+    get
+  }
+  public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
+}
+public struct ContainerComponent : SetgreetSDK.SetgreetComponentProtocol {
+  public static var componentType: Swift.String {
+    get
+  }
+  public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
+}
+public struct ProgressIndicatorComponent : SetgreetSDK.SetgreetComponentProtocol {
+  public static var componentType: Swift.String {
+    get
+  }
+  public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
+}
+public struct MediaComponent : SetgreetSDK.SetgreetComponentProtocol {
+  public static var componentType: Swift.String {
+    get
+  }
+  public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
+}
+public struct MediaFrameComponent : SetgreetSDK.SetgreetComponentProtocol {
+  public static var componentType: Swift.String {
+    get
+  }
+  public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
+}
+public struct ComponentInstance : Swift.Codable, Swift.Identifiable, Swift.Hashable {
+  public let id: Swift.String
+  public let type: Swift.String
+  public let props: [Swift.String : SetgreetSDK.AnyCodable]
+  public let bindings: [SetgreetSDK.VariableBinding]?
+  public let position: SetgreetSDK.ComponentPosition?
+  public let size: SetgreetSDK.ComponentSize?
+  public let children: [SetgreetSDK.ComponentInstance]?
+  public let conditions: [SetgreetSDK.ComponentCondition]?
+  public let order: Swift.Int
+  public let visible: Swift.Bool?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(id: Swift.String, type: Swift.String, props: [Swift.String : SetgreetSDK.AnyCodable] = [:], bindings: [SetgreetSDK.VariableBinding]? = nil, position: SetgreetSDK.ComponentPosition? = nil, size: SetgreetSDK.ComponentSize? = nil, children: [SetgreetSDK.ComponentInstance]? = nil, conditions: [SetgreetSDK.ComponentCondition]? = nil, order: Swift.Int = 0, visible: Swift.Bool? = true)
+  #endif
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (lhs: SetgreetSDK.ComponentInstance, rhs: SetgreetSDK.ComponentInstance) -> Swift.Bool
+  public typealias ID = Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ComponentPosition : Swift.Codable {
+  public let x: CoreFoundation.CGFloat
+  public let y: CoreFoundation.CGFloat
+  public init(x: CoreFoundation.CGFloat, y: CoreFoundation.CGFloat)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ComponentSize : Swift.Codable {
+  public let width: SetgreetSDK.DimensionValue
+  public let height: SetgreetSDK.DimensionValue
+  public init(width: SetgreetSDK.DimensionValue, height: SetgreetSDK.DimensionValue)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum DimensionValue : Swift.Codable {
+  case fixed(CoreFoundation.CGFloat)
+  case percentage(CoreFoundation.CGFloat)
+  case auto
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct VariableBinding : Swift.Codable {
+  public let type: SetgreetSDK.BindingType
+  public let path: Swift.String?
+  public let fallback: SetgreetSDK.AnyCodable?
+  public let format: SetgreetSDK.BindingFormat?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(type: SetgreetSDK.BindingType, path: Swift.String? = nil, fallback: SetgreetSDK.AnyCodable? = nil, format: SetgreetSDK.BindingFormat? = nil)
+  #endif
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum BindingType : Swift.String, Swift.Codable {
+  case `static`
+  case userAttribute
+  case eventProperty
+  case computed
+  case screenData
+  public init(from decoder: any Swift.Decoder) throws
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum BindingFormat : Swift.String, Swift.Codable {
+  case currency
+  case date
+  case percentage
+  case number
+  case uppercase
+  case lowercase
+  public init(from decoder: any Swift.Decoder) throws
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct ComponentCondition : Swift.Codable {
+  public let field: Swift.String
+  public let source: SetgreetSDK.ConditionSource
+  public let `operator`: SetgreetSDK.ConditionOperator
+  public let value: SetgreetSDK.AnyCodable
+  public init(field: Swift.String, source: SetgreetSDK.ConditionSource, operator: SetgreetSDK.ConditionOperator, value: SetgreetSDK.AnyCodable)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum ConditionSource : Swift.String, Swift.Codable {
+  case userAttribute
+  case eventProperty
+  public init(from decoder: any Swift.Decoder) throws
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ConditionOperator : Swift.String, Swift.Codable {
+  case equals
+  case notEquals
+  case contains
+  case greaterThan
+  case lessThan
+  case exists
+  case notExists
+  public init(from decoder: any Swift.Decoder) throws
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct AnyCodable : Swift.Codable, Swift.Hashable {
+  public let value: Any
+  public init(_ value: Any)
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (lhs: SetgreetSDK.AnyCodable, rhs: SetgreetSDK.AnyCodable) -> Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var stringValue: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var intValue: Swift.Int? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var doubleValue: Swift.Double? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var boolValue: Swift.Bool? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var arrayValue: [Any]? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var dictionaryValue: [Swift.String : Any]? {
+    get
+  }
+  #endif
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol SetgreetComponentProtocol {
+  static var componentType: Swift.String { get }
+  @SwiftUICore.ViewBuilder static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
+}
+public struct ComponentContext {
+  public let userData: [Swift.String : Any]
+  public let eventData: [Swift.String : Any]
+  weak public var viewModel: SetgreetSDK.SetgreetViewModel?
+  public let screenId: Swift.String
+  public let screenIndex: Swift.Int
+  public let screenCount: Swift.Int
+  public let safeAreaInsets: SwiftUICore.EdgeInsets
+  public let parentAppliesSafeAreaPadding: Swift.Bool
+  public let useTransparentComponentDefaults: Swift.Bool
+  public let screenSize: CoreFoundation.CGSize
+  public let isInsideScrollView: Swift.Bool
+  public let isInsideAutoWidthContainer: Swift.Bool
+  public let isFlexChildInRow: Swift.Bool
+  public let hasDynamicProgress: Swift.Bool
+  public let dynamicCurrentStep: Swift.Int?
+  public let dynamicTotalSteps: Swift.Int?
+  public var onNext: (() -> Swift.Void)?
+  public var onPrevious: (() -> Swift.Void)?
+  public var onSkip: (() -> Swift.Void)?
+  public var onDismiss: (() -> Swift.Void)?
+  public var onRemindLater: (() -> Swift.Void)?
+  public var onUrl: ((Swift.String) -> Swift.Void)?
+  public var onDeeplink: ((Swift.String) -> Swift.Void)?
+  public var onRequestNotificationPermission: ((@escaping () -> Swift.Void) -> Swift.Void)?
+  public var onRequestLocationPermission: ((@escaping () -> Swift.Void) -> Swift.Void)?
+  public var onRequestCameraPermission: ((@escaping () -> Swift.Void) -> Swift.Void)?
+  public var onRequestReview: (() -> Swift.Void)?
+  public var onShare: ((Swift.String) -> Swift.Void)?
+  public var onOpenSettings: (() -> Swift.Void)?
+  public var onTrackEvent: ((Swift.String, [Swift.String : Any]?) -> Swift.Void)?
+  public var onCustom: (([Swift.String : Any]?) -> Swift.Void)?
+  public var onInputValueChanged: ((Swift.String, Swift.String, Any) -> Swift.Void)?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(userData: [Swift.String : Any] = [:], eventData: [Swift.String : Any] = [:], viewModel: SetgreetSDK.SetgreetViewModel? = nil, screenId: Swift.String = "", screenIndex: Swift.Int = 0, screenCount: Swift.Int = 1, safeAreaInsets: SwiftUICore.EdgeInsets = .init(), parentAppliesSafeAreaPadding: Swift.Bool = true, useTransparentComponentDefaults: Swift.Bool = false, screenSize: CoreFoundation.CGSize = .zero, isInsideScrollView: Swift.Bool = false, isInsideAutoWidthContainer: Swift.Bool = false, isFlexChildInRow: Swift.Bool = false, hasDynamicProgress: Swift.Bool = false, dynamicCurrentStep: Swift.Int? = nil, dynamicTotalSteps: Swift.Int? = nil, onNext: (() -> Swift.Void)? = nil, onPrevious: (() -> Swift.Void)? = nil, onSkip: (() -> Swift.Void)? = nil, onDismiss: (() -> Swift.Void)? = nil, onRemindLater: (() -> Swift.Void)? = nil, onUrl: ((Swift.String) -> Swift.Void)? = nil, onDeeplink: ((Swift.String) -> Swift.Void)? = nil, onRequestNotificationPermission: ((@escaping () -> Swift.Void) -> Swift.Void)? = nil, onRequestLocationPermission: ((@escaping () -> Swift.Void) -> Swift.Void)? = nil, onRequestCameraPermission: ((@escaping () -> Swift.Void) -> Swift.Void)? = nil, onRequestReview: (() -> Swift.Void)? = nil, onShare: ((Swift.String) -> Swift.Void)? = nil, onOpenSettings: (() -> Swift.Void)? = nil, onTrackEvent: ((Swift.String, [Swift.String : Any]?) -> Swift.Void)? = nil, onCustom: (([Swift.String : Any]?) -> Swift.Void)? = nil, onInputValueChanged: ((Swift.String, Swift.String, Any) -> Swift.Void)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func with(isInsideScrollView: Swift.Bool? = nil, isInsideAutoWidthContainer: Swift.Bool? = nil, isFlexChildInRow: Swift.Bool? = nil, parentAppliesSafeAreaPadding: Swift.Bool? = nil, useTransparentComponentDefaults: Swift.Bool? = nil) -> SetgreetSDK.ComponentContext
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func evaluateBinding(_ binding: SetgreetSDK.VariableBinding?) -> Any?
+  #endif
+  public func resolveBinding(_ binding: SetgreetSDK.VariableBinding) -> Swift.String
+  public func resolveBindingTemplate(_ template: Swift.String) -> Swift.String
+  public func getString(from props: [Swift.String : SetgreetSDK.AnyCodable], key: Swift.String, default defaultValue: Swift.String = "") -> Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func formatValue(_ value: Any?, format: SetgreetSDK.BindingFormat?) -> Swift.String
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func evaluateConditions(_ conditions: [SetgreetSDK.ComponentCondition]?) -> Swift.Bool
+  #endif
+}
+@_hasMissingDesignatedInitializers final public class ComponentRegistry {
+  public static let shared: SetgreetSDK.ComponentRegistry
+  final public func register<T>(_ component: T.Type) where T : SetgreetSDK.SetgreetComponentProtocol
+  final public func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> some SwiftUICore.View
+  
+  final public func renderComponents(_ instances: [SetgreetSDK.ComponentInstance], context: SetgreetSDK.ComponentContext) -> some SwiftUICore.View
+  
+  @objc deinit
+}
+public struct BackgroundComponent : SetgreetSDK.SetgreetComponentProtocol {
+  public static var componentType: Swift.String {
+    get
+  }
+  public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
+}
+public struct TextInputComponent : SetgreetSDK.SetgreetComponentProtocol {
+  public static var componentType: Swift.String {
+    get
+  }
+  public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
+}
+public struct DropdownComponent : SetgreetSDK.SetgreetComponentProtocol {
+  public static var componentType: Swift.String {
+    get
+  }
+  public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
+}
+public struct CheckboxComponent : SetgreetSDK.SetgreetComponentProtocol {
+  public static var componentType: Swift.String {
+    get
+  }
+  public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
+}
+public struct RadioGroupComponent : SetgreetSDK.SetgreetComponentProtocol {
+  public static var componentType: Swift.String {
+    get
+  }
+  public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
+}
+public struct RatingComponent : SetgreetSDK.SetgreetComponentProtocol {
+  public static var componentType: Swift.String {
+    get
+  }
+  public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
+}
+public struct NPSComponent : SetgreetSDK.SetgreetComponentProtocol {
+  public static var componentType: Swift.String {
+    get
+  }
+  public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
+}
+public struct CountdownTimerComponent : SetgreetSDK.SetgreetComponentProtocol {
+  public static var componentType: Swift.String {
+    get
+  }
+  public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
+}
+public struct CarouselComponent : SetgreetSDK.SetgreetComponentProtocol {
+  public static var componentType: Swift.String {
+    get
+  }
+  public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
+}
+public struct LottieComponent : SetgreetSDK.SetgreetComponentProtocol {
+  public static var componentType: Swift.String {
+    get
+  }
+  public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
+}
+public struct IconButtonComponent : SetgreetSDK.SetgreetComponentProtocol {
+  public static var componentType: Swift.String {
+    get
+  }
+  public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
+}
 public enum Operation : Swift.String, Swift.Codable {
   case create
   case update
@@ -272,6 +781,9 @@ public enum SetgreetFlowEvent {
   case actionTriggered(SetgreetSDK.ActionTriggeredEvent)
   case permissionRequested(SetgreetSDK.PermissionRequestedEvent)
   case flowError(SetgreetSDK.FlowErrorEvent)
+  case trackEvent(SetgreetSDK.TrackEventEvent)
+  case customAction(SetgreetSDK.CustomActionEvent)
+  case remindLater(SetgreetSDK.RemindLaterEvent)
   public var flowId: Swift.String {
     get
   }
@@ -327,8 +839,11 @@ public enum DismissReason : Swift.String {
   case userClose
   case userSkip
   case backPress
+  case swipeDown
   case replaced
   case programmatic
+  case remindLater
+  case completed
   #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
   #endif
@@ -358,6 +873,31 @@ public struct PermissionRequestedEvent {
   public let timestamp: Foundation.TimeInterval
   public init(flowId: Swift.String, permissionType: Swift.String, result: Swift.String, screenIndex: Swift.Int, timestamp: Foundation.TimeInterval = Date().timeIntervalSince1970)
 }
+public struct TrackEventEvent {
+  public let flowId: Swift.String
+  public let eventName: Swift.String
+  public let properties: [Swift.String : Any]?
+  public let screenIndex: Swift.Int
+  public let timestamp: Foundation.TimeInterval
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(flowId: Swift.String, eventName: Swift.String, properties: [Swift.String : Any]?, screenIndex: Swift.Int, timestamp: Foundation.TimeInterval = Date().timeIntervalSince1970)
+  #endif
+}
+public struct CustomActionEvent {
+  public let flowId: Swift.String
+  public let data: [Swift.String : Any]?
+  public let screenIndex: Swift.Int
+  public let timestamp: Foundation.TimeInterval
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(flowId: Swift.String, data: [Swift.String : Any]?, screenIndex: Swift.Int, timestamp: Foundation.TimeInterval = Date().timeIntervalSince1970)
+  #endif
+}
+public struct RemindLaterEvent {
+  public let flowId: Swift.String
+  public let screenIndex: Swift.Int
+  public let timestamp: Foundation.TimeInterval
+  public init(flowId: Swift.String, screenIndex: Swift.Int, timestamp: Foundation.TimeInterval = Date().timeIntervalSince1970)
+}
 public class SetgreetFlowCallbacks {
   public init()
   @discardableResult
@@ -374,20 +914,591 @@ public class SetgreetFlowCallbacks {
   public func onPermissionRequested(_ callback: @escaping (SetgreetSDK.PermissionRequestedEvent) -> Swift.Void) -> Self
   @discardableResult
   public func onError(_ callback: @escaping (SetgreetSDK.FlowErrorEvent) -> Swift.Void) -> Self
+  @discardableResult
+  public func onTrackEvent(_ callback: @escaping (SetgreetSDK.TrackEventEvent) -> Swift.Void) -> Self
+  @discardableResult
+  public func onCustomAction(_ callback: @escaping (SetgreetSDK.CustomActionEvent) -> Swift.Void) -> Self
+  @discardableResult
+  public func onRemindLater(_ callback: @escaping (SetgreetSDK.RemindLaterEvent) -> Swift.Void) -> Self
   @objc deinit
+}
+public protocol SetgreetFlowListener : AnyObject {
+  func onFlowEvent(_ event: SetgreetSDK.SetgreetFlowEvent)
+}
+public enum ComponentEventType : Swift.String, Swift.Codable {
+  case componentView
+  case componentClick
+  case componentInput
+  case componentRating
+  case componentNps
+  case componentVideo
+  case componentCarousel
+  case componentCustom
+  case componentFeedback
+  case conditionEvaluated
+  case pathSelected
+  case branchDecision
+  case screenTransition
+  case flowStarted
+  case flowCompleted
+  case flowDismissed
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct ComponentAnalyticsEvent : Swift.Codable {
+  public let eventType: SetgreetSDK.ComponentEventType
+  public let flowId: Swift.String
+  public let screenId: Swift.String
+  public let componentId: Swift.String
+  public let componentType: Swift.String
+  public let componentVersion: Swift.String?
+  public let properties: [Swift.String : SetgreetSDK.AnyCodable]?
+  public let endUserId: Swift.String
+  public let sessionId: Swift.String?
+  public let timestamp: Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(eventType: SetgreetSDK.ComponentEventType, flowId: Swift.String, screenId: Swift.String, componentId: Swift.String, componentType: Swift.String, componentVersion: Swift.String? = nil, properties: [Swift.String : SetgreetSDK.AnyCodable]? = nil, endUserId: Swift.String, sessionId: Swift.String? = nil, timestamp: Foundation.Date = Date())
+  #endif
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers final public class ComponentAnalytics {
+  public static let shared: SetgreetSDK.ComponentAnalytics
+  final public var isEnabled: Swift.Bool
+  final public var maxBatchSize: Swift.Int
+  final public var flushInterval: Swift.Double
+  @objc deinit
+  final public func startSession(flowId: Swift.String)
+  final public func endSession()
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func trackView(componentId: Swift.String, componentType: Swift.String, screenId: Swift.String, properties: [Swift.String : Any]? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func trackClick(componentId: Swift.String, componentType: Swift.String, screenId: Swift.String, action: Swift.String? = nil, properties: [Swift.String : Any]? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func trackInput(componentId: Swift.String, componentType: Swift.String, screenId: Swift.String, inputType: Swift.String? = nil, hasValue: Swift.Bool = false, value: Any? = nil, properties: [Swift.String : Any]? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func trackRating(componentId: Swift.String, screenId: Swift.String, value: Swift.Int, maxValue: Swift.Int = 5, properties: [Swift.String : Any]? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func trackNPS(componentId: Swift.String, screenId: Swift.String, score: Swift.Int, properties: [Swift.String : Any]? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func trackVideo(componentId: Swift.String, screenId: Swift.String, action: Swift.String, progress: Swift.Double? = nil, properties: [Swift.String : Any]? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func trackCarousel(componentId: Swift.String, screenId: Swift.String, action: Swift.String, slideIndex: Swift.Int? = nil, properties: [Swift.String : Any]? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func trackFeedback(componentId: Swift.String, screenId: Swift.String, type: Swift.String, value: Any, index: Swift.Int? = nil, properties: [Swift.String : Any]? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func trackCustom(componentId: Swift.String, componentType: Swift.String, screenId: Swift.String, properties: [Swift.String : Any]? = nil)
+  #endif
+  final public func flush()
+}
+public struct StackComponent : SetgreetSDK.SetgreetComponentProtocol {
+  public static var componentType: Swift.String {
+    get
+  }
+  public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
+}
+public struct CardComponent : SetgreetSDK.SetgreetComponentProtocol {
+  public static var componentType: Swift.String {
+    get
+  }
+  public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
+}
+public struct SpacerComponent : SetgreetSDK.SetgreetComponentProtocol {
+  public static var componentType: Swift.String {
+    get
+  }
+  public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
+}
+public struct DividerComponent : SetgreetSDK.SetgreetComponentProtocol {
+  public static var componentType: Swift.String {
+    get
+  }
+  public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
+}
+public struct EmojiFeedbackComponent : SetgreetSDK.SetgreetComponentProtocol {
+  public static var componentType: Swift.String {
+    get
+  }
+  public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
+}
+public struct ThumbsComponent : SetgreetSDK.SetgreetComponentProtocol {
+  public static var componentType: Swift.String {
+    get
+  }
+  public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
+}
+public struct VideoComponent : SetgreetSDK.SetgreetComponentProtocol {
+  public static var componentType: Swift.String {
+    get
+  }
+  public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
+}
+public struct PurchaseCountComponent : SetgreetSDK.SetgreetComponentProtocol {
+  public static var componentType: Swift.String {
+    get
+  }
+  public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
+}
+public struct ReviewCarouselComponent : SetgreetSDK.SetgreetComponentProtocol {
+  public static var componentType: Swift.String {
+    get
+  }
+  public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
+}
+public struct TestimonialComponent : SetgreetSDK.SetgreetComponentProtocol {
+  public static var componentType: Swift.String {
+    get
+  }
+  public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
+}
+public struct UserAvatarsComponent : SetgreetSDK.SetgreetComponentProtocol {
+  public static var componentType: Swift.String {
+    get
+  }
+  public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
+}
+public enum PresentationStyle : Swift.String, Swift.Codable {
+  case fullscreen
+  case bottomSheet
+  public init(from decoder: any Swift.Decoder) throws
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct BottomSheetConfig : Swift.Codable {
+  public let showHandle: Swift.Bool?
+  public let handleHeight: CoreFoundation.CGFloat?
+  public let handleWidth: CoreFoundation.CGFloat?
+  public let handleColor: Swift.String?
+  public let cornerRadius: CoreFoundation.CGFloat?
+  public let cornerRadiusTopLeft: CoreFoundation.CGFloat?
+  public let cornerRadiusTopRight: CoreFoundation.CGFloat?
+  public let backgroundColor: Swift.String?
+  public let isDraggable: Swift.Bool?
+  public let isDismissibleOnSwipeDown: Swift.Bool?
+  public let isDismissibleOnOverlayTap: Swift.Bool?
+  public let showBackgroundOverlay: Swift.Bool?
+  public let overlayColor: Swift.String?
+  public let overlayOpacity: Swift.Double?
+  public let initialHeight: SetgreetSDK.BottomSheetInitialHeight?
+  public let animationDuration: Swift.Int?
+  public let isContentScrollable: Swift.Bool?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(showHandle: Swift.Bool? = true, handleHeight: CoreFoundation.CGFloat? = 4, handleWidth: CoreFoundation.CGFloat? = 36, handleColor: Swift.String? = "#D1D5DB", cornerRadius: CoreFoundation.CGFloat? = 20, cornerRadiusTopLeft: CoreFoundation.CGFloat? = nil, cornerRadiusTopRight: CoreFoundation.CGFloat? = nil, backgroundColor: Swift.String? = "#FFFFFF", isDraggable: Swift.Bool? = true, isDismissibleOnSwipeDown: Swift.Bool? = true, isDismissibleOnOverlayTap: Swift.Bool? = true, showBackgroundOverlay: Swift.Bool? = true, overlayColor: Swift.String? = "#000000", overlayOpacity: Swift.Double? = 0.3, initialHeight: SetgreetSDK.BottomSheetInitialHeight? = .medium, animationDuration: Swift.Int? = 300, isContentScrollable: Swift.Bool? = true)
+  #endif
+  public var effectiveCornerRadiusTL: CoreFoundation.CGFloat {
+    get
+  }
+  public var effectiveCornerRadiusTR: CoreFoundation.CGFloat {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum BottomSheetInitialHeight : Swift.String, Swift.Codable {
+  case small
+  case medium
+  case large
+  case full
+  public init(from decoder: any Swift.Decoder) throws
+  public var fraction: CoreFoundation.CGFloat {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers final public class FlowAnalyticsCollector {
+  public static let shared: SetgreetSDK.FlowAnalyticsCollector
+  final public var maxBatchSize: Swift.Int
+  final public var flushInterval: Swift.Double
+  @objc deinit
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func startFlow(flowId: Swift.String, sessionId: Swift.String? = nil, totalScreens: Swift.Int)
+  #endif
+  final public func endFlow(reason: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func trackFlowStarted(flowId: Swift.String, sessionId: Swift.String?, startScreenId: Swift.String)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func trackFlowCompleted(finalScreenId: Swift.String, reason: Swift.String? = nil)
+  #endif
+  final public func trackFlowDismissed(screenId: Swift.String, reason: SetgreetSDK.DismissReason)
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func trackScreenTransition(fromScreenId: Swift.String?, toScreenId: Swift.String, direction: Swift.String = "forward", nodeId: Swift.String? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func trackConditionEvaluated(nodeId: Swift.String, screenId: Swift.String? = nil, result: Swift.Bool)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func trackPathSelected(nodeId: Swift.String, screenId: Swift.String? = nil, selectedPath: Swift.String)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func trackBranchDecision(componentId: Swift.String, componentType: Swift.String, screenId: Swift.String? = nil, branchNodeId: Swift.String, selectedValue: Swift.String)
+  #endif
+  final public var progressFraction: Swift.Double {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func getCurrentScreenId() -> Swift.String?
+  #endif
+  final public func flush()
+}
+public struct ComponentInteraction {
+  public let componentId: Swift.String
+  public let componentType: Swift.String
+  public let inputName: Swift.String
+  public let value: Any
+  public let timestamp: Foundation.Date
+  public init(componentId: Swift.String, componentType: Swift.String, inputName: Swift.String, value: Any, timestamp: Foundation.Date = Date())
+}
+@_hasMissingDesignatedInitializers final public class ScreenInteractionCollector {
+  public static let shared: SetgreetSDK.ScreenInteractionCollector
+  final public func onScreenEnter(screenId: Swift.String)
+  final public func onScreenExit()
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func recordInteraction(screenId: Swift.String? = nil, componentId: Swift.String, componentType: Swift.String, inputName: Swift.String, value: Any)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func flushCurrentScreen(flowId: Swift.String, screenId: Swift.String? = nil, endUserId: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func processBranchNodes(flowId: Swift.String, screenId: Swift.String, branchNodes: [SetgreetSDK.FlowNode], endUserId: Swift.String?)
+  #endif
+  final public var currentDwellTimeMs: Swift.Int64 {
+    get
+  }
+  final public var currentInteractionCount: Swift.Int {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func clearScreen(_ screenId: Swift.String? = nil)
+  #endif
+  final public func clearAll()
+  @objc deinit
+}
+public enum InteractionType : Swift.String {
+  case click
+  case input
+  case scroll
+  case selection
+  case toggle
+  case feedback
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+final public class FlowNavigationEngine {
+  final public var evaluationMode: SetgreetSDK.EvaluationMode
+  final public var onPathSelected: ((_ nodeId: Swift.String, _ conditionResult: Swift.Bool?, _ properties: [Swift.String : Any]) -> Swift.Void)?
+  final public var onConditionEvaluated: ((_ nodeId: Swift.String, _ result: Swift.Bool, _ properties: [Swift.String : Any]) -> Swift.Void)?
+  final public var onScreenWillChange: ((_ fromNodeId: Swift.String, _ toNodeId: Swift.String) -> Swift.Void)?
+  final public var currentStep: Swift.Int? {
+    get
+  }
+  final public var totalSteps: Swift.Int? {
+    get
+  }
+  public init()
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(network: (any SetgreetSDK.SetgreetNetworkInterface)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func configure(flowId: Swift.String? = nil, nodes: [SetgreetSDK.FlowNode]?, edges: [SetgreetSDK.FlowEdge]?, screens: [SetgreetSDK.ScreenWithComponents], userData: [Swift.String : Any] = [:], eventData: [Swift.String : Any] = [:], startNodeId: Swift.String? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func setNetwork(_ network: (any SetgreetSDK.SetgreetNetworkInterface)?)
+  #endif
+  final public func updateUserData(_ data: [Swift.String : Any])
+  final public func updateEventData(_ data: [Swift.String : Any])
+  final public func setSelectedBranchValue(componentId: Swift.String, value: Swift.String)
+  final public var isConditionalFlow: Swift.Bool {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func getStartNode() -> SetgreetSDK.FlowNode?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func getNode(id: Swift.String) -> SetgreetSDK.FlowNode?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func getScreen(for nodeId: Swift.String) -> SetgreetSDK.ScreenWithComponents?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func getScreenIndex(for nodeId: Swift.String) -> Swift.Int?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func getFirstScreen() -> (screen: SetgreetSDK.ScreenWithComponents, nodeId: Swift.String)?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func getNextNodeId(from nodeId: Swift.String) -> Swift.String?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func navigateNext() -> (screen: SetgreetSDK.ScreenWithComponents, nodeId: Swift.String, screenIndex: Swift.Int)?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func navigateBack() -> (screen: SetgreetSDK.ScreenWithComponents, nodeId: Swift.String, screenIndex: Swift.Int)?
+  #endif
+  final public func getBranchNodesForScreen(_ screenNodeId: Swift.String) -> [SetgreetSDK.FlowNode]
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public var currentNode: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func navigateNextAsync() async -> (screen: SetgreetSDK.ScreenWithComponents, nodeId: Swift.String, screenIndex: Swift.Int)?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func getFirstScreenAsync() async -> (screen: SetgreetSDK.ScreenWithComponents, nodeId: Swift.String)?
+  #endif
+  final public func hasNext() -> Swift.Bool
+  final public func hasBack() -> Swift.Bool
+  final public func setCurrentNode(_ nodeId: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func calculateProgressSteps(currentScreenId: Swift.String?, selectedBranchValueOverride: Swift.String? = nil) -> (currentStep: Swift.Int, totalSteps: Swift.Int)
+  #endif
+  final public func evaluateTrigger(_ trigger: SetgreetSDK.FlowTrigger) -> Swift.Bool
+  @objc deinit
+}
+public struct EdgeInsetsValue {
+  public let top: CoreFoundation.CGFloat
+  public let leading: CoreFoundation.CGFloat
+  public let bottom: CoreFoundation.CGFloat
+  public let trailing: CoreFoundation.CGFloat
+  public init(top: CoreFoundation.CGFloat = 0, leading: CoreFoundation.CGFloat = 0, bottom: CoreFoundation.CGFloat = 0, trailing: CoreFoundation.CGFloat = 0)
+  public init(all: CoreFoundation.CGFloat)
+  public init(horizontal: CoreFoundation.CGFloat = 0, vertical: CoreFoundation.CGFloat = 0)
+  public var edgeInsets: SwiftUICore.EdgeInsets {
+    get
+  }
+}
+public struct ShadowValue {
+  public let color: SwiftUICore.Color
+  public let radius: CoreFoundation.CGFloat
+  public let x: CoreFoundation.CGFloat
+  public let y: CoreFoundation.CGFloat
+  public init(color: SwiftUICore.Color = .black.opacity(0.2), radius: CoreFoundation.CGFloat = 4, x: CoreFoundation.CGFloat = 0, y: CoreFoundation.CGFloat = 2)
+}
+public struct BorderValue {
+  public let width: CoreFoundation.CGFloat
+  public let color: SwiftUICore.Color
+  public let cornerRadius: CoreFoundation.CGFloat
+  public init(width: CoreFoundation.CGFloat = 0, color: SwiftUICore.Color = .clear, cornerRadius: CoreFoundation.CGFloat = 0)
+}
+public struct FontValue {
+  public let size: CoreFoundation.CGFloat
+  public let weight: SwiftUICore.Font.Weight
+  public let family: Swift.String?
+  public let italic: Swift.Bool
+  public let letterSpacing: CoreFoundation.CGFloat?
+  public let lineHeight: CoreFoundation.CGFloat?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(size: CoreFoundation.CGFloat = 16, weight: SwiftUICore.Font.Weight = .regular, family: Swift.String? = nil, italic: Swift.Bool = false, letterSpacing: CoreFoundation.CGFloat? = nil, lineHeight: CoreFoundation.CGFloat? = nil)
+  #endif
+  public var font: SwiftUICore.Font {
+    get
+  }
+}
+public struct GradientValue {
+  public enum GradientType {
+    case linear(startPoint: SwiftUICore.UnitPoint, endPoint: SwiftUICore.UnitPoint)
+    case radial(center: SwiftUICore.UnitPoint, startRadius: CoreFoundation.CGFloat, endRadius: CoreFoundation.CGFloat)
+    case angular(center: SwiftUICore.UnitPoint)
+  }
+  public let type: SetgreetSDK.GradientValue.GradientType
+  public let colors: [SwiftUICore.Color]
+  public let stops: [CoreFoundation.CGFloat]?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(type: SetgreetSDK.GradientValue.GradientType, colors: [SwiftUICore.Color], stops: [CoreFoundation.CGFloat]? = nil)
+  #endif
+  public var gradient: some SwiftUICore.View {
+    get
+  }
+}
+public enum StyleParser {
+  public static func parseEdgeInsets(from props: [Swift.String : SetgreetSDK.AnyCodable], prefix: Swift.String) -> SetgreetSDK.EdgeInsetsValue
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func parseShadow(from props: [Swift.String : SetgreetSDK.AnyCodable]) -> SetgreetSDK.ShadowValue?
+  #endif
+  public static func parseBorder(from props: [Swift.String : SetgreetSDK.AnyCodable]) -> SetgreetSDK.BorderValue
+  #if compiler(>=5.3) && $NonescapableTypes
+  @available(iOS 16.0, *)
+  public static func parseCornerRadii(from props: [Swift.String : SetgreetSDK.AnyCodable]) -> SwiftUICore.RectangleCornerRadii?
+  #endif
+  public static func parseFont(from props: [Swift.String : SetgreetSDK.AnyCodable]) -> SetgreetSDK.FontValue
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func parseFontWeight(_ value: Swift.String?) -> SwiftUICore.Font.Weight
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func parseColor(_ value: Swift.String?, default defaultColor: SwiftUICore.Color = .clear) -> SwiftUICore.Color
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func parseGradient(from props: [Swift.String : SetgreetSDK.AnyCodable]) -> SetgreetSDK.GradientValue?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func parseDimension(_ value: Any?, relativeTo: CoreFoundation.CGFloat? = nil) -> CoreFoundation.CGFloat?
+  #endif
+}
+extension SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public func padding(_ insets: SetgreetSDK.EdgeInsetsValue) -> some SwiftUICore.View
+  
+  @_Concurrency.MainActor @preconcurrency public func applyMargin(from props: [Swift.String : SetgreetSDK.AnyCodable]) -> some SwiftUICore.View
+  
+  @_Concurrency.MainActor @preconcurrency public func applyPadding(from props: [Swift.String : SetgreetSDK.AnyCodable]) -> some SwiftUICore.View
+  
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public func shadow(_ shadow: SetgreetSDK.ShadowValue?) -> some SwiftUICore.View
+  
+  #endif
+  @_Concurrency.MainActor @preconcurrency public func border(_ border: SetgreetSDK.BorderValue) -> some SwiftUICore.View
+  
+  @_Concurrency.MainActor @preconcurrency public func applyComponentStyle(from props: [Swift.String : SetgreetSDK.AnyCodable]) -> some SwiftUICore.View
+  
+}
+extension SetgreetSDK.ComponentContext {
+  public func parseEdgeInsets(_ props: [Swift.String : SetgreetSDK.AnyCodable], prefix: Swift.String) -> SetgreetSDK.EdgeInsetsValue
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func parseShadow(_ props: [Swift.String : SetgreetSDK.AnyCodable]) -> SetgreetSDK.ShadowValue?
+  #endif
+  public func parseBorder(_ props: [Swift.String : SetgreetSDK.AnyCodable]) -> SetgreetSDK.BorderValue
+  public func parseFont(_ props: [Swift.String : SetgreetSDK.AnyCodable]) -> SetgreetSDK.FontValue
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func parseColor(_ value: Swift.String?, default defaultColor: SwiftUICore.Color = .clear) -> SwiftUICore.Color
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func parseGradient(_ props: [Swift.String : SetgreetSDK.AnyCodable]) -> SetgreetSDK.GradientValue?
+  #endif
+}
+public struct BadgeComponent : SetgreetSDK.SetgreetComponentProtocol {
+  public static var componentType: Swift.String {
+    get
+  }
+  public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
+}
+public struct ProgressBarComponent : SetgreetSDK.SetgreetComponentProtocol {
+  public static var componentType: Swift.String {
+    get
+  }
+  public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
+}
+public struct TooltipComponent : SetgreetSDK.SetgreetComponentProtocol {
+  public static var componentType: Swift.String {
+    get
+  }
+  public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
+}
+public struct AccordionComponent : SetgreetSDK.SetgreetComponentProtocol {
+  public static var componentType: Swift.String {
+    get
+  }
+  public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
+}
+public struct SliderComponent : SetgreetSDK.SetgreetComponentProtocol {
+  public static var componentType: Swift.String {
+    get
+  }
+  public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
+}
+public struct MultiSelectComponent : SetgreetSDK.SetgreetComponentProtocol {
+  public static var componentType: Swift.String {
+    get
+  }
+  public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
+}
+public struct DatePickerComponent : SetgreetSDK.SetgreetComponentProtocol {
+  public static var componentType: Swift.String {
+    get
+  }
+  public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
+}
+public struct ModalTriggerComponent : SetgreetSDK.SetgreetComponentProtocol {
+  public static var componentType: Swift.String {
+    get
+  }
+  public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
+}
+public enum VideoSource {
+  case direct(url: Swift.String)
+  case youtube(videoId: Swift.String, embedUrl: Swift.String)
+  case vimeo(videoId: Swift.String, embedUrl: Swift.String)
+}
+public struct VideoURLParser {
+  public static func parse(_ urlString: Swift.String, autoplay: Swift.Bool = false, loop: Swift.Bool = false, muted: Swift.Bool = false, controls: Swift.Bool = true) -> SetgreetSDK.VideoSource
+  public static func isEmbedVideo(_ urlString: Swift.String) -> Swift.Bool
+}
+@_Concurrency.MainActor @preconcurrency public struct SetgreetWebView : SwiftUI.UIViewRepresentable {
+  @_Concurrency.MainActor @preconcurrency public init(url: Swift.String, scrollEnabled: Swift.Bool = true)
+  @_Concurrency.MainActor @preconcurrency public func makeUIView(context: SetgreetSDK.SetgreetWebView.Context) -> WebKit.WKWebView
+  @_Concurrency.MainActor @preconcurrency public func updateUIView(_ webView: WebKit.WKWebView, context: SetgreetSDK.SetgreetWebView.Context)
+  public typealias Body = Swift.Never
+  public typealias Coordinator = Swift.Void
+  public typealias UIViewType = WebKit.WKWebView
+}
+public struct WebViewComponent : SetgreetSDK.SetgreetComponentProtocol {
+  public static var componentType: Swift.String {
+    get
+  }
+  public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
 }
 extension SetgreetSDK.HTTPMethod : Swift.Equatable {}
 extension SetgreetSDK.HTTPMethod : Swift.Hashable {}
 extension SetgreetSDK.HTTPMethod : Swift.RawRepresentable {}
-extension SetgreetSDK.TemplateType : Swift.Equatable {}
-extension SetgreetSDK.TemplateType : Swift.Hashable {}
-extension SetgreetSDK.TemplateType : Swift.RawRepresentable {}
+extension SetgreetSDK.EvaluationMode : Swift.Equatable {}
+extension SetgreetSDK.EvaluationMode : Swift.Hashable {}
+extension SetgreetSDK.EvaluationMode : Swift.RawRepresentable {}
+extension SetgreetSDK.SetgreetContentScaleType : Swift.Equatable {}
+extension SetgreetSDK.SetgreetContentScaleType : Swift.Hashable {}
+extension SetgreetSDK.SetgreetContentScaleType : Swift.RawRepresentable {}
 extension SetgreetSDK.EventType : Swift.Equatable {}
 extension SetgreetSDK.EventType : Swift.Hashable {}
 extension SetgreetSDK.EventType : Swift.RawRepresentable {}
 extension SetgreetSDK.EventPropertyKey : Swift.Equatable {}
 extension SetgreetSDK.EventPropertyKey : Swift.Hashable {}
 extension SetgreetSDK.EventPropertyKey : Swift.RawRepresentable {}
+extension SetgreetSDK.DynamicScreenView : Swift.Sendable {}
+extension SetgreetSDK.FlowNodeType : Swift.Equatable {}
+extension SetgreetSDK.FlowNodeType : Swift.Hashable {}
+extension SetgreetSDK.FlowNodeType : Swift.RawRepresentable {}
+extension SetgreetSDK.TriggerOperator : Swift.Equatable {}
+extension SetgreetSDK.TriggerOperator : Swift.Hashable {}
+extension SetgreetSDK.TriggerOperator : Swift.RawRepresentable {}
+extension SetgreetSDK.BindingType : Swift.Equatable {}
+extension SetgreetSDK.BindingType : Swift.Hashable {}
+extension SetgreetSDK.BindingType : Swift.RawRepresentable {}
+extension SetgreetSDK.BindingFormat : Swift.Equatable {}
+extension SetgreetSDK.BindingFormat : Swift.Hashable {}
+extension SetgreetSDK.BindingFormat : Swift.RawRepresentable {}
+extension SetgreetSDK.ConditionSource : Swift.Equatable {}
+extension SetgreetSDK.ConditionSource : Swift.Hashable {}
+extension SetgreetSDK.ConditionSource : Swift.RawRepresentable {}
+extension SetgreetSDK.ConditionOperator : Swift.Equatable {}
+extension SetgreetSDK.ConditionOperator : Swift.Hashable {}
+extension SetgreetSDK.ConditionOperator : Swift.RawRepresentable {}
 extension SetgreetSDK.Operation : Swift.Equatable {}
 extension SetgreetSDK.Operation : Swift.Hashable {}
 extension SetgreetSDK.Operation : Swift.RawRepresentable {}
@@ -397,3 +1508,16 @@ extension SetgreetSDK.DismissReason : Swift.RawRepresentable {}
 extension SetgreetSDK.FlowErrorType : Swift.Equatable {}
 extension SetgreetSDK.FlowErrorType : Swift.Hashable {}
 extension SetgreetSDK.FlowErrorType : Swift.RawRepresentable {}
+extension SetgreetSDK.ComponentEventType : Swift.Equatable {}
+extension SetgreetSDK.ComponentEventType : Swift.Hashable {}
+extension SetgreetSDK.ComponentEventType : Swift.RawRepresentable {}
+extension SetgreetSDK.PresentationStyle : Swift.Equatable {}
+extension SetgreetSDK.PresentationStyle : Swift.Hashable {}
+extension SetgreetSDK.PresentationStyle : Swift.RawRepresentable {}
+extension SetgreetSDK.BottomSheetInitialHeight : Swift.Equatable {}
+extension SetgreetSDK.BottomSheetInitialHeight : Swift.Hashable {}
+extension SetgreetSDK.BottomSheetInitialHeight : Swift.RawRepresentable {}
+extension SetgreetSDK.InteractionType : Swift.Equatable {}
+extension SetgreetSDK.InteractionType : Swift.Hashable {}
+extension SetgreetSDK.InteractionType : Swift.RawRepresentable {}
+extension SetgreetSDK.SetgreetWebView : Swift.Sendable {}
