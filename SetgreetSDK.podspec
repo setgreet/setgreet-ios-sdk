@@ -21,6 +21,9 @@ Pod::Spec.new do |spec|
   
   # Ensure the framework is properly linked
   spec.frameworks = "UIKit", "Foundation"
+
+  # External dependencies
+  spec.dependency 'lottie-ios', '~> 4.5'
   
   # Minimum deployment target
   spec.ios.deployment_target = "15.0"
