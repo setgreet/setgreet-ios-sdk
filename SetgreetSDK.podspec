@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "SetgreetSDK"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
   spec.summary      = "Setgreet iOS SDK allows you to show Setgreet flows in your iOS app."
   spec.description  = <<-DESC
                       Setgreet iOS SDK is a powerful framework that enables you to integrate Setgreet flows 

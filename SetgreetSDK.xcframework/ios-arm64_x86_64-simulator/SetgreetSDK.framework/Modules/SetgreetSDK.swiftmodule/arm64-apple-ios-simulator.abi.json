@@ -395,13 +395,6 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "SendableMetatype",
-            "printedName": "SendableMetatype",
-            "usr": "s:s16SendableMetatypeP",
-            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -42464,7 +42457,6 @@
         "declAttributes": [
           "Preconcurrency",
           "TypeEraser",
-          "TypeEraser",
           "OriginallyDefinedIn",
           "OriginallyDefinedIn",
           "OriginallyDefinedIn",
@@ -42563,7 +42555,6 @@
         "intro_tvOS": "9.0",
         "intro_watchOS": "2.0",
         "declAttributes": [
-          "AddressableForDependencies",
           "Frozen",
           "Available",
           "Available",
@@ -42929,13 +42920,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "SendableMetatype",
-            "printedName": "SendableMetatype",
-            "usr": "s:s16SendableMetatypeP",
-            "mangledName": "$ss16SendableMetatypeP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Sequence",
             "printedName": "Sequence",
             "children": [
@@ -42985,41 +42969,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomReflectable",
-            "printedName": "CustomReflectable",
-            "usr": "s:s17CustomReflectableP",
-            "mangledName": "$ss17CustomReflectableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Decodable",
-            "printedName": "Decodable",
-            "usr": "s:Se",
-            "mangledName": "$sSe"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Encodable",
-            "printedName": "Encodable",
-            "usr": "s:SE",
-            "mangledName": "$sSE"
-          },
-          {
-            "kind": "Conformance",
             "name": "ReferenceConvertible",
             "printedName": "ReferenceConvertible",
             "children": [
@@ -43064,6 +43013,41 @@
           },
           {
             "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomReflectable",
+            "printedName": "CustomReflectable",
+            "usr": "s:s17CustomReflectableP",
+            "mangledName": "$ss17CustomReflectableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
             "name": "Transferable",
             "printedName": "Transferable",
             "children": [
@@ -43098,2555 +43082,2576 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/SetgreetNetwork\/SetgreetNetwork.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/SetgreetNetwork\/SetgreetNetwork.swift",
       "kind": "IntegerLiteral",
       "offset": 507,
       "length": 3,
       "value": "200"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetTextAlign.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetTextAlign.swift",
       "kind": "StringLiteral",
       "offset": 131,
       "length": 7,
       "value": "\"START\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetTextAlign.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetTextAlign.swift",
       "kind": "StringLiteral",
       "offset": 157,
       "length": 8,
       "value": "\"CENTER\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetTextAlign.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetTextAlign.swift",
       "kind": "StringLiteral",
       "offset": 181,
       "length": 5,
       "value": "\"END\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Templates\/SetgreetViewModel.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Templates\/SetgreetViewModel.swift",
       "kind": "IntegerLiteral",
       "offset": 454,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Templates\/SetgreetViewModel.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Templates\/SetgreetViewModel.swift",
       "kind": "BooleanLiteral",
       "offset": 594,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Templates\/SetgreetViewModel.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Templates\/SetgreetViewModel.swift",
       "kind": "Dictionary",
       "offset": 822,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Templates\/SetgreetViewModel.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Templates\/SetgreetViewModel.swift",
       "kind": "Dictionary",
       "offset": 982,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Templates\/SetgreetViewModel.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Templates\/SetgreetViewModel.swift",
       "kind": "Dictionary",
       "offset": 1159,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/Setgreet.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/Setgreet.swift",
       "kind": "BooleanLiteral",
       "offset": 379,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetConfig.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetConfig.swift",
       "kind": "StringLiteral",
       "offset": 264,
       "length": 13,
       "value": "\"CLIENT_SIDE\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetConfig.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetConfig.swift",
       "kind": "StringLiteral",
       "offset": 347,
       "length": 13,
       "value": "\"SERVER_SIDE\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetConfig.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetConfig.swift",
       "kind": "StringLiteral",
       "offset": 441,
       "length": 8,
       "value": "\"HYBRID\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetContentScaleType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetContentScaleType.swift",
       "kind": "StringLiteral",
       "offset": 182,
       "length": 6,
       "value": "\"FILL\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetContentScaleType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetContentScaleType.swift",
       "kind": "StringLiteral",
       "offset": 211,
       "length": 5,
       "value": "\"FIT\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/ViewModifiers\/OnFirstAppearViewModifier.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/ViewModifiers\/OnFirstAppearViewModifier.swift",
       "kind": "BooleanLiteral",
       "offset": 232,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/SetgreetView.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/SetgreetView.swift",
       "kind": "StringLiteral",
       "offset": 679,
       "length": 14,
       "value": "\"preview-flow\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetLogger.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetLogger.swift",
       "kind": "StringLiteral",
       "offset": 349,
       "length": 10,
       "value": "\"Setgreet\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetLogger.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetLogger.swift",
       "kind": "StringLiteral",
       "offset": 380,
       "length": 5,
       "value": "\"Log\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetLogger.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetLogger.swift",
       "kind": "BooleanLiteral",
       "offset": 405,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetFlowModel.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetFlowModel.swift",
       "kind": "StringLiteral",
       "offset": 666,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetFlowModel.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetFlowModel.swift",
       "kind": "IntegerLiteral",
       "offset": 695,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/Extensions\/View+Ext.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/Extensions\/View+Ext.swift",
       "kind": "IntegerLiteral",
       "offset": 3041,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetFontType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetFontType.swift",
       "kind": "StringLiteral",
       "offset": 153,
       "length": 7,
       "value": "\"INTER\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetFontType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetFontType.swift",
       "kind": "StringLiteral",
       "offset": 179,
       "length": 8,
       "value": "\"ROBOTO\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetFontType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetFontType.swift",
       "kind": "StringLiteral",
       "offset": 208,
       "length": 10,
       "value": "\"OPENSANS\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetFontType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetFontType.swift",
       "kind": "StringLiteral",
       "offset": 235,
       "length": 6,
       "value": "\"LATO\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetFontType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetFontType.swift",
       "kind": "StringLiteral",
       "offset": 264,
       "length": 12,
       "value": "\"MONTSERRAT\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetFontType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetFontType.swift",
       "kind": "StringLiteral",
       "offset": 296,
       "length": 9,
       "value": "\"POPPINS\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetFontType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetFontType.swift",
       "kind": "StringLiteral",
       "offset": 324,
       "length": 8,
       "value": "\"NUNITO\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetFontType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetFontType.swift",
       "kind": "StringLiteral",
       "offset": 354,
       "length": 11,
       "value": "\"QUICKSAND\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetFontType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetFontType.swift",
       "kind": "StringLiteral",
       "offset": 385,
       "length": 9,
       "value": "\"HANDJET\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetFontType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetFontType.swift",
       "kind": "StringLiteral",
       "offset": 412,
       "length": 7,
       "value": "\"KUFAM\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetFontType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetFontType.swift",
       "kind": "StringLiteral",
       "offset": 447,
       "length": 17,
       "value": "\"PLAYFAIRDISPLAY\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetFontType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetFontType.swift",
       "kind": "StringLiteral",
       "offset": 489,
       "length": 14,
       "value": "\"MERRIWEATHER\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetFontType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetFontType.swift",
       "kind": "StringLiteral",
       "offset": 529,
       "length": 11,
       "value": "\"HKGROTESK\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/SetgreetViewController.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/SetgreetViewController.swift",
       "kind": "BooleanLiteral",
       "offset": 1591,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/FlowManager.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/FlowManager.swift",
       "kind": "IntegerLiteral",
       "offset": 555,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/FlowManager.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/FlowManager.swift",
       "kind": "IntegerLiteral",
       "offset": 575,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/FlowManager.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/FlowManager.swift",
       "kind": "IntegerLiteral",
       "offset": 593,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/FlowManager.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/FlowManager.swift",
       "kind": "IntegerLiteral",
       "offset": 615,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/FlowManager.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/FlowManager.swift",
       "kind": "Array",
       "offset": 994,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/FlowManager.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/FlowManager.swift",
       "kind": "StringLiteral",
       "offset": 1146,
       "length": 26,
       "value": "\"com.setgreet.flowmanager\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetButtonActionType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetButtonActionType.swift",
       "kind": "StringLiteral",
       "offset": 205,
       "length": 6,
       "value": "\"NEXT\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetButtonActionType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetButtonActionType.swift",
       "kind": "StringLiteral",
       "offset": 232,
       "length": 10,
       "value": "\"PREVIOUS\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetButtonActionType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetButtonActionType.swift",
       "kind": "StringLiteral",
       "offset": 259,
       "length": 6,
       "value": "\"SKIP\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetButtonActionType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetButtonActionType.swift",
       "kind": "StringLiteral",
       "offset": 306,
       "length": 9,
       "value": "\"DISMISS\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetButtonActionType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetButtonActionType.swift",
       "kind": "StringLiteral",
       "offset": 339,
       "length": 14,
       "value": "\"REMIND_LATER\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetButtonActionType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetButtonActionType.swift",
       "kind": "StringLiteral",
       "offset": 386,
       "length": 5,
       "value": "\"URL\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetButtonActionType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetButtonActionType.swift",
       "kind": "StringLiteral",
       "offset": 412,
       "length": 10,
       "value": "\"DEEPLINK\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetButtonActionType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetButtonActionType.swift",
       "kind": "StringLiteral",
       "offset": 484,
       "length": 33,
       "value": "\"REQUEST_NOTIFICATION_PERMISSION\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetButtonActionType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetButtonActionType.swift",
       "kind": "StringLiteral",
       "offset": 555,
       "length": 29,
       "value": "\"REQUEST_LOCATION_PERMISSION\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetButtonActionType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetButtonActionType.swift",
       "kind": "StringLiteral",
       "offset": 620,
       "length": 27,
       "value": "\"REQUEST_CAMERA_PERMISSION\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetButtonActionType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetButtonActionType.swift",
       "kind": "StringLiteral",
       "offset": 688,
       "length": 16,
       "value": "\"REQUEST_REVIEW\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetButtonActionType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetButtonActionType.swift",
       "kind": "StringLiteral",
       "offset": 722,
       "length": 7,
       "value": "\"SHARE\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetButtonActionType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetButtonActionType.swift",
       "kind": "StringLiteral",
       "offset": 754,
       "length": 15,
       "value": "\"OPEN_SETTINGS\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetButtonActionType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetButtonActionType.swift",
       "kind": "StringLiteral",
       "offset": 819,
       "length": 13,
       "value": "\"TRACK_EVENT\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetButtonActionType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/SetgreetButtonActionType.swift",
       "kind": "StringLiteral",
       "offset": 851,
       "length": 8,
       "value": "\"CUSTOM\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
       "kind": "StringLiteral",
       "offset": 270,
       "length": 22,
       "value": "\"setgreet:flowStarted\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
       "kind": "StringLiteral",
       "offset": 318,
       "length": 24,
       "value": "\"setgreet:flowCompleted\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
       "kind": "StringLiteral",
       "offset": 368,
       "length": 24,
       "value": "\"setgreet:flowDismissed\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
       "kind": "StringLiteral",
       "offset": 414,
       "length": 20,
       "value": "\"setgreet:flowError\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
       "kind": "StringLiteral",
       "offset": 479,
       "length": 17,
       "value": "\"setgreet:screen\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
       "kind": "StringLiteral",
       "offset": 520,
       "length": 22,
       "value": "\"setgreet:screenEnter\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
       "kind": "StringLiteral",
       "offset": 565,
       "length": 21,
       "value": "\"setgreet:screenExit\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
       "kind": "StringLiteral",
       "offset": 641,
       "length": 22,
       "value": "\"setgreet:buttonClick\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
       "kind": "StringLiteral",
       "offset": 686,
       "length": 21,
       "value": "\"setgreet:inputFocus\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
       "kind": "StringLiteral",
       "offset": 729,
       "length": 20,
       "value": "\"setgreet:inputBlur\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
       "kind": "StringLiteral",
       "offset": 768,
       "length": 17,
       "value": "\"setgreet:scroll\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
       "kind": "StringLiteral",
       "offset": 803,
       "length": 16,
       "value": "\"setgreet:swipe\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
       "kind": "StringLiteral",
       "offset": 866,
       "length": 20,
       "value": "\"setgreet:mediaPlay\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
       "kind": "StringLiteral",
       "offset": 909,
       "length": 21,
       "value": "\"setgreet:mediaPause\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
       "kind": "StringLiteral",
       "offset": 956,
       "length": 24,
       "value": "\"setgreet:mediaComplete\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
       "kind": "StringLiteral",
       "offset": 1003,
       "length": 21,
       "value": "\"setgreet:mediaError\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
       "kind": "StringLiteral",
       "offset": 1075,
       "length": 19,
       "value": "\"setgreet:nextPage\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
       "kind": "StringLiteral",
       "offset": 1119,
       "length": 23,
       "value": "\"setgreet:previousPage\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
       "kind": "StringLiteral",
       "offset": 1163,
       "length": 19,
       "value": "\"setgreet:skipPage\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
       "kind": "StringLiteral",
       "offset": 1245,
       "length": 29,
       "value": "\"setgreet:conditionEvaluated\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
       "kind": "StringLiteral",
       "offset": 1299,
       "length": 23,
       "value": "\"setgreet:pathSelected\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
       "kind": "StringLiteral",
       "offset": 1351,
       "length": 27,
       "value": "\"setgreet:branchNavigation\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
       "kind": "StringLiteral",
       "offset": 1425,
       "length": 21,
       "value": "\"setgreet:formSubmit\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
       "kind": "StringLiteral",
       "offset": 1473,
       "length": 25,
       "value": "\"setgreet:formValidation\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
       "kind": "StringLiteral",
       "offset": 1522,
       "length": 22,
       "value": "\"setgreet:fieldChange\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
       "kind": "StringLiteral",
       "offset": 1590,
       "length": 18,
       "value": "\"setgreet:sdkInit\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
       "kind": "StringLiteral",
       "offset": 1635,
       "length": 25,
       "value": "\"setgreet:userIdentified\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
       "kind": "StringLiteral",
       "offset": 1686,
       "length": 24,
       "value": "\"setgreet:configChanged\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventType.swift",
       "kind": "StringLiteral",
       "offset": 1735,
       "length": 23,
       "value": "\"setgreet:networkError\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventPropertyKey.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventPropertyKey.swift",
       "kind": "StringLiteral",
       "offset": 245,
       "length": 12,
       "value": "\"screenName\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventPropertyKey.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventPropertyKey.swift",
       "kind": "StringLiteral",
       "offset": 278,
       "length": 10,
       "value": "\"buttonId\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventPropertyKey.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventPropertyKey.swift",
       "kind": "StringLiteral",
       "offset": 307,
       "length": 8,
       "value": "\"flowId\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventPropertyKey.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventPropertyKey.swift",
       "kind": "StringLiteral",
       "offset": 338,
       "length": 12,
       "value": "\"appVersion\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventPropertyKey.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventPropertyKey.swift",
       "kind": "StringLiteral",
       "offset": 373,
       "length": 12,
       "value": "\"sdkVersion\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventPropertyKey.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventPropertyKey.swift",
       "kind": "StringLiteral",
       "offset": 410,
       "length": 14,
       "value": "\"errorMessage\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventPropertyKey.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/EventPropertyKey.swift",
       "kind": "StringLiteral",
       "offset": 443,
       "length": 8,
       "value": "\"userId\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/DynamicFontLoader.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/DynamicFontLoader.swift",
       "kind": "StringLiteral",
       "offset": 430,
       "length": 24,
       "value": "\"com.setgreet.sdk\/Fonts\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/DynamicFontLoader.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/DynamicFontLoader.swift",
       "kind": "BooleanLiteral",
       "offset": 469,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/DynamicFontLoader.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/DynamicFontLoader.swift",
       "kind": "Array",
       "offset": 534,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/DynamicFontLoader.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/DynamicFontLoader.swift",
       "kind": "BooleanLiteral",
       "offset": 565,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetVersion.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetVersion.swift",
       "kind": "StringLiteral",
       "offset": 120,
       "length": 7,
-      "value": "\"1.0.0\""
+      "value": "\"1.0.1\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/DynamicScreenView.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/DynamicScreenView.swift",
       "kind": "Dictionary",
       "offset": 1465,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/DynamicScreenView.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/DynamicScreenView.swift",
       "kind": "Dictionary",
       "offset": 1505,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/DynamicScreenView.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/DynamicScreenView.swift",
       "kind": "StringLiteral",
       "offset": 1537,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/DynamicScreenView.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/DynamicScreenView.swift",
       "kind": "BooleanLiteral",
       "offset": 1635,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/DynamicScreenView.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/DynamicScreenView.swift",
       "kind": "BooleanLiteral",
       "offset": 1673,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/DynamicScreenView.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/DynamicScreenView.swift",
       "kind": "Array",
-      "offset": 14937,
+      "offset": 15257,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/DynamicScreenView.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/DynamicScreenView.swift",
       "kind": "BooleanLiteral",
-      "offset": 17397,
+      "offset": 17717,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/DynamicScreenView.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/DynamicScreenView.swift",
       "kind": "StringLiteral",
-      "offset": 17428,
+      "offset": 17748,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ComponentRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ComponentRegistry.swift",
       "kind": "Dictionary",
       "offset": 903,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ComponentRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ComponentRegistry.swift",
       "kind": "IntegerLiteral",
       "offset": 1148,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ComponentRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ComponentRegistry.swift",
       "kind": "BooleanLiteral",
       "offset": 1176,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ComponentRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ComponentRegistry.swift",
       "kind": "Dictionary",
       "offset": 13094,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ComponentRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ComponentRegistry.swift",
       "kind": "Dictionary",
       "offset": 13134,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ComponentRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ComponentRegistry.swift",
       "kind": "StringLiteral",
       "offset": 13211,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ComponentRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ComponentRegistry.swift",
       "kind": "IntegerLiteral",
       "offset": 13242,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ComponentRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ComponentRegistry.swift",
       "kind": "IntegerLiteral",
       "offset": 13272,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ComponentRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ComponentRegistry.swift",
       "kind": "BooleanLiteral",
       "offset": 13366,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ComponentRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ComponentRegistry.swift",
       "kind": "BooleanLiteral",
       "offset": 13420,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ComponentRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ComponentRegistry.swift",
       "kind": "BooleanLiteral",
       "offset": 13498,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ComponentRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ComponentRegistry.swift",
       "kind": "BooleanLiteral",
       "offset": 13548,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ComponentRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ComponentRegistry.swift",
       "kind": "BooleanLiteral",
       "offset": 13588,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ComponentRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ComponentRegistry.swift",
       "kind": "BooleanLiteral",
       "offset": 13630,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ComponentRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ComponentRegistry.swift",
       "kind": "StringLiteral",
       "offset": 23446,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ComponentRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ComponentRegistry.swift",
       "kind": "Dictionary",
       "offset": 28358,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/TextInputComponent.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/TextInputComponent.swift",
       "kind": "StringLiteral",
       "offset": 704,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/TextInputComponent.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/TextInputComponent.swift",
       "kind": "BooleanLiteral",
       "offset": 748,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/DropdownComponent.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/DropdownComponent.swift",
       "kind": "BooleanLiteral",
       "offset": 1072,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/CheckboxComponent.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/CheckboxComponent.swift",
       "kind": "BooleanLiteral",
       "offset": 677,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/CheckboxComponent.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/CheckboxComponent.swift",
       "kind": "IntegerLiteral",
       "offset": 732,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/RatingComponent.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/RatingComponent.swift",
       "kind": "IntegerLiteral",
       "offset": 686,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/CountdownTimerComponent.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/CountdownTimerComponent.swift",
       "kind": "IntegerLiteral",
       "offset": 729,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/CountdownTimerComponent.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/CountdownTimerComponent.swift",
       "kind": "BooleanLiteral",
       "offset": 809,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/CarouselComponent.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/CarouselComponent.swift",
       "kind": "IntegerLiteral",
       "offset": 697,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/Operation.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/Operation.swift",
       "kind": "StringLiteral",
       "offset": 161,
       "length": 8,
       "value": "\"create\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/Operation.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/Operation.swift",
       "kind": "StringLiteral",
       "offset": 188,
       "length": 8,
       "value": "\"update\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/SetgreetNetwork\/SetgreetNetworkLogger.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/SetgreetNetwork\/SetgreetNetworkLogger.swift",
       "kind": "BooleanLiteral",
       "offset": 167,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/TrackRequest.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/TrackRequest.swift",
       "kind": "StringLiteral",
       "offset": 341,
       "length": 11,
       "value": "\"endUserId\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetSettings.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetSettings.swift",
       "kind": "StringLiteral",
       "offset": 474,
       "length": 18,
       "value": "\"com.setgreet.sdk\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
       "kind": "StringLiteral",
       "offset": 4793,
       "length": 12,
       "value": "\"USER_CLOSE\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
       "kind": "StringLiteral",
       "offset": 4826,
       "length": 11,
       "value": "\"USER_SKIP\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
       "kind": "StringLiteral",
       "offset": 4859,
       "length": 12,
       "value": "\"BACK_PRESS\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
       "kind": "StringLiteral",
       "offset": 4893,
       "length": 12,
       "value": "\"SWIPE_DOWN\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
       "kind": "StringLiteral",
       "offset": 4926,
       "length": 10,
       "value": "\"REPLACED\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
       "kind": "StringLiteral",
       "offset": 4961,
       "length": 14,
       "value": "\"PROGRAMMATIC\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
       "kind": "StringLiteral",
       "offset": 4999,
       "length": 14,
       "value": "\"REMIND_LATER\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
       "kind": "StringLiteral",
       "offset": 5035,
       "length": 11,
       "value": "\"COMPLETED\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
       "kind": "StringLiteral",
       "offset": 5105,
       "length": 9,
       "value": "\"NETWORK\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
       "kind": "StringLiteral",
       "offset": 5132,
       "length": 7,
       "value": "\"PARSE\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
       "kind": "StringLiteral",
       "offset": 5159,
       "length": 9,
       "value": "\"DISPLAY\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
       "kind": "StringLiteral",
       "offset": 5188,
       "length": 9,
       "value": "\"UNKNOWN\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/FlowSession.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/FlowSession.swift",
       "kind": "IntegerLiteral",
       "offset": 240,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Permission\/PermissionResult.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Permission\/PermissionResult.swift",
       "kind": "StringLiteral",
       "offset": 210,
       "length": 9,
       "value": "\"granted\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Permission\/PermissionResult.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Permission\/PermissionResult.swift",
       "kind": "StringLiteral",
       "offset": 238,
       "length": 8,
       "value": "\"denied\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Permission\/PermissionResult.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Permission\/PermissionResult.swift",
       "kind": "StringLiteral",
       "offset": 276,
       "length": 20,
       "value": "\"permanently_denied\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Permission\/PermissionResult.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Permission\/PermissionResult.swift",
       "kind": "StringLiteral",
       "offset": 323,
       "length": 17,
       "value": "\"already_granted\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Permission\/PermissionResult.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Permission\/PermissionResult.swift",
       "kind": "StringLiteral",
       "offset": 364,
       "length": 14,
       "value": "\"not_required\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Permission\/PermissionType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Permission\/PermissionType.swift",
       "kind": "StringLiteral",
       "offset": 203,
       "length": 14,
       "value": "\"notification\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Permission\/PermissionType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Permission\/PermissionType.swift",
       "kind": "StringLiteral",
       "offset": 238,
       "length": 10,
       "value": "\"location\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Permission\/PermissionType.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Permission\/PermissionType.swift",
       "kind": "StringLiteral",
       "offset": 267,
       "length": 8,
       "value": "\"camera\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
       "kind": "StringLiteral",
       "offset": 370,
       "length": 16,
       "value": "\"component_view\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
       "kind": "StringLiteral",
       "offset": 413,
       "length": 17,
       "value": "\"component_click\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
       "kind": "StringLiteral",
       "offset": 457,
       "length": 17,
       "value": "\"component_input\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
       "kind": "StringLiteral",
       "offset": 502,
       "length": 18,
       "value": "\"component_rating\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
       "kind": "StringLiteral",
       "offset": 545,
       "length": 15,
       "value": "\"component_nps\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
       "kind": "StringLiteral",
       "offset": 587,
       "length": 17,
       "value": "\"component_video\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
       "kind": "StringLiteral",
       "offset": 634,
       "length": 20,
       "value": "\"component_carousel\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
       "kind": "StringLiteral",
       "offset": 682,
       "length": 18,
       "value": "\"component_custom\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
       "kind": "StringLiteral",
       "offset": 730,
       "length": 20,
       "value": "\"component_feedback\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
       "kind": "StringLiteral",
       "offset": 844,
       "length": 21,
       "value": "\"condition_evaluated\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
       "kind": "StringLiteral",
       "offset": 890,
       "length": 15,
       "value": "\"path_selected\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
       "kind": "StringLiteral",
       "offset": 932,
       "length": 17,
       "value": "\"branch_decision\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
       "kind": "StringLiteral",
       "offset": 978,
       "length": 19,
       "value": "\"screen_transition\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
       "kind": "StringLiteral",
       "offset": 1021,
       "length": 14,
       "value": "\"flow_started\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
       "kind": "StringLiteral",
       "offset": 1061,
       "length": 16,
       "value": "\"flow_completed\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
       "kind": "StringLiteral",
       "offset": 1103,
       "length": 16,
       "value": "\"flow_dismissed\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
       "kind": "BooleanLiteral",
       "offset": 2971,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
       "kind": "IntegerLiteral",
       "offset": 3057,
       "length": 2,
       "value": "50"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
       "kind": "IntegerLiteral",
       "offset": 3145,
       "length": 2,
       "value": "30"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
       "kind": "Array",
       "offset": 3232,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
       "kind": "StringLiteral",
       "offset": 3280,
       "length": 24,
       "value": "\"com.setgreet.analytics\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
       "kind": "BooleanLiteral",
       "offset": 5893,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ComponentAnalytics.swift",
       "kind": "IntegerLiteral",
       "offset": 6602,
       "length": 1,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/EmojiFeedbackComponent.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/EmojiFeedbackComponent.swift",
       "kind": "IntegerLiteral",
       "offset": 710,
       "length": 2,
       "value": "-1"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/VideoComponent.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/VideoComponent.swift",
       "kind": "BooleanLiteral",
       "offset": 843,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/PurchaseCountComponent.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/PurchaseCountComponent.swift",
       "kind": "IntegerLiteral",
       "offset": 721,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ReviewCarouselComponent.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ReviewCarouselComponent.swift",
       "kind": "IntegerLiteral",
       "offset": 893,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ReviewCarouselComponent.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ReviewCarouselComponent.swift",
       "kind": "IntegerLiteral",
       "offset": 4327,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ReviewCarouselComponent.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ReviewCarouselComponent.swift",
       "kind": "IntegerLiteral",
       "offset": 4348,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ReviewCarouselComponent.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ReviewCarouselComponent.swift",
       "kind": "FloatLiteral",
       "offset": 4442,
       "length": 6,
       "value": "1000.0"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ReviewCarouselComponent.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ReviewCarouselComponent.swift",
       "kind": "BooleanLiteral",
       "offset": 4459,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ReviewCarouselComponent.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ReviewCarouselComponent.swift",
       "kind": "IntegerLiteral",
       "offset": 4547,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/WeightedStack.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/WeightedStack.swift",
       "kind": "IntegerLiteral",
       "offset": 463,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/WeightedStack.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/WeightedStack.swift",
       "kind": "BooleanLiteral",
       "offset": 808,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/WeightedStack.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/WeightedStack.swift",
       "kind": "IntegerLiteral",
       "offset": 1383,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/WeightedStack.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/WeightedStack.swift",
       "kind": "IntegerLiteral",
       "offset": 5321,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/WeightedStack.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/WeightedStack.swift",
       "kind": "BooleanLiteral",
       "offset": 5656,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/WeightedStack.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/WeightedStack.swift",
       "kind": "IntegerLiteral",
-      "offset": 9784,
+      "offset": 10107,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/PresentationStyle.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/WeightedStack.swift",
+      "kind": "StringLiteral",
+      "offset": 10142,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/WeightedStack.swift",
+      "kind": "IntegerLiteral",
+      "offset": 19946,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/WeightedStack.swift",
+      "kind": "StringLiteral",
+      "offset": 19981,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/PresentationStyle.swift",
       "kind": "BooleanLiteral",
       "offset": 1478,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/PresentationStyle.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/PresentationStyle.swift",
       "kind": "IntegerLiteral",
       "offset": 1517,
       "length": 1,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/PresentationStyle.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/PresentationStyle.swift",
       "kind": "IntegerLiteral",
       "offset": 1552,
       "length": 2,
       "value": "36"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/PresentationStyle.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/PresentationStyle.swift",
       "kind": "StringLiteral",
       "offset": 1587,
       "length": 9,
       "value": "\"#D1D5DB\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/PresentationStyle.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/PresentationStyle.swift",
       "kind": "IntegerLiteral",
       "offset": 1631,
       "length": 2,
       "value": "20"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/PresentationStyle.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/PresentationStyle.swift",
       "kind": "StringLiteral",
       "offset": 1761,
       "length": 9,
       "value": "\"#FFFFFF\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/PresentationStyle.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/PresentationStyle.swift",
       "kind": "BooleanLiteral",
       "offset": 1801,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/PresentationStyle.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/PresentationStyle.swift",
       "kind": "BooleanLiteral",
       "offset": 1849,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/PresentationStyle.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/PresentationStyle.swift",
       "kind": "BooleanLiteral",
       "offset": 1898,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/PresentationStyle.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/PresentationStyle.swift",
       "kind": "BooleanLiteral",
       "offset": 1943,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/PresentationStyle.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/PresentationStyle.swift",
       "kind": "StringLiteral",
       "offset": 1981,
       "length": 9,
       "value": "\"#000000\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/PresentationStyle.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/PresentationStyle.swift",
       "kind": "FloatLiteral",
       "offset": 2026,
       "length": 3,
       "value": "0.3"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/PresentationStyle.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/PresentationStyle.swift",
       "kind": "IntegerLiteral",
       "offset": 2125,
       "length": 3,
       "value": "300"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/PresentationStyle.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Data\/Models\/PresentationStyle.swift",
       "kind": "BooleanLiteral",
       "offset": 2167,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/BottomSheetFlowView.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/BottomSheetFlowView.swift",
       "kind": "IntegerLiteral",
       "offset": 414,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/BottomSheetFlowView.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/BottomSheetFlowView.swift",
       "kind": "IntegerLiteral",
       "offset": 464,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/BottomSheetFlowView.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/BottomSheetFlowView.swift",
       "kind": "BooleanLiteral",
       "offset": 509,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/FlowAnalyticsCollector.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/FlowAnalyticsCollector.swift",
       "kind": "IntegerLiteral",
       "offset": 691,
       "length": 2,
       "value": "30"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/FlowAnalyticsCollector.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/FlowAnalyticsCollector.swift",
       "kind": "IntegerLiteral",
       "offset": 779,
       "length": 2,
       "value": "15"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/FlowAnalyticsCollector.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/FlowAnalyticsCollector.swift",
       "kind": "IntegerLiteral",
       "offset": 1043,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/FlowAnalyticsCollector.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/FlowAnalyticsCollector.swift",
       "kind": "IntegerLiteral",
       "offset": 1079,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/FlowAnalyticsCollector.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/FlowAnalyticsCollector.swift",
       "kind": "Array",
       "offset": 1138,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/FlowAnalyticsCollector.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/FlowAnalyticsCollector.swift",
       "kind": "StringLiteral",
       "offset": 1186,
       "length": 28,
       "value": "\"com.setgreet.flowAnalytics\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/FlowAnalyticsCollector.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/FlowAnalyticsCollector.swift",
       "kind": "StringLiteral",
       "offset": 4769,
       "length": 9,
       "value": "\"forward\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ScreenInteractionCollector.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Analytics\/ScreenInteractionCollector.swift",
       "kind": "Dictionary",
       "offset": 1792,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Core\/Navigation\/FlowNavigationEngine.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Core\/Navigation\/FlowNavigationEngine.swift",
       "kind": "Dictionary",
       "offset": 540,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Core\/Navigation\/FlowNavigationEngine.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Core\/Navigation\/FlowNavigationEngine.swift",
       "kind": "Dictionary",
       "offset": 632,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Core\/Navigation\/FlowNavigationEngine.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Core\/Navigation\/FlowNavigationEngine.swift",
       "kind": "Array",
       "offset": 700,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Core\/Navigation\/FlowNavigationEngine.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Core\/Navigation\/FlowNavigationEngine.swift",
       "kind": "Array",
       "offset": 767,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Core\/Navigation\/FlowNavigationEngine.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Core\/Navigation\/FlowNavigationEngine.swift",
       "kind": "Array",
       "offset": 849,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Core\/Navigation\/FlowNavigationEngine.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Core\/Navigation\/FlowNavigationEngine.swift",
       "kind": "Array",
       "offset": 1010,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Core\/Navigation\/FlowNavigationEngine.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Core\/Navigation\/FlowNavigationEngine.swift",
       "kind": "Dictionary",
       "offset": 2780,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Core\/Navigation\/FlowNavigationEngine.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Core\/Navigation\/FlowNavigationEngine.swift",
       "kind": "Dictionary",
       "offset": 2820,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Core\/Navigation\/FlowNavigationEngine.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Core\/Navigation\/FlowNavigationEngine.swift",
       "kind": "IntegerLiteral",
-      "offset": 24221,
+      "offset": 24275,
       "length": 2,
       "value": "50"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/Extensions\/StyleParser.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/Extensions\/StyleParser.swift",
       "kind": "IntegerLiteral",
       "offset": 468,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/Extensions\/StyleParser.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/Extensions\/StyleParser.swift",
       "kind": "IntegerLiteral",
       "offset": 490,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/Extensions\/StyleParser.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/Extensions\/StyleParser.swift",
       "kind": "IntegerLiteral",
       "offset": 511,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/Extensions\/StyleParser.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/Extensions\/StyleParser.swift",
       "kind": "IntegerLiteral",
       "offset": 534,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/Extensions\/StyleParser.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/Extensions\/StyleParser.swift",
       "kind": "IntegerLiteral",
       "offset": 823,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/Extensions\/StyleParser.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/Extensions\/StyleParser.swift",
       "kind": "IntegerLiteral",
       "offset": 846,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/Extensions\/StyleParser.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/Extensions\/StyleParser.swift",
       "kind": "FloatLiteral",
       "offset": 1346,
       "length": 3,
       "value": "0.2"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/Extensions\/StyleParser.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/Extensions\/StyleParser.swift",
       "kind": "IntegerLiteral",
       "offset": 1370,
       "length": 1,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/Extensions\/StyleParser.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/Extensions\/StyleParser.swift",
       "kind": "IntegerLiteral",
       "offset": 1386,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/Extensions\/StyleParser.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/Extensions\/StyleParser.swift",
       "kind": "IntegerLiteral",
       "offset": 1402,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/Extensions\/StyleParser.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/Extensions\/StyleParser.swift",
       "kind": "IntegerLiteral",
       "offset": 1729,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/Extensions\/StyleParser.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/Extensions\/StyleParser.swift",
       "kind": "IntegerLiteral",
       "offset": 1779,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/Extensions\/StyleParser.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/Extensions\/StyleParser.swift",
       "kind": "IntegerLiteral",
       "offset": 2212,
       "length": 2,
       "value": "16"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/Extensions\/StyleParser.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/Extensions\/StyleParser.swift",
       "kind": "BooleanLiteral",
       "offset": 2310,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ProgressBarComponent.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ProgressBarComponent.swift",
       "kind": "IntegerLiteral",
       "offset": 727,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/TooltipComponent.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/TooltipComponent.swift",
       "kind": "BooleanLiteral",
       "offset": 695,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/AccordionComponent.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/AccordionComponent.swift",
       "kind": "BooleanLiteral",
       "offset": 724,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/SliderComponent.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/SliderComponent.swift",
       "kind": "IntegerLiteral",
       "offset": 696,
       "length": 2,
       "value": "50"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/MultiSelectComponent.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/MultiSelectComponent.swift",
       "kind": "Array",
       "offset": 1035,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/MultiSelectComponent.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/MultiSelectComponent.swift",
       "kind": "BooleanLiteral",
       "offset": 1088,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/DatePickerComponent.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/DatePickerComponent.swift",
       "kind": "BooleanLiteral",
       "offset": 726,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ModalTriggerComponent.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ModalTriggerComponent.swift",
       "kind": "BooleanLiteral",
       "offset": 743,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/VideoURLParser.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/VideoURLParser.swift",
       "kind": "Array",
       "offset": 825,
       "length": 494,
       "value": "[\"(?:https?:\/\/)?(?:www\\.)?youtu\\.be\/([a-zA-Z0-9_-]{11})\", \"(?:https?:\/\/)?(?:www\\.|m\\.)?youtube\\.com\/watch\\?.*v=([a-zA-Z0-9_-]{11})\", \"(?:https?:\/\/)?(?:www\\.)?youtube\\.com\/embed\/([a-zA-Z0-9_-]{11})\", \"(?:https?:\/\/)?(?:www\\.)?youtube\\.com\/shorts\/([a-zA-Z0-9_-]{11})\"]"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/VideoURLParser.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/VideoURLParser.swift",
       "kind": "Array",
       "offset": 1404,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/VideoURLParser.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/VideoURLParser.swift",
       "kind": "Array",
       "offset": 1506,
       "length": 212,
       "value": "[\"(?:https?:\/\/)?(?:www\\.)?vimeo\\.com\/(\\d+)\", \"(?:https?:\/\/)?player\\.vimeo\\.com\/video\/(\\d+)\"]"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/VideoURLParser.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/VideoURLParser.swift",
       "kind": "Array",
       "offset": 1803,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/VideoURLParser.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/VideoURLParser.swift",
       "kind": "BooleanLiteral",
       "offset": 2070,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/VideoURLParser.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/VideoURLParser.swift",
       "kind": "BooleanLiteral",
       "offset": 2098,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/VideoURLParser.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/VideoURLParser.swift",
       "kind": "BooleanLiteral",
       "offset": 2127,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/VideoURLParser.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/VideoURLParser.swift",
       "kind": "BooleanLiteral",
       "offset": 2159,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/SetgreetWebView.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/SetgreetWebView.swift",
       "kind": "BooleanLiteral",
       "offset": 472,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "Array",
       "offset": 431,
       "length": 9,
       "value": "[\"Inter\"]"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 624,
       "length": 7,
       "value": "\"Inter\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 638,
       "length": 7,
       "value": "\"inter\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 662,
       "length": 11,
       "value": "\"inter.ttf\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 716,
       "length": 90,
       "value": "\"https:\/\/raw.githubusercontent.com\/google\/fonts\/main\/ofl\/inter\/Inter%5Bopsz%2Cwght%5D.ttf\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "BooleanLiteral",
       "offset": 840,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 890,
       "length": 8,
       "value": "\"Roboto\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 905,
       "length": 8,
       "value": "\"roboto\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 930,
       "length": 12,
       "value": "\"roboto.ttf\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 985,
       "length": 92,
       "value": "\"https:\/\/raw.githubusercontent.com\/google\/fonts\/main\/ofl\/roboto\/Roboto%5Bwdth%2Cwght%5D.ttf\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "BooleanLiteral",
       "offset": 1111,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 1161,
       "length": 11,
       "value": "\"Open Sans\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 1179,
       "length": 10,
       "value": "\"opensans\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 1206,
       "length": 14,
       "value": "\"opensans.ttf\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 1263,
       "length": 96,
       "value": "\"https:\/\/raw.githubusercontent.com\/google\/fonts\/main\/ofl\/opensans\/OpenSans%5Bwdth%2Cwght%5D.ttf\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "BooleanLiteral",
       "offset": 1393,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 1443,
       "length": 12,
       "value": "\"Montserrat\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 1462,
       "length": 12,
       "value": "\"montserrat\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 1491,
       "length": 16,
       "value": "\"montserrat.ttf\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 1550,
       "length": 93,
       "value": "\"https:\/\/raw.githubusercontent.com\/google\/fonts\/main\/ofl\/montserrat\/Montserrat%5Bwght%5D.ttf\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "BooleanLiteral",
       "offset": 1677,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 1727,
       "length": 8,
       "value": "\"Nunito\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 1742,
       "length": 8,
       "value": "\"nunito\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 1767,
       "length": 12,
       "value": "\"nunito.ttf\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 1822,
       "length": 85,
       "value": "\"https:\/\/raw.githubusercontent.com\/google\/fonts\/main\/ofl\/nunito\/Nunito%5Bwght%5D.ttf\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "BooleanLiteral",
       "offset": 1941,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 1991,
       "length": 11,
       "value": "\"Quicksand\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 2009,
       "length": 11,
       "value": "\"quicksand\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 2037,
       "length": 15,
       "value": "\"quicksand.ttf\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 2095,
       "length": 91,
       "value": "\"https:\/\/raw.githubusercontent.com\/google\/fonts\/main\/ofl\/quicksand\/Quicksand%5Bwght%5D.ttf\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "BooleanLiteral",
       "offset": 2220,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 2270,
       "length": 9,
       "value": "\"Handjet\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 2286,
       "length": 9,
       "value": "\"handjet\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 2312,
       "length": 13,
       "value": "\"handjet.ttf\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 2368,
       "length": 101,
       "value": "\"https:\/\/raw.githubusercontent.com\/google\/fonts\/main\/ofl\/handjet\/Handjet%5BELGR%2CELSH%2Cwght%5D.ttf\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "BooleanLiteral",
       "offset": 2503,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 2553,
       "length": 7,
       "value": "\"Kufam\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 2567,
       "length": 7,
       "value": "\"kufam\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 2591,
       "length": 11,
       "value": "\"kufam.ttf\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 2645,
       "length": 83,
       "value": "\"https:\/\/raw.githubusercontent.com\/google\/fonts\/main\/ofl\/kufam\/Kufam%5Bwght%5D.ttf\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "BooleanLiteral",
       "offset": 2762,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 2812,
       "length": 18,
       "value": "\"Playfair Display\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 2837,
       "length": 17,
       "value": "\"playfairdisplay\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 2871,
       "length": 21,
       "value": "\"playfairdisplay.ttf\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 2935,
       "length": 103,
       "value": "\"https:\/\/raw.githubusercontent.com\/google\/fonts\/main\/ofl\/playfairdisplay\/PlayfairDisplay%5Bwght%5D.ttf\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "BooleanLiteral",
       "offset": 3072,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 3122,
       "length": 14,
       "value": "\"Merriweather\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 3143,
       "length": 14,
       "value": "\"merriweather\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 3174,
       "length": 18,
       "value": "\"merriweather.ttf\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 3235,
       "length": 111,
       "value": "\"https:\/\/raw.githubusercontent.com\/google\/fonts\/main\/ofl\/merriweather\/Merriweather%5Bopsz%2Cwdth%2Cwght%5D.ttf\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "BooleanLiteral",
       "offset": 3380,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 3430,
       "length": 16,
       "value": "\"Hanken Grotesk\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 3453,
       "length": 15,
       "value": "\"hankengrotesk\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 3485,
       "length": 19,
       "value": "\"hankengrotesk.ttf\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 3547,
       "length": 99,
       "value": "\"https:\/\/raw.githubusercontent.com\/google\/fonts\/main\/ofl\/hankengrotesk\/HankenGrotesk%5Bwght%5D.ttf\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "BooleanLiteral",
       "offset": 3680,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 3775,
       "length": 6,
       "value": "\"Lato\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 3788,
       "length": 6,
       "value": "\"lato\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 3811,
       "length": 18,
       "value": "\"lato-regular.ttf\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 3872,
       "length": 79,
       "value": "\"https:\/\/raw.githubusercontent.com\/google\/fonts\/main\/ofl\/lato\/Lato-Regular.ttf\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "BooleanLiteral",
       "offset": 3985,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "IntegerLiteral",
       "offset": 4000,
       "length": 3,
       "value": "400"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 4036,
       "length": 6,
       "value": "\"Lato\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 4049,
       "length": 6,
       "value": "\"lato\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 4072,
       "length": 17,
       "value": "\"lato-medium.ttf\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 4132,
       "length": 78,
       "value": "\"https:\/\/raw.githubusercontent.com\/google\/fonts\/main\/ofl\/lato\/Lato-Medium.ttf\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "BooleanLiteral",
       "offset": 4244,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "IntegerLiteral",
       "offset": 4259,
       "length": 3,
       "value": "500"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 4295,
       "length": 6,
       "value": "\"Lato\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 4308,
       "length": 6,
       "value": "\"lato\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 4331,
       "length": 19,
       "value": "\"lato-semibold.ttf\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 4393,
       "length": 80,
       "value": "\"https:\/\/raw.githubusercontent.com\/google\/fonts\/main\/ofl\/lato\/Lato-SemiBold.ttf\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "BooleanLiteral",
       "offset": 4507,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "IntegerLiteral",
       "offset": 4522,
       "length": 3,
       "value": "600"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 4558,
       "length": 6,
       "value": "\"Lato\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 4571,
       "length": 6,
       "value": "\"lato\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 4594,
       "length": 15,
       "value": "\"lato-bold.ttf\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 4652,
       "length": 76,
       "value": "\"https:\/\/raw.githubusercontent.com\/google\/fonts\/main\/ofl\/lato\/Lato-Bold.ttf\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "BooleanLiteral",
       "offset": 4762,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "IntegerLiteral",
       "offset": 4777,
       "length": 3,
       "value": "700"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 4861,
       "length": 9,
       "value": "\"Poppins\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 4877,
       "length": 9,
       "value": "\"poppins\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 4903,
       "length": 21,
       "value": "\"poppins-regular.ttf\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 4967,
       "length": 85,
       "value": "\"https:\/\/raw.githubusercontent.com\/google\/fonts\/main\/ofl\/poppins\/Poppins-Regular.ttf\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "BooleanLiteral",
       "offset": 5086,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "IntegerLiteral",
       "offset": 5101,
       "length": 3,
       "value": "400"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 5137,
       "length": 9,
       "value": "\"Poppins\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 5153,
       "length": 9,
       "value": "\"poppins\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 5179,
       "length": 20,
       "value": "\"poppins-medium.ttf\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 5242,
       "length": 84,
       "value": "\"https:\/\/raw.githubusercontent.com\/google\/fonts\/main\/ofl\/poppins\/Poppins-Medium.ttf\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "BooleanLiteral",
       "offset": 5360,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "IntegerLiteral",
       "offset": 5375,
       "length": 3,
       "value": "500"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 5411,
       "length": 9,
       "value": "\"Poppins\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 5427,
       "length": 9,
       "value": "\"poppins\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 5453,
       "length": 22,
       "value": "\"poppins-semibold.ttf\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 5518,
       "length": 86,
       "value": "\"https:\/\/raw.githubusercontent.com\/google\/fonts\/main\/ofl\/poppins\/Poppins-SemiBold.ttf\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "BooleanLiteral",
       "offset": 5638,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "IntegerLiteral",
       "offset": 5653,
       "length": 3,
       "value": "600"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 5689,
       "length": 9,
       "value": "\"Poppins\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 5705,
       "length": 9,
       "value": "\"poppins\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 5731,
       "length": 18,
       "value": "\"poppins-bold.ttf\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "StringLiteral",
       "offset": 5792,
       "length": 82,
       "value": "\"https:\/\/raw.githubusercontent.com\/google\/fonts\/main\/ofl\/poppins\/Poppins-Bold.ttf\""
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "BooleanLiteral",
       "offset": 5908,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alpertekin\/Documents\/GitHub\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/SetgreetFontRegistry.swift",
       "kind": "IntegerLiteral",
       "offset": 5923,
       "length": 3,
