@@ -6268,7 +6268,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(components:userData:eventData:screenId:background:isContentScrollable:forceScrollable:)",
+            "printedName": "init(components:userData:eventData:screenId:background:isContentScrollable:forceScrollable:screenLayout:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -6365,11 +6365,26 @@
                 "printedName": "Swift.Bool",
                 "hasDefaultArg": true,
                 "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:11SetgreetSDK17DynamicScreenViewV10components8userData05eventH08screenId10background19isContentScrollable05forceO0ACSayAA17ComponentInstanceVG_SDySSypGANSSAA0aD15BackgroundModelVSgS2btcfc",
-            "mangledName": "$s11SetgreetSDK17DynamicScreenViewV10components8userData05eventH08screenId10background19isContentScrollable05forceO0ACSayAA17ComponentInstanceVG_SDySSypGANSSAA0aD15BackgroundModelVSgS2btcfc",
+            "usr": "s:11SetgreetSDK17DynamicScreenViewV10components8userData05eventH08screenId10background19isContentScrollable05forceO00J6LayoutACSayAA17ComponentInstanceVG_SDySSypGAOSSAA0aD15BackgroundModelVSgS2bSSSgtcfc",
+            "mangledName": "$s11SetgreetSDK17DynamicScreenViewV10components8userData05eventH08screenId10background19isContentScrollable05forceO00J6LayoutACSayAA17ComponentInstanceVG_SDySSypGAOSSAA0aD15BackgroundModelVSgS2bSSSgtcfc",
             "moduleName": "SetgreetSDK",
             "declAttributes": [
               "Preconcurrency",
@@ -6893,9 +6908,70 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "screenLayout",
+            "printedName": "screenLayout",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK20ScreenWithComponentsV12screenLayoutSSSgvp",
+            "mangledName": "$s11SetgreetSDK20ScreenWithComponentsV12screenLayoutSSSgvp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK20ScreenWithComponentsV12screenLayoutSSSgvg",
+                "mangledName": "$s11SetgreetSDK20ScreenWithComponentsV12screenLayoutSSSgvg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(id:orderId:name:components:background:presentationStyle:bottomSheetConfig:)",
+            "printedName": "init(id:orderId:name:components:background:presentationStyle:bottomSheetConfig:screenLayout:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -6989,11 +7065,26 @@
                 ],
                 "hasDefaultArg": true,
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:11SetgreetSDK20ScreenWithComponentsV2id7orderId4name10components10background17presentationStyle17bottomSheetConfigACSS_SiSSSgSayAA17ComponentInstanceVGAA0aC15BackgroundModelVSgAA012PresentationM0OSgAA06BottomoP0VSgtcfc",
-            "mangledName": "$s11SetgreetSDK20ScreenWithComponentsV2id7orderId4name10components10background17presentationStyle17bottomSheetConfigACSS_SiSSSgSayAA17ComponentInstanceVGAA0aC15BackgroundModelVSgAA012PresentationM0OSgAA06BottomoP0VSgtcfc",
+            "usr": "s:11SetgreetSDK20ScreenWithComponentsV2id7orderId4name10components10background17presentationStyle17bottomSheetConfig12screenLayoutACSS_SiSSSgSayAA17ComponentInstanceVGAA0aC15BackgroundModelVSgAA012PresentationM0OSgAA06BottomoP0VSgALtcfc",
+            "mangledName": "$s11SetgreetSDK20ScreenWithComponentsV2id7orderId4name10components10background17presentationStyle17bottomSheetConfig12screenLayoutACSS_SiSSSgSayAA17ComponentInstanceVGAA0aC15BackgroundModelVSgAA012PresentationM0OSgAA06BottomoP0VSgALtcfc",
             "moduleName": "SetgreetSDK",
             "declAttributes": [
               "AccessControl"
@@ -43772,61 +43863,61 @@
       "kind": "StringLiteral",
       "offset": 120,
       "length": 7,
-      "value": "\"1.0.1\""
+      "value": "\"1.0.2\""
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/DynamicScreenView.swift",
       "kind": "Dictionary",
-      "offset": 1465,
+      "offset": 1563,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/DynamicScreenView.swift",
       "kind": "Dictionary",
-      "offset": 1505,
+      "offset": 1603,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/DynamicScreenView.swift",
       "kind": "StringLiteral",
-      "offset": 1537,
+      "offset": 1635,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/DynamicScreenView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1635,
+      "offset": 1733,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/DynamicScreenView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1673,
+      "offset": 1771,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/DynamicScreenView.swift",
       "kind": "Array",
-      "offset": 15257,
+      "offset": 16906,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/DynamicScreenView.swift",
       "kind": "BooleanLiteral",
-      "offset": 17717,
+      "offset": 19444,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/DynamicScreenView.swift",
       "kind": "StringLiteral",
-      "offset": 17748,
+      "offset": 19475,
       "length": 2,
       "value": "\"\""
     },

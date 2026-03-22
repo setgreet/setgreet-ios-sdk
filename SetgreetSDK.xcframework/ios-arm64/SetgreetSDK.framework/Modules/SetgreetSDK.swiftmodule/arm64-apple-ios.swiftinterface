@@ -232,7 +232,7 @@ public enum EventPropertyKey : Swift.String, Swift.CaseIterable {
 }
 public var setgreetVersion: Swift.String
 @_Concurrency.MainActor @preconcurrency public struct DynamicScreenView : SwiftUICore.View {
-  @_Concurrency.MainActor @preconcurrency public init(components: [SetgreetSDK.ComponentInstance], userData: [Swift.String : Any] = [:], eventData: [Swift.String : Any] = [:], screenId: Swift.String = "", background: SetgreetSDK.SetgreetScreenBackgroundModel? = nil, isContentScrollable: Swift.Bool = true, forceScrollable: Swift.Bool = false)
+  @_Concurrency.MainActor @preconcurrency public init(components: [SetgreetSDK.ComponentInstance], userData: [Swift.String : Any] = [:], eventData: [Swift.String : Any] = [:], screenId: Swift.String = "", background: SetgreetSDK.SetgreetScreenBackgroundModel? = nil, isContentScrollable: Swift.Bool = true, forceScrollable: Swift.Bool = false, screenLayout: Swift.String? = nil)
   @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
     get
   }
@@ -246,7 +246,8 @@ public struct ScreenWithComponents : Swift.Codable, Swift.Identifiable, Swift.Ha
   public let background: SetgreetSDK.SetgreetScreenBackgroundModel?
   public let presentationStyle: SetgreetSDK.PresentationStyle?
   public let bottomSheetConfig: SetgreetSDK.BottomSheetConfig?
-  public init(id: Swift.String, orderId: Swift.Int, name: Swift.String? = nil, components: [SetgreetSDK.ComponentInstance] = [], background: SetgreetSDK.SetgreetScreenBackgroundModel? = nil, presentationStyle: SetgreetSDK.PresentationStyle? = nil, bottomSheetConfig: SetgreetSDK.BottomSheetConfig? = nil)
+  public let screenLayout: Swift.String?
+  public init(id: Swift.String, orderId: Swift.Int, name: Swift.String? = nil, components: [SetgreetSDK.ComponentInstance] = [], background: SetgreetSDK.SetgreetScreenBackgroundModel? = nil, presentationStyle: SetgreetSDK.PresentationStyle? = nil, bottomSheetConfig: SetgreetSDK.BottomSheetConfig? = nil, screenLayout: Swift.String? = nil)
   public func hash(into hasher: inout Swift.Hasher)
   public static func == (lhs: SetgreetSDK.ScreenWithComponents, rhs: SetgreetSDK.ScreenWithComponents) -> Swift.Bool
   public typealias ID = Swift.String
