@@ -32,7 +32,45 @@ Or you can add it directly within Xcode:
 Add to your `Podfile`:
 
 ```ruby
-pod 'SetgreetSDK', '~> 1.0.0'
+pod 'SetgreetSDK', '~> LATEST_VERSION'
+```
+
+### Lottie animations (optional)
+
+The core `SetgreetSDK` has no third-party dependencies. Lottie animation support is shipped as a separate, optional module — add it **only if your flows use Lottie animation components**. If you don't add it, `lottie` components in a flow render as empty and the rest of the flow is unaffected; the core SDK stays smaller and Lottie-free.
+
+**Swift Package Manager** — add the `SetgreetSDKLottie` product, and (because SwiftPM binary frameworks can't declare their own dependencies) also add the Lottie package to your app target:
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/setgreet/setgreet-ios-sdk.git", .upToNextMajor(from: "LATEST_VERSION")),
+    .package(url: "https://github.com/airbnb/lottie-spm.git", from: "4.6.0")
+],
+targets: [
+    .target(
+        name: "YourApp",
+        dependencies: [
+            .product(name: "SetgreetSDK", package: "setgreet-ios-sdk"),
+            .product(name: "SetgreetSDKLottie", package: "setgreet-ios-sdk"),
+            .product(name: "Lottie", package: "lottie-spm")
+        ]
+    )
+]
+```
+
+**CocoaPods** — add the companion pod (it pulls in `lottie-ios` automatically):
+
+```ruby
+pod 'SetgreetSDK', '~> LATEST_VERSION'
+pod 'SetgreetSDKLottie', '~> LATEST_VERSION'
+```
+
+**Register at startup** — call this once before the first Setgreet flow is shown (e.g. in your `AppDelegate` / `App.init()`):
+
+```swift
+import SetgreetSDKLottie
+
+SetgreetLottie.register()
 ```
 
 ## Usage
