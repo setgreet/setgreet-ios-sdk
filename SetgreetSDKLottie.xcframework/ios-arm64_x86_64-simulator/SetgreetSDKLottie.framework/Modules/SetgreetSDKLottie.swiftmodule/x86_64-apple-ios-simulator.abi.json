@@ -121,13 +121,6 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "SetgreetComponentProtocol",
-            "printedName": "SetgreetComponentProtocol",
-            "usr": "s:11SetgreetSDK0A17ComponentProtocolP",
-            "mangledName": "$s11SetgreetSDK0A17ComponentProtocolP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
@@ -139,6 +132,13 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SetgreetComponentProtocol",
+            "printedName": "SetgreetComponentProtocol",
+            "usr": "s:11SetgreetSDK0A17ComponentProtocolP",
+            "mangledName": "$s11SetgreetSDK0A17ComponentProtocolP"
           }
         ]
       },

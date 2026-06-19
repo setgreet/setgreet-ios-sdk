@@ -10,47 +10,47 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		jd131eubyo7BsqbrxzJdmWn0PkE=
+		ktcgORwdY+BykUBqDuGQRuDaLDI=
 		</data>
 		<key>Modules/SetgreetSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		5kFiDox0HzCOlQdALfVHENih3pQ=
+		9C4J280SlQk+KWFSEUrZ4AGciWQ=
 		</data>
 		<key>Modules/SetgreetSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		++bP3l6jKtPeG+veO3MO1rbcum4=
+		2xO7m4SZkNtEe3zYth12UJgGYE4=
 		</data>
 		<key>Modules/SetgreetSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		KISWW9KO6nv/U033VtvPHr9UtFY=
+		kwhOgYNfmdjtAxcTUgTg9v2atRk=
 		</data>
 		<key>Modules/SetgreetSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Vrfc5y2RA/BbludVfh9DBnXYgRg=
+		dNUp6F/pQ6huIRgL0/SjcMeHG8U=
 		</data>
 		<key>Modules/SetgreetSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Qma0ni19AajOpWL4YtUGiOOosLc=
+		+puogyVEksN2/lzqIikIn63ueA4=
 		</data>
 		<key>Modules/SetgreetSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		5kFiDox0HzCOlQdALfVHENih3pQ=
+		9C4J280SlQk+KWFSEUrZ4AGciWQ=
 		</data>
 		<key>Modules/SetgreetSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		gFZucLNfQodqUfyVrs7rzfS1/7k=
+		UIU3rPtD5NDL2d/mo8tlmNdDYUs=
 		</data>
 		<key>Modules/SetgreetSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		VPfKrL4jcnYRidRuF83cmaJJEzE=
+		h5CbvIcWINnd8dM7cFwpd/T2Qo4=
 		</data>
 		<key>Modules/SetgreetSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		cfJ1ZYXDWDMsWjjnMlpQYV1z+SU=
+		n5yB6wgt/qQLVBYgwT49j0eTuNQ=
 		</data>
 		<key>Modules/SetgreetSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		aNOIyX7+F9n3Ajl6z2T94AYSQHc=
+		9i8u5YpT9QAtFbGaebVsq0DpATA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -74,70 +74,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			dDQryQAuzUQDPBAC1oUrtBJ6YoK4alcR19NUe5Yxjvc=
+			pWTjKuCS7+0IFz25+iDwzeK1flPV0uaIE+UO2ErndVY=
 			</data>
 		</dict>
 		<key>Modules/SetgreetSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			K1hu4yMnhDNcwVXU4ycpBMykabMeBM7XjlP/zO/p8c8=
+			dgaaUkqz0cRxaxN2/lfQyDTs+X1r2FuN+HzEw+XsS4k=
 			</data>
 		</dict>
 		<key>Modules/SetgreetSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xUdMlxr7CWZl2Ll1UMjfAc48T6wkH+drFKA3Rm62H64=
+			7U5LvJ5E2Xr/cA0iBqoLkPhgH9UEuaxpvDb7rewE4CQ=
 			</data>
 		</dict>
 		<key>Modules/SetgreetSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+rRQA+NC0XbTKSgDR/098NbGPK3QhEytzIhDSwm+CyE=
+			y4IfEo+rTjPY58+08CqD/QWmmiK+QHi+Uh5damaP9QI=
 			</data>
 		</dict>
 		<key>Modules/SetgreetSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lrKyl3JuX/Oc1EqpPMTinEPeNxgZ0n3M+oLB/PRzs1s=
+			dwXmNXb5TpXHH0Ckjluqc7aoGGDEstWx8Mwd1LDPi+Q=
 			</data>
 		</dict>
 		<key>Modules/SetgreetSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dDQryQAuzUQDPBAC1oUrtBJ6YoK4alcR19NUe5Yxjvc=
+			pWTjKuCS7+0IFz25+iDwzeK1flPV0uaIE+UO2ErndVY=
 			</data>
 		</dict>
 		<key>Modules/SetgreetSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Nx8IKyzLDtlx1ad/L+J6sl9xX23L5DOueR+DMgpAI7M=
+			Tg0FEYpSeXECRajwBWgvyM+hktynw5OocqkL2LMZOx0=
 			</data>
 		</dict>
 		<key>Modules/SetgreetSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OabA0mGmhqMtuNoQVsScGpgjoyXSeJrjVbVIRmDie/4=
+			Nk3piBIhcJ+pS2ns/XSJlJoenxeXLBUBxS3JHp9mviE=
 			</data>
 		</dict>
 		<key>Modules/SetgreetSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ESYmr+WCzaZ3eezKvigzHPj0c8VA1AXbHMpL6YFi/OM=
+			XnAi1njaa0sL1hpNNvM9KY5PYYH4ATGmugkwRYrH3xs=
 			</data>
 		</dict>
 		<key>Modules/SetgreetSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6uBgVlnIgzbPMgQLEYbF6JgP1SGKYDMxZO3bM8Oq8vk=
+			IGxhO4PwL7PP9JamoKILqXh6X0WS6cVgBv9N7pNuYu4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

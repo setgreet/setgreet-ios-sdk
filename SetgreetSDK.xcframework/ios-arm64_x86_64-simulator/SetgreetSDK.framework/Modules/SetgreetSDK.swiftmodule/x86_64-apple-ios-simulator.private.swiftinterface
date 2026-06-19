@@ -1,7 +1,6 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
-// swift-module-flags: -target x86_64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name SetgreetSDK
-// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
+// swift-module-flags: -target x86_64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name SetgreetSDK
 import AVFoundation
 import AVKit
 import Combine
@@ -21,7 +20,6 @@ import _AVKit_SwiftUI
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
-import _WebKit_SwiftUI
 import os.log
 import os
 public protocol SetgreetNetworkInterface {
@@ -402,6 +400,7 @@ public struct ComponentInstance : Swift.Codable, Swift.Identifiable, Swift.Hasha
   public let order: Swift.Int
   public let visible: Swift.Bool?
   public init(id: Swift.String, type: Swift.String, props: [Swift.String : SetgreetSDK.AnyCodable] = [:], bindings: [SetgreetSDK.VariableBinding]? = nil, position: SetgreetSDK.ComponentPosition? = nil, size: SetgreetSDK.ComponentSize? = nil, children: [SetgreetSDK.ComponentInstance]? = nil, conditions: [SetgreetSDK.ComponentCondition]? = nil, order: Swift.Int = 0, visible: Swift.Bool? = true)
+  public init(from decoder: any Swift.Decoder) throws
   public func hash(into hasher: inout Swift.Hasher)
   public static func == (lhs: SetgreetSDK.ComponentInstance, rhs: SetgreetSDK.ComponentInstance) -> Swift.Bool
   public typealias ID = Swift.String
@@ -409,7 +408,6 @@ public struct ComponentInstance : Swift.Codable, Swift.Identifiable, Swift.Hasha
   public var hashValue: Swift.Int {
     get
   }
-  public init(from decoder: any Swift.Decoder) throws
 }
 public struct ComponentPosition : Swift.Codable {
   public let x: CoreFoundation.CGFloat
@@ -431,6 +429,9 @@ public enum DimensionValue : Swift.Codable {
   case auto
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
+  public var fraction: CoreFoundation.CGFloat? {
+    get
+  }
 }
 public struct VariableBinding : Swift.Codable {
   public let type: SetgreetSDK.BindingType
@@ -627,6 +628,12 @@ public struct ChipComponent : SetgreetSDK.SetgreetComponentProtocol {
   }
   public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
 }
+public struct StepperComponent : SetgreetSDK.SetgreetComponentProtocol {
+  public static var componentType: Swift.String {
+    get
+  }
+  public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
+}
 public struct RadioGroupComponent : SetgreetSDK.SetgreetComponentProtocol {
   public static var componentType: Swift.String {
     get
@@ -658,12 +665,6 @@ public struct CountdownTimerComponent : SetgreetSDK.SetgreetComponentProtocol {
   public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
 }
 public struct CarouselComponent : SetgreetSDK.SetgreetComponentProtocol {
-  public static var componentType: Swift.String {
-    get
-  }
-  public static func render(instance: SetgreetSDK.ComponentInstance, context: SetgreetSDK.ComponentContext) -> SwiftUICore.AnyView
-}
-public struct IconButtonComponent : SetgreetSDK.SetgreetComponentProtocol {
   public static var componentType: Swift.String {
     get
   }
@@ -1168,6 +1169,8 @@ extension SwiftUICore.View {
   
   @_Concurrency.MainActor @preconcurrency public func applyMargin(from props: [Swift.String : SetgreetSDK.AnyCodable]) -> some SwiftUICore.View
   
+  @_Concurrency.MainActor @preconcurrency public func widthFraction(_ fraction: CoreFoundation.CGFloat?, alignment: SwiftUICore.Alignment = .leading) -> some SwiftUICore.View
+  
   @_Concurrency.MainActor @preconcurrency public func applyPadding(from props: [Swift.String : SetgreetSDK.AnyCodable]) -> some SwiftUICore.View
   
   @_Concurrency.MainActor @preconcurrency public func shadow(_ shadow: SetgreetSDK.ShadowValue?) -> some SwiftUICore.View
@@ -1184,6 +1187,9 @@ extension SetgreetSDK.ComponentContext {
   public func parseFont(_ props: [Swift.String : SetgreetSDK.AnyCodable]) -> SetgreetSDK.FontValue
   public func parseColor(_ value: Swift.String?, default defaultColor: SwiftUICore.Color = .clear) -> SwiftUICore.Color
   public func parseGradient(_ props: [Swift.String : SetgreetSDK.AnyCodable]) -> SetgreetSDK.GradientValue?
+}
+public enum FontWeightResolver {
+  public static func nearest(_ value: Swift.Int) -> SwiftUICore.Font.Weight
 }
 public struct BadgeComponent : SetgreetSDK.SetgreetComponentProtocol {
   public static var componentType: Swift.String {

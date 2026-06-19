@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "SetgreetSDKLottie"
-  spec.version      = "1.0.2"
+  spec.version      = "1.1.0"
   spec.summary      = "Optional Lottie animation support for the Setgreet iOS SDK."
   spec.description  = <<-DESC
                       Adds Lottie animation rendering to the Setgreet iOS SDK.
@@ -28,7 +28,7 @@ Pod::Spec.new do |spec|
   # Dependencies: the core SDK (exact-version lockstep) + Lottie.
   # Lottie floor matches the version the companion binary is built against
   # (lottie-spm 4.6.x) and the SPM install instructions in the README.
-  spec.dependency 'SetgreetSDK', '1.0.2'
+  spec.dependency 'SetgreetSDK', '1.1.0'
   spec.dependency 'lottie-ios', '~> 4.6'
 
   # Minimum deployment target
