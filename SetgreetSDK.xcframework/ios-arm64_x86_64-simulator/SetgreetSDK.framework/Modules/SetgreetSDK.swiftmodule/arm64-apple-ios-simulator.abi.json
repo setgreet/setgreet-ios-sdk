@@ -44343,7 +44343,7 @@
       "kind": "StringLiteral",
       "offset": 120,
       "length": 7,
-      "value": "\"1.1.0\""
+      "value": "\"1.1.1\""
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/DynamicScreenView.swift",
