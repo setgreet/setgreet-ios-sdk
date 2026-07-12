@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/setgreet/setgreet-ios-sdk.git",
       "state" : {
-        "revision" : "5ff022aa2512e1b96fca1193df38a9cb8c1cd31d",
-        "version" : "0.3.0"
+        "revision" : "f8a3b0991eb932decc70294909050a1a03c2dba3",
+        "version" : "1.1.1"
       }
     }
   ],

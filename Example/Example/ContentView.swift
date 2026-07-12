@@ -29,6 +29,7 @@ struct ContentView: View {
                         errorMessage = "FlowId must be filled"
                     } else {
                         errorMessage = ""
+                        Setgreet.shared.identifyUser(userId: "example-ios-user")
                         Setgreet.shared.showFlow(flowId: flowId)
                     }
                 }) {
