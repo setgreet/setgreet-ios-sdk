@@ -6525,6 +6525,363 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "ScreenAutoAdvance",
+        "printedName": "ScreenAutoAdvance",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "delayMs",
+            "printedName": "delayMs",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK17ScreenAutoAdvanceV7delayMsSivp",
+            "mangledName": "$s11SetgreetSDK17ScreenAutoAdvanceV7delayMsSivp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK17ScreenAutoAdvanceV7delayMsSivg",
+                "mangledName": "$s11SetgreetSDK17ScreenAutoAdvanceV7delayMsSivg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "action",
+            "printedName": "action",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK17ScreenAutoAdvanceV6actionSSSgvp",
+            "mangledName": "$s11SetgreetSDK17ScreenAutoAdvanceV6actionSSSgvp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK17ScreenAutoAdvanceV6actionSSSgvg",
+                "mangledName": "$s11SetgreetSDK17ScreenAutoAdvanceV6actionSSSgvg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(delayMs:action:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ScreenAutoAdvance",
+                "printedName": "SetgreetSDK.ScreenAutoAdvance",
+                "usr": "s:11SetgreetSDK17ScreenAutoAdvanceV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11SetgreetSDK17ScreenAutoAdvanceV7delayMs6actionACSi_SSSgtcfc",
+            "mangledName": "$s11SetgreetSDK17ScreenAutoAdvanceV7delayMs6actionACSi_SSSgtcfc",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ScreenAutoAdvance",
+                "printedName": "SetgreetSDK.ScreenAutoAdvance",
+                "usr": "s:11SetgreetSDK17ScreenAutoAdvanceV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11SetgreetSDK17ScreenAutoAdvanceV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s11SetgreetSDK17ScreenAutoAdvanceV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11SetgreetSDK17ScreenAutoAdvanceV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s11SetgreetSDK17ScreenAutoAdvanceV6encode2toys7Encoder_p_tKF",
+            "moduleName": "SetgreetSDK",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK17ScreenAutoAdvanceV9hashValueSivp",
+            "mangledName": "$s11SetgreetSDK17ScreenAutoAdvanceV9hashValueSivp",
+            "moduleName": "SetgreetSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK17ScreenAutoAdvanceV9hashValueSivg",
+                "mangledName": "$s11SetgreetSDK17ScreenAutoAdvanceV9hashValueSivg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11SetgreetSDK17ScreenAutoAdvanceV4hash4intoys6HasherVz_tF",
+            "mangledName": "$s11SetgreetSDK17ScreenAutoAdvanceV4hash4intoys6HasherVz_tF",
+            "moduleName": "SetgreetSDK",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ScreenAutoAdvance",
+                "printedName": "SetgreetSDK.ScreenAutoAdvance",
+                "usr": "s:11SetgreetSDK17ScreenAutoAdvanceV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ScreenAutoAdvance",
+                "printedName": "SetgreetSDK.ScreenAutoAdvance",
+                "usr": "s:11SetgreetSDK17ScreenAutoAdvanceV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11SetgreetSDK17ScreenAutoAdvanceV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s11SetgreetSDK17ScreenAutoAdvanceV2eeoiySbAC_ACtFZ",
+            "moduleName": "SetgreetSDK",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:11SetgreetSDK17ScreenAutoAdvanceV",
+        "mangledName": "$s11SetgreetSDK17ScreenAutoAdvanceV",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "ScreenWithComponents",
         "printedName": "ScreenWithComponents",
         "children": [
@@ -6979,9 +7336,131 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "transition",
+            "printedName": "transition",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SetgreetSDK.ScreenTransitionConfig?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ScreenTransitionConfig",
+                    "printedName": "SetgreetSDK.ScreenTransitionConfig",
+                    "usr": "s:11SetgreetSDK22ScreenTransitionConfigV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK20ScreenWithComponentsV10transitionAA0C16TransitionConfigVSgvp",
+            "mangledName": "$s11SetgreetSDK20ScreenWithComponentsV10transitionAA0C16TransitionConfigVSgvp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "SetgreetSDK.ScreenTransitionConfig?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ScreenTransitionConfig",
+                        "printedName": "SetgreetSDK.ScreenTransitionConfig",
+                        "usr": "s:11SetgreetSDK22ScreenTransitionConfigV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK20ScreenWithComponentsV10transitionAA0C16TransitionConfigVSgvg",
+                "mangledName": "$s11SetgreetSDK20ScreenWithComponentsV10transitionAA0C16TransitionConfigVSgvg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "autoAdvance",
+            "printedName": "autoAdvance",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SetgreetSDK.ScreenAutoAdvance?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ScreenAutoAdvance",
+                    "printedName": "SetgreetSDK.ScreenAutoAdvance",
+                    "usr": "s:11SetgreetSDK17ScreenAutoAdvanceV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK20ScreenWithComponentsV11autoAdvanceAA0c4AutoG0VSgvp",
+            "mangledName": "$s11SetgreetSDK20ScreenWithComponentsV11autoAdvanceAA0c4AutoG0VSgvp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "SetgreetSDK.ScreenAutoAdvance?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ScreenAutoAdvance",
+                        "printedName": "SetgreetSDK.ScreenAutoAdvance",
+                        "usr": "s:11SetgreetSDK17ScreenAutoAdvanceV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK20ScreenWithComponentsV11autoAdvanceAA0c4AutoG0VSgvg",
+                "mangledName": "$s11SetgreetSDK20ScreenWithComponentsV11autoAdvanceAA0c4AutoG0VSgvg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(id:orderId:name:components:background:presentationStyle:bottomSheetConfig:screenLayout:)",
+            "printedName": "init(id:orderId:name:components:background:presentationStyle:bottomSheetConfig:screenLayout:transition:autoAdvance:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -7090,11 +7569,41 @@
                 ],
                 "hasDefaultArg": true,
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SetgreetSDK.ScreenTransitionConfig?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ScreenTransitionConfig",
+                    "printedName": "SetgreetSDK.ScreenTransitionConfig",
+                    "usr": "s:11SetgreetSDK22ScreenTransitionConfigV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SetgreetSDK.ScreenAutoAdvance?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ScreenAutoAdvance",
+                    "printedName": "SetgreetSDK.ScreenAutoAdvance",
+                    "usr": "s:11SetgreetSDK17ScreenAutoAdvanceV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:11SetgreetSDK20ScreenWithComponentsV2id7orderId4name10components10background17presentationStyle17bottomSheetConfig12screenLayoutACSS_SiSSSgSayAA17ComponentInstanceVGAA0aC15BackgroundModelVSgAA012PresentationM0OSgAA06BottomoP0VSgALtcfc",
-            "mangledName": "$s11SetgreetSDK20ScreenWithComponentsV2id7orderId4name10components10background17presentationStyle17bottomSheetConfig12screenLayoutACSS_SiSSSgSayAA17ComponentInstanceVGAA0aC15BackgroundModelVSgAA012PresentationM0OSgAA06BottomoP0VSgALtcfc",
+            "usr": "s:11SetgreetSDK20ScreenWithComponentsV2id7orderId4name10components10background17presentationStyle17bottomSheetConfig12screenLayout10transition11autoAdvanceACSS_SiSSSgSayAA17ComponentInstanceVGAA0aC15BackgroundModelVSgAA012PresentationM0OSgAA06BottomoP0VSgAnA0c10TransitionP0VSgAA0c4AutoU0VSgtcfc",
+            "mangledName": "$s11SetgreetSDK20ScreenWithComponentsV2id7orderId4name10components10background17presentationStyle17bottomSheetConfig12screenLayout10transition11autoAdvanceACSS_SiSSSgSayAA17ComponentInstanceVGAA0aC15BackgroundModelVSgAA012PresentationM0OSgAA06BottomoP0VSgAnA0c10TransitionP0VSgAA0c4AutoU0VSgtcfc",
             "moduleName": "SetgreetSDK",
             "declAttributes": [
               "AccessControl"
@@ -7258,8 +7767,7 @@
         "mangledName": "$s11SetgreetSDK20ScreenWithComponentsV",
         "moduleName": "SetgreetSDK",
         "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
+          "AccessControl"
         ],
         "conformances": [
           {
@@ -34154,6 +34662,839 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "ScreenTransitionType",
+        "printedName": "ScreenTransitionType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "none",
+            "printedName": "none",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.ScreenTransitionType.Type) -> SetgreetSDK.ScreenTransitionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ScreenTransitionType",
+                    "printedName": "SetgreetSDK.ScreenTransitionType",
+                    "usr": "s:11SetgreetSDK20ScreenTransitionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.ScreenTransitionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ScreenTransitionType",
+                        "printedName": "SetgreetSDK.ScreenTransitionType",
+                        "usr": "s:11SetgreetSDK20ScreenTransitionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK20ScreenTransitionTypeO4noneyA2CmF",
+            "mangledName": "$s11SetgreetSDK20ScreenTransitionTypeO4noneyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "fade",
+            "printedName": "fade",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.ScreenTransitionType.Type) -> SetgreetSDK.ScreenTransitionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ScreenTransitionType",
+                    "printedName": "SetgreetSDK.ScreenTransitionType",
+                    "usr": "s:11SetgreetSDK20ScreenTransitionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.ScreenTransitionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ScreenTransitionType",
+                        "printedName": "SetgreetSDK.ScreenTransitionType",
+                        "usr": "s:11SetgreetSDK20ScreenTransitionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK20ScreenTransitionTypeO4fadeyA2CmF",
+            "mangledName": "$s11SetgreetSDK20ScreenTransitionTypeO4fadeyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "slide",
+            "printedName": "slide",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.ScreenTransitionType.Type) -> SetgreetSDK.ScreenTransitionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ScreenTransitionType",
+                    "printedName": "SetgreetSDK.ScreenTransitionType",
+                    "usr": "s:11SetgreetSDK20ScreenTransitionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.ScreenTransitionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ScreenTransitionType",
+                        "printedName": "SetgreetSDK.ScreenTransitionType",
+                        "usr": "s:11SetgreetSDK20ScreenTransitionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK20ScreenTransitionTypeO5slideyA2CmF",
+            "mangledName": "$s11SetgreetSDK20ScreenTransitionTypeO5slideyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "slideUp",
+            "printedName": "slideUp",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.ScreenTransitionType.Type) -> SetgreetSDK.ScreenTransitionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ScreenTransitionType",
+                    "printedName": "SetgreetSDK.ScreenTransitionType",
+                    "usr": "s:11SetgreetSDK20ScreenTransitionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.ScreenTransitionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ScreenTransitionType",
+                        "printedName": "SetgreetSDK.ScreenTransitionType",
+                        "usr": "s:11SetgreetSDK20ScreenTransitionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK20ScreenTransitionTypeO7slideUpyA2CmF",
+            "mangledName": "$s11SetgreetSDK20ScreenTransitionTypeO7slideUpyA2CmF",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ScreenTransitionType",
+                "printedName": "SetgreetSDK.ScreenTransitionType",
+                "usr": "s:11SetgreetSDK20ScreenTransitionTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11SetgreetSDK20ScreenTransitionTypeO4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s11SetgreetSDK20ScreenTransitionTypeO4fromACs7Decoder_p_tKcfc",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11SetgreetSDK20ScreenTransitionTypeO6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s11SetgreetSDK20ScreenTransitionTypeO6encode2toys7Encoder_p_tKF",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SetgreetSDK.ScreenTransitionType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ScreenTransitionType",
+                    "printedName": "SetgreetSDK.ScreenTransitionType",
+                    "usr": "s:11SetgreetSDK20ScreenTransitionTypeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11SetgreetSDK20ScreenTransitionTypeO8rawValueACSgSS_tcfc",
+            "mangledName": "$s11SetgreetSDK20ScreenTransitionTypeO8rawValueACSgSS_tcfc",
+            "moduleName": "SetgreetSDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK20ScreenTransitionTypeO8rawValueSSvp",
+            "mangledName": "$s11SetgreetSDK20ScreenTransitionTypeO8rawValueSSvp",
+            "moduleName": "SetgreetSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK20ScreenTransitionTypeO8rawValueSSvg",
+                "mangledName": "$s11SetgreetSDK20ScreenTransitionTypeO8rawValueSSvg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:11SetgreetSDK20ScreenTransitionTypeO",
+        "mangledName": "$s11SetgreetSDK20ScreenTransitionTypeO",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ScreenTransitionConfig",
+        "printedName": "ScreenTransitionConfig",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "type",
+            "printedName": "type",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ScreenTransitionType",
+                "printedName": "SetgreetSDK.ScreenTransitionType",
+                "usr": "s:11SetgreetSDK20ScreenTransitionTypeO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK22ScreenTransitionConfigV4typeAA0cD4TypeOvp",
+            "mangledName": "$s11SetgreetSDK22ScreenTransitionConfigV4typeAA0cD4TypeOvp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ScreenTransitionType",
+                    "printedName": "SetgreetSDK.ScreenTransitionType",
+                    "usr": "s:11SetgreetSDK20ScreenTransitionTypeO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK22ScreenTransitionConfigV4typeAA0cD4TypeOvg",
+                "mangledName": "$s11SetgreetSDK22ScreenTransitionConfigV4typeAA0cD4TypeOvg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "duration",
+            "printedName": "duration",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK22ScreenTransitionConfigV8durationSiSgvp",
+            "mangledName": "$s11SetgreetSDK22ScreenTransitionConfigV8durationSiSgvp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK22ScreenTransitionConfigV8durationSiSgvg",
+                "mangledName": "$s11SetgreetSDK22ScreenTransitionConfigV8durationSiSgvg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "easing",
+            "printedName": "easing",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK22ScreenTransitionConfigV6easingSSSgvp",
+            "mangledName": "$s11SetgreetSDK22ScreenTransitionConfigV6easingSSSgvp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK22ScreenTransitionConfigV6easingSSSgvg",
+                "mangledName": "$s11SetgreetSDK22ScreenTransitionConfigV6easingSSSgvg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(type:duration:easing:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ScreenTransitionConfig",
+                "printedName": "SetgreetSDK.ScreenTransitionConfig",
+                "usr": "s:11SetgreetSDK22ScreenTransitionConfigV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ScreenTransitionType",
+                "printedName": "SetgreetSDK.ScreenTransitionType",
+                "usr": "s:11SetgreetSDK20ScreenTransitionTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11SetgreetSDK22ScreenTransitionConfigV4type8duration6easingAcA0cD4TypeO_SiSgSSSgtcfc",
+            "mangledName": "$s11SetgreetSDK22ScreenTransitionConfigV4type8duration6easingAcA0cD4TypeO_SiSgSSSgtcfc",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ScreenTransitionConfig",
+                "printedName": "SetgreetSDK.ScreenTransitionConfig",
+                "usr": "s:11SetgreetSDK22ScreenTransitionConfigV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11SetgreetSDK22ScreenTransitionConfigV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s11SetgreetSDK22ScreenTransitionConfigV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "durationSeconds",
+            "printedName": "durationSeconds",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK22ScreenTransitionConfigV15durationSecondsSdvp",
+            "mangledName": "$s11SetgreetSDK22ScreenTransitionConfigV15durationSecondsSdvp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK22ScreenTransitionConfigV15durationSecondsSdvg",
+                "mangledName": "$s11SetgreetSDK22ScreenTransitionConfigV15durationSecondsSdvg",
+                "moduleName": "SetgreetSDK",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11SetgreetSDK22ScreenTransitionConfigV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s11SetgreetSDK22ScreenTransitionConfigV6encode2toys7Encoder_p_tKF",
+            "moduleName": "SetgreetSDK",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK22ScreenTransitionConfigV9hashValueSivp",
+            "mangledName": "$s11SetgreetSDK22ScreenTransitionConfigV9hashValueSivp",
+            "moduleName": "SetgreetSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK22ScreenTransitionConfigV9hashValueSivg",
+                "mangledName": "$s11SetgreetSDK22ScreenTransitionConfigV9hashValueSivg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11SetgreetSDK22ScreenTransitionConfigV4hash4intoys6HasherVz_tF",
+            "mangledName": "$s11SetgreetSDK22ScreenTransitionConfigV4hash4intoys6HasherVz_tF",
+            "moduleName": "SetgreetSDK",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ScreenTransitionConfig",
+                "printedName": "SetgreetSDK.ScreenTransitionConfig",
+                "usr": "s:11SetgreetSDK22ScreenTransitionConfigV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ScreenTransitionConfig",
+                "printedName": "SetgreetSDK.ScreenTransitionConfig",
+                "usr": "s:11SetgreetSDK22ScreenTransitionConfigV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11SetgreetSDK22ScreenTransitionConfigV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s11SetgreetSDK22ScreenTransitionConfigV2eeoiySbAC_ACtFZ",
+            "moduleName": "SetgreetSDK",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:11SetgreetSDK22ScreenTransitionConfigV",
+        "mangledName": "$s11SetgreetSDK22ScreenTransitionConfigV",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "BottomSheetInitialHeight",
         "printedName": "BottomSheetInitialHeight",
         "children": [
@@ -34557,6 +35898,16 @@
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
         "declKind": "Import",
         "moduleName": "SetgreetSDK",
         "declAttributes": [
@@ -40752,6 +42103,43 @@
           },
           {
             "kind": "Function",
+            "name": "resolveThemeToken",
+            "printedName": "resolveThemeToken(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11SetgreetSDK11StyleParserO17resolveThemeTokenySSSgSSFZ",
+            "mangledName": "$s11SetgreetSDK11StyleParserO17resolveThemeTokenySSSgSSFZ",
+            "moduleName": "SetgreetSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "parseColor",
             "printedName": "parseColor(_:default:)",
             "children": [
@@ -42621,6 +44009,23 @@
       },
       {
         "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "SetgreetSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -43668,43 +45073,64 @@
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Templates\/SetgreetViewModel.swift",
+      "kind": "Array",
+      "offset": 711,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Templates\/SetgreetViewModel.swift",
+      "kind": "Array",
+      "offset": 1217,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Templates\/SetgreetViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 812,
+      "offset": 2170,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Templates\/SetgreetViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2287,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Templates\/SetgreetViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 952,
+      "offset": 2427,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Templates\/SetgreetViewModel.swift",
       "kind": "Dictionary",
-      "offset": 1180,
+      "offset": 2655,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Templates\/SetgreetViewModel.swift",
       "kind": "Dictionary",
-      "offset": 1340,
+      "offset": 2815,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Templates\/SetgreetViewModel.swift",
       "kind": "Dictionary",
-      "offset": 1517,
+      "offset": 2992,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Templates\/SetgreetViewModel.swift",
       "kind": "Array",
-      "offset": 1880,
+      "offset": 3355,
       "length": 2,
       "value": "[]"
     },
@@ -43907,7 +45333,7 @@
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/SetgreetViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1591,
+      "offset": 3037,
       "length": 5,
       "value": "false"
     },
@@ -44343,7 +45769,7 @@
       "kind": "StringLiteral",
       "offset": 120,
       "length": 7,
-      "value": "\"1.1.1\""
+      "value": "\"1.1.2\""
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/DynamicScreenView.swift",
@@ -44383,21 +45809,21 @@
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/DynamicScreenView.swift",
       "kind": "Array",
-      "offset": 16906,
+      "offset": 22508,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/DynamicScreenView.swift",
       "kind": "BooleanLiteral",
-      "offset": 19444,
+      "offset": 25220,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/DynamicScreenView.swift",
       "kind": "StringLiteral",
-      "offset": 19475,
+      "offset": 25251,
       "length": 2,
       "value": "\"\""
     },
@@ -44409,9 +45835,23 @@
       "value": "false"
     },
     {
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/ButtonComponent.swift",
+      "kind": "FloatLiteral",
+      "offset": 11919,
+      "length": 4,
+      "value": "0.97"
+    },
+    {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/EntranceAnimation.swift",
       "kind": "BooleanLiteral",
-      "offset": 3991,
+      "offset": 6531,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/EntranceAnimation.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7963,
       "length": 5,
       "value": "false"
     },
@@ -44600,9 +46040,16 @@
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/QuizComponent.swift",
       "kind": "Array",
-      "offset": 1352,
+      "offset": 3429,
       "length": 2,
       "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/QuizComponent.swift",
+      "kind": "StringLiteral",
+      "offset": 3477,
+      "length": 2,
+      "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/RatingComponent.swift",
@@ -45440,7 +46887,7 @@
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/Extensions\/StyleParser.swift",
       "kind": "IntegerLiteral",
-      "offset": 22850,
+      "offset": 24071,
       "length": 1,
       "value": "0"
     },
@@ -46339,6 +47786,13 @@
       "offset": 529,
       "length": 3,
       "value": "\"|\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/Theme\/SetgreetDefaultPalette.swift",
+      "kind": "Dictionary",
+      "offset": 1806,
+      "length": 1076,
+      "value": "[(\"primary\", \"#6750A4\"), (\"onPrimary\", \"#FFFFFF\"), (\"primaryContainer\", \"#EADDFF\"), (\"onPrimaryContainer\", \"#21005D\"), (\"secondary\", \"#625B71\"), (\"onSecondary\", \"#FFFFFF\"), (\"secondaryContainer\", \"#E8DEF8\"), (\"onSecondaryContainer\", \"#1D192B\"), (\"tertiary\", \"#7D5260\"), (\"onTertiary\", \"#FFFFFF\"), (\"tertiaryContainer\", \"#FFD8E4\"), (\"onTertiaryContainer\", \"#31111D\"), (\"surface\", \"#FFFBFE\"), (\"onSurface\", \"#1C1B1F\"), (\"surfaceVariant\", \"#E7E0EC\"), (\"onSurfaceVariant\", \"#49454F\"), (\"error\", \"#B3261E\"), (\"onError\", \"#FFFFFF\"), (\"outline\", \"#79747E\"), (\"outlineVariant\", \"#CAC4D0\"), (\"surfaceContainerLowest\", \"#FFFFFF\"), (\"surfaceContainerLow\", \"#F7F2FA\"), (\"surfaceContainer\", \"#F3EDF7\"), (\"surfaceContainerHigh\", \"#ECE6F0\"), (\"surfaceContainerHighest\", \"#E6E0E9\")]"
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Utils\/IconMapping.swift",

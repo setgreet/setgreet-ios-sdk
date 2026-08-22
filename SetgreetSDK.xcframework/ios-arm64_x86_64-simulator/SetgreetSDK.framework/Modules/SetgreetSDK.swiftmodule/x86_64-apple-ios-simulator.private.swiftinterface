@@ -238,6 +238,18 @@ public var setgreetVersion: Swift.String
   }
   public typealias Body = @_opaqueReturnTypeOf("$s11SetgreetSDK17DynamicScreenViewV4bodyQrvp", 0) __
 }
+public struct ScreenAutoAdvance : Swift.Codable, Swift.Hashable {
+  public let delayMs: Swift.Int
+  public let action: Swift.String?
+  public init(delayMs: Swift.Int, action: Swift.String? = nil)
+  public init(from decoder: any Swift.Decoder) throws
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: SetgreetSDK.ScreenAutoAdvance, b: SetgreetSDK.ScreenAutoAdvance) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 public struct ScreenWithComponents : Swift.Codable, Swift.Identifiable, Swift.Hashable {
   public let id: Swift.String
   public let orderId: Swift.Int
@@ -247,7 +259,9 @@ public struct ScreenWithComponents : Swift.Codable, Swift.Identifiable, Swift.Ha
   public let presentationStyle: SetgreetSDK.PresentationStyle?
   public let bottomSheetConfig: SetgreetSDK.BottomSheetConfig?
   public let screenLayout: Swift.String?
-  public init(id: Swift.String, orderId: Swift.Int, name: Swift.String? = nil, components: [SetgreetSDK.ComponentInstance] = [], background: SetgreetSDK.SetgreetScreenBackgroundModel? = nil, presentationStyle: SetgreetSDK.PresentationStyle? = nil, bottomSheetConfig: SetgreetSDK.BottomSheetConfig? = nil, screenLayout: Swift.String? = nil)
+  public let transition: SetgreetSDK.ScreenTransitionConfig?
+  public let autoAdvance: SetgreetSDK.ScreenAutoAdvance?
+  public init(id: Swift.String, orderId: Swift.Int, name: Swift.String? = nil, components: [SetgreetSDK.ComponentInstance] = [], background: SetgreetSDK.SetgreetScreenBackgroundModel? = nil, presentationStyle: SetgreetSDK.PresentationStyle? = nil, bottomSheetConfig: SetgreetSDK.BottomSheetConfig? = nil, screenLayout: Swift.String? = nil, transition: SetgreetSDK.ScreenTransitionConfig? = nil, autoAdvance: SetgreetSDK.ScreenAutoAdvance? = nil)
   public func hash(into hasher: inout Swift.Hasher)
   public static func == (lhs: SetgreetSDK.ScreenWithComponents, rhs: SetgreetSDK.ScreenWithComponents) -> Swift.Bool
   public typealias ID = Swift.String
@@ -986,6 +1000,35 @@ public struct BottomSheetConfig : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
+public enum ScreenTransitionType : Swift.String, Swift.Codable {
+  case none
+  case fade
+  case slide
+  case slideUp
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct ScreenTransitionConfig : Swift.Codable, Swift.Hashable {
+  public let type: SetgreetSDK.ScreenTransitionType
+  public let duration: Swift.Int?
+  public let easing: Swift.String?
+  public init(type: SetgreetSDK.ScreenTransitionType, duration: Swift.Int? = nil, easing: Swift.String? = nil)
+  public init(from decoder: any Swift.Decoder) throws
+  public var durationSeconds: Swift.Double {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: SetgreetSDK.ScreenTransitionConfig, b: SetgreetSDK.ScreenTransitionConfig) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 public enum BottomSheetInitialHeight : Swift.String, Swift.Codable {
   case small
   case medium
@@ -1160,6 +1203,7 @@ public enum StyleParser {
   public static func parseCornerRadii(from props: [Swift.String : SetgreetSDK.AnyCodable]) -> SwiftUICore.RectangleCornerRadii?
   public static func parseFont(from props: [Swift.String : SetgreetSDK.AnyCodable]) -> SetgreetSDK.FontValue
   public static func parseFontWeight(_ value: Swift.String?) -> SwiftUICore.Font.Weight
+  public static func resolveThemeToken(_ value: Swift.String) -> Swift.String?
   public static func parseColor(_ value: Swift.String?, default defaultColor: SwiftUICore.Color = .clear) -> SwiftUICore.Color
   public static func parseGradient(from props: [Swift.String : SetgreetSDK.AnyCodable]) -> SetgreetSDK.GradientValue?
   public static func parseDimension(_ value: Any?, relativeTo: CoreFoundation.CGFloat? = nil) -> CoreFoundation.CGFloat?
@@ -1305,6 +1349,9 @@ extension SetgreetSDK.ComponentEventType : Swift.RawRepresentable {}
 extension SetgreetSDK.PresentationStyle : Swift.Equatable {}
 extension SetgreetSDK.PresentationStyle : Swift.Hashable {}
 extension SetgreetSDK.PresentationStyle : Swift.RawRepresentable {}
+extension SetgreetSDK.ScreenTransitionType : Swift.Equatable {}
+extension SetgreetSDK.ScreenTransitionType : Swift.Hashable {}
+extension SetgreetSDK.ScreenTransitionType : Swift.RawRepresentable {}
 extension SetgreetSDK.BottomSheetInitialHeight : Swift.Equatable {}
 extension SetgreetSDK.BottomSheetInitialHeight : Swift.Hashable {}
 extension SetgreetSDK.BottomSheetInitialHeight : Swift.RawRepresentable {}
