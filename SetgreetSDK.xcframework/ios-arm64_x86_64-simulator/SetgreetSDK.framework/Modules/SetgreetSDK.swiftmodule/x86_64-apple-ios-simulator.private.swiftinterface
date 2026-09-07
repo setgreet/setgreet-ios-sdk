@@ -3,12 +3,14 @@
 // swift-module-flags: -target x86_64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name SetgreetSDK
 import AVFoundation
 import AVKit
+import AppTrackingTransparency
 import Combine
 import CoreGraphics
 import CoreLocation
 import CoreText
 import DeveloperToolsSupport
 import Foundation
+import Photos
 @_exported import SetgreetSDK
 import StoreKit
 import Swift
@@ -232,7 +234,7 @@ public enum EventPropertyKey : Swift.String, Swift.CaseIterable {
 }
 public var setgreetVersion: Swift.String
 @_Concurrency.MainActor @preconcurrency public struct DynamicScreenView : SwiftUICore.View {
-  @_Concurrency.MainActor @preconcurrency public init(components: [SetgreetSDK.ComponentInstance], userData: [Swift.String : Any] = [:], eventData: [Swift.String : Any] = [:], screenId: Swift.String = "", background: SetgreetSDK.SetgreetScreenBackgroundModel? = nil, isContentScrollable: Swift.Bool = true, forceScrollable: Swift.Bool = false, screenLayout: Swift.String? = nil)
+  @_Concurrency.MainActor @preconcurrency public init(components: [SetgreetSDK.ComponentInstance], userData: [Swift.String : Any] = [:], eventData: [Swift.String : Any] = [:], screenId: Swift.String = "", background: SetgreetSDK.SetgreetScreenBackgroundModel? = nil, isContentScrollable: Swift.Bool = true, forceScrollable: Swift.Bool = false, screenLayout: Swift.String? = nil, hugsContent: Swift.Bool = false, hugContainerSize: CoreFoundation.CGSize = .zero)
   @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
     get
   }
@@ -250,6 +252,18 @@ public struct ScreenAutoAdvance : Swift.Codable, Swift.Hashable {
     get
   }
 }
+public struct ScreenPermissionGate : Swift.Codable, Swift.Hashable {
+  public let permission: Swift.String
+  public let skipWhen: Swift.String?
+  public init(permission: Swift.String, skipWhen: Swift.String? = "granted")
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: SetgreetSDK.ScreenPermissionGate, b: SetgreetSDK.ScreenPermissionGate) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
 public struct ScreenWithComponents : Swift.Codable, Swift.Identifiable, Swift.Hashable {
   public let id: Swift.String
   public let orderId: Swift.Int
@@ -258,13 +272,31 @@ public struct ScreenWithComponents : Swift.Codable, Swift.Identifiable, Swift.Ha
   public let background: SetgreetSDK.SetgreetScreenBackgroundModel?
   public let presentationStyle: SetgreetSDK.PresentationStyle?
   public let bottomSheetConfig: SetgreetSDK.BottomSheetConfig?
+  public let popupConfig: SetgreetSDK.PopupConfig?
   public let screenLayout: Swift.String?
   public let transition: SetgreetSDK.ScreenTransitionConfig?
   public let autoAdvance: SetgreetSDK.ScreenAutoAdvance?
-  public init(id: Swift.String, orderId: Swift.Int, name: Swift.String? = nil, components: [SetgreetSDK.ComponentInstance] = [], background: SetgreetSDK.SetgreetScreenBackgroundModel? = nil, presentationStyle: SetgreetSDK.PresentationStyle? = nil, bottomSheetConfig: SetgreetSDK.BottomSheetConfig? = nil, screenLayout: Swift.String? = nil, transition: SetgreetSDK.ScreenTransitionConfig? = nil, autoAdvance: SetgreetSDK.ScreenAutoAdvance? = nil)
+  public let permissionGate: SetgreetSDK.ScreenPermissionGate?
+  public let hasDataBindings: Swift.Bool?
+  public let dependsOnInputs: [Swift.String]?
+  public let dataErrors: [SetgreetSDK.ScreenDataError]?
+  public let skipScreen: Swift.Bool?
+  public init(id: Swift.String, orderId: Swift.Int, name: Swift.String? = nil, components: [SetgreetSDK.ComponentInstance] = [], background: SetgreetSDK.SetgreetScreenBackgroundModel? = nil, presentationStyle: SetgreetSDK.PresentationStyle? = nil, bottomSheetConfig: SetgreetSDK.BottomSheetConfig? = nil, popupConfig: SetgreetSDK.PopupConfig? = nil, screenLayout: Swift.String? = nil, transition: SetgreetSDK.ScreenTransitionConfig? = nil, autoAdvance: SetgreetSDK.ScreenAutoAdvance? = nil, permissionGate: SetgreetSDK.ScreenPermissionGate? = nil, hasDataBindings: Swift.Bool? = nil, dependsOnInputs: [Swift.String]? = nil, dataErrors: [SetgreetSDK.ScreenDataError]? = nil, skipScreen: Swift.Bool? = nil)
   public func hash(into hasher: inout Swift.Hasher)
   public static func == (lhs: SetgreetSDK.ScreenWithComponents, rhs: SetgreetSDK.ScreenWithComponents) -> Swift.Bool
   public typealias ID = Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ScreenDataError : Swift.Codable, Swift.Hashable {
+  public let alias: Swift.String
+  public let code: Swift.String?
+  public init(alias: Swift.String, code: Swift.String? = nil)
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: SetgreetSDK.ScreenDataError, b: SetgreetSDK.ScreenDataError) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
   public var hashValue: Swift.Int {
     get
@@ -430,14 +462,15 @@ public struct ComponentPosition : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-public struct ComponentSize : Swift.Codable {
-  public let width: SetgreetSDK.DimensionValue
-  public let height: SetgreetSDK.DimensionValue
-  public init(width: SetgreetSDK.DimensionValue, height: SetgreetSDK.DimensionValue)
-  public func encode(to encoder: any Swift.Encoder) throws
+public struct ComponentSize : Swift.Codable, Swift.Equatable {
+  public let width: SetgreetSDK.DimensionValue?
+  public let height: SetgreetSDK.DimensionValue?
+  public init(width: SetgreetSDK.DimensionValue? = nil, height: SetgreetSDK.DimensionValue? = nil)
   public init(from decoder: any Swift.Decoder) throws
+  public static func == (a: SetgreetSDK.ComponentSize, b: SetgreetSDK.ComponentSize) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
 }
-public enum DimensionValue : Swift.Codable {
+public enum DimensionValue : Swift.Codable, Swift.Equatable {
   case fixed(CoreFoundation.CGFloat)
   case percentage(CoreFoundation.CGFloat)
   case auto
@@ -446,6 +479,7 @@ public enum DimensionValue : Swift.Codable {
   public var fraction: CoreFoundation.CGFloat? {
     get
   }
+  public static func == (a: SetgreetSDK.DimensionValue, b: SetgreetSDK.DimensionValue) -> Swift.Bool
 }
 public struct VariableBinding : Swift.Codable {
   public let type: SetgreetSDK.BindingType
@@ -577,14 +611,17 @@ public struct ComponentContext {
   public var onRequestNotificationPermission: ((@escaping () -> Swift.Void) -> Swift.Void)?
   public var onRequestLocationPermission: ((@escaping () -> Swift.Void) -> Swift.Void)?
   public var onRequestCameraPermission: ((@escaping () -> Swift.Void) -> Swift.Void)?
+  public var onRequestTrackingPermission: ((@escaping () -> Swift.Void) -> Swift.Void)?
+  public var onRequestMicrophonePermission: ((@escaping () -> Swift.Void) -> Swift.Void)?
+  public var onRequestPhotoLibraryPermission: ((@escaping () -> Swift.Void) -> Swift.Void)?
   public var onRequestReview: (() -> Swift.Void)?
   public var onShare: ((Swift.String) -> Swift.Void)?
   public var onOpenSettings: (() -> Swift.Void)?
   public var onTrackEvent: ((Swift.String, [Swift.String : Any]?) -> Swift.Void)?
   public var onCustom: (([Swift.String : Any]?) -> Swift.Void)?
   public var onInputValueChanged: ((Swift.String, Swift.String, Any) -> Swift.Void)?
-  public init(userData: [Swift.String : Any] = [:], eventData: [Swift.String : Any] = [:], viewModel: SetgreetSDK.SetgreetViewModel? = nil, screenId: Swift.String = "", screenIndex: Swift.Int = 0, screenCount: Swift.Int = 1, safeAreaInsets: SwiftUICore.EdgeInsets = .init(), parentAppliesSafeAreaPadding: Swift.Bool = true, useTransparentComponentDefaults: Swift.Bool = false, screenSize: CoreFoundation.CGSize = .zero, isInsideScrollView: Swift.Bool = false, isInsideAutoWidthContainer: Swift.Bool = false, isFlexChildInRow: Swift.Bool = false, hasDynamicProgress: Swift.Bool = false, dynamicCurrentStep: Swift.Int? = nil, dynamicTotalSteps: Swift.Int? = nil, onNext: (() -> Swift.Void)? = nil, onPrevious: (() -> Swift.Void)? = nil, onSkip: (() -> Swift.Void)? = nil, onDismiss: (() -> Swift.Void)? = nil, onRemindLater: (() -> Swift.Void)? = nil, onUrl: ((Swift.String) -> Swift.Void)? = nil, onDeeplink: ((Swift.String) -> Swift.Void)? = nil, onRequestNotificationPermission: ((@escaping () -> Swift.Void) -> Swift.Void)? = nil, onRequestLocationPermission: ((@escaping () -> Swift.Void) -> Swift.Void)? = nil, onRequestCameraPermission: ((@escaping () -> Swift.Void) -> Swift.Void)? = nil, onRequestReview: (() -> Swift.Void)? = nil, onShare: ((Swift.String) -> Swift.Void)? = nil, onOpenSettings: (() -> Swift.Void)? = nil, onTrackEvent: ((Swift.String, [Swift.String : Any]?) -> Swift.Void)? = nil, onCustom: (([Swift.String : Any]?) -> Swift.Void)? = nil, onInputValueChanged: ((Swift.String, Swift.String, Any) -> Swift.Void)? = nil)
-  public func with(isInsideScrollView: Swift.Bool? = nil, isInsideAutoWidthContainer: Swift.Bool? = nil, isFlexChildInRow: Swift.Bool? = nil, parentAppliesSafeAreaPadding: Swift.Bool? = nil, useTransparentComponentDefaults: Swift.Bool? = nil) -> SetgreetSDK.ComponentContext
+  public init(userData: [Swift.String : Any] = [:], eventData: [Swift.String : Any] = [:], viewModel: SetgreetSDK.SetgreetViewModel? = nil, screenId: Swift.String = "", screenIndex: Swift.Int = 0, screenCount: Swift.Int = 1, safeAreaInsets: SwiftUICore.EdgeInsets = .init(), parentAppliesSafeAreaPadding: Swift.Bool = true, useTransparentComponentDefaults: Swift.Bool = false, screenSize: CoreFoundation.CGSize = .zero, isInsideScrollView: Swift.Bool = false, isInsideAutoWidthContainer: Swift.Bool = false, isFlexChildInRow: Swift.Bool = false, hasDynamicProgress: Swift.Bool = false, dynamicCurrentStep: Swift.Int? = nil, dynamicTotalSteps: Swift.Int? = nil, onNext: (() -> Swift.Void)? = nil, onPrevious: (() -> Swift.Void)? = nil, onSkip: (() -> Swift.Void)? = nil, onDismiss: (() -> Swift.Void)? = nil, onRemindLater: (() -> Swift.Void)? = nil, onUrl: ((Swift.String) -> Swift.Void)? = nil, onDeeplink: ((Swift.String) -> Swift.Void)? = nil, onRequestNotificationPermission: ((@escaping () -> Swift.Void) -> Swift.Void)? = nil, onRequestLocationPermission: ((@escaping () -> Swift.Void) -> Swift.Void)? = nil, onRequestCameraPermission: ((@escaping () -> Swift.Void) -> Swift.Void)? = nil, onRequestTrackingPermission: ((@escaping () -> Swift.Void) -> Swift.Void)? = nil, onRequestMicrophonePermission: ((@escaping () -> Swift.Void) -> Swift.Void)? = nil, onRequestPhotoLibraryPermission: ((@escaping () -> Swift.Void) -> Swift.Void)? = nil, onRequestReview: (() -> Swift.Void)? = nil, onShare: ((Swift.String) -> Swift.Void)? = nil, onOpenSettings: (() -> Swift.Void)? = nil, onTrackEvent: ((Swift.String, [Swift.String : Any]?) -> Swift.Void)? = nil, onCustom: (([Swift.String : Any]?) -> Swift.Void)? = nil, onInputValueChanged: ((Swift.String, Swift.String, Any) -> Swift.Void)? = nil)
+  public func with(isInsideScrollView: Swift.Bool? = nil, isInsideAutoWidthContainer: Swift.Bool? = nil, isFlexChildInRow: Swift.Bool? = nil, parentAppliesSafeAreaPadding: Swift.Bool? = nil, useTransparentComponentDefaults: Swift.Bool? = nil, safeAreaInsets: SwiftUICore.EdgeInsets? = nil) -> SetgreetSDK.ComponentContext
   public func evaluateBinding(_ binding: SetgreetSDK.VariableBinding?) -> Any?
   public func resolveBinding(_ binding: SetgreetSDK.VariableBinding) -> Swift.String
   public func getString(from props: [Swift.String : SetgreetSDK.AnyCodable], key: Swift.String, default defaultValue: Swift.String = "") -> Swift.String
@@ -965,6 +1002,7 @@ public struct UserAvatarsComponent : SetgreetSDK.SetgreetComponentProtocol {
 public enum PresentationStyle : Swift.String, Swift.Codable {
   case fullscreen
   case bottomSheet
+  case popup
   public init(from decoder: any Swift.Decoder) throws
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
@@ -995,6 +1033,43 @@ public struct BottomSheetConfig : Swift.Codable {
     get
   }
   public var effectiveCornerRadiusTR: CoreFoundation.CGFloat {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum PopupWidth : Swift.String, Swift.Codable {
+  case small
+  case medium
+  case large
+  public init(from decoder: any Swift.Decoder) throws
+  public var fraction: CoreFoundation.CGFloat {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct PopupConfig : Swift.Codable {
+  public let width: SetgreetSDK.PopupWidth?
+  public let maxHeightFraction: Swift.Double?
+  public let cornerRadius: CoreFoundation.CGFloat?
+  public let backgroundColor: Swift.String?
+  public let showBackgroundOverlay: Swift.Bool?
+  public let overlayColor: Swift.String?
+  public let overlayOpacity: Swift.Double?
+  public let isDismissibleOnOverlayTap: Swift.Bool?
+  public let animationDuration: Swift.Int?
+  public init(width: SetgreetSDK.PopupWidth? = .medium, maxHeightFraction: Swift.Double? = 0.7, cornerRadius: CoreFoundation.CGFloat? = 20, backgroundColor: Swift.String? = "#FFFFFF", showBackgroundOverlay: Swift.Bool? = true, overlayColor: Swift.String? = "#000000", overlayOpacity: Swift.Double? = 0.32, isDismissibleOnOverlayTap: Swift.Bool? = true, animationDuration: Swift.Int? = 300)
+  public var effectiveWidthFraction: CoreFoundation.CGFloat {
+    get
+  }
+  public var effectiveMaxHeightFraction: CoreFoundation.CGFloat {
+    get
+  }
+  public var effectiveCornerRadius: CoreFoundation.CGFloat {
     get
   }
   public func encode(to encoder: any Swift.Encoder) throws
@@ -1130,6 +1205,8 @@ final public class FlowNavigationEngine {
   final public func getFirstScreen() -> (screen: SetgreetSDK.ScreenWithComponents, nodeId: Swift.String)?
   final public func getNextNodeId(from nodeId: Swift.String) -> Swift.String?
   final public func navigateNext() -> (screen: SetgreetSDK.ScreenWithComponents, nodeId: Swift.String, screenIndex: Swift.Int)?
+  final public func navigateNextSkippingCurrent() -> (screen: SetgreetSDK.ScreenWithComponents, nodeId: Swift.String, screenIndex: Swift.Int)?
+  final public func previousFullscreenScreen() -> SetgreetSDK.ScreenWithComponents?
   final public func navigateBack() -> (screen: SetgreetSDK.ScreenWithComponents, nodeId: Swift.String, screenIndex: Swift.Int)?
   final public func getBranchNodesForScreen(_ screenNodeId: Swift.String) -> [SetgreetSDK.FlowNode]
   final public var currentNode: Swift.String? {
@@ -1349,6 +1426,9 @@ extension SetgreetSDK.ComponentEventType : Swift.RawRepresentable {}
 extension SetgreetSDK.PresentationStyle : Swift.Equatable {}
 extension SetgreetSDK.PresentationStyle : Swift.Hashable {}
 extension SetgreetSDK.PresentationStyle : Swift.RawRepresentable {}
+extension SetgreetSDK.PopupWidth : Swift.Equatable {}
+extension SetgreetSDK.PopupWidth : Swift.Hashable {}
+extension SetgreetSDK.PopupWidth : Swift.RawRepresentable {}
 extension SetgreetSDK.ScreenTransitionType : Swift.Equatable {}
 extension SetgreetSDK.ScreenTransitionType : Swift.Hashable {}
 extension SetgreetSDK.ScreenTransitionType : Swift.RawRepresentable {}
