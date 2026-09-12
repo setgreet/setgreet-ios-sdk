@@ -1152,7 +1152,7 @@ public struct ComponentInteraction {
   final public func onScreenExit()
   final public func recordInteraction(screenId: Swift.String? = nil, componentId: Swift.String, componentType: Swift.String, inputName: Swift.String, value: Any)
   final public func flushCurrentScreen(flowId: Swift.String, screenId: Swift.String? = nil, endUserId: Swift.String?)
-  final public func processBranchNodes(flowId: Swift.String, screenId: Swift.String, branchNodes: [SetgreetSDK.FlowNode], endUserId: Swift.String?)
+  final public func processBranchNodes(flowId: Swift.String, screenId: Swift.String, branchNodes: [SetgreetSDK.FlowNode], endUserId: Swift.String?, branchAnswerProvider: ((Swift.String) -> Swift.String?)? = nil)
   final public var currentDwellTimeMs: Swift.Int64 {
     get
   }
@@ -1177,6 +1177,9 @@ public enum InteractionType : Swift.String {
   }
 }
 final public class FlowNavigationEngine {
+  final public var isNavigatingBack: Swift.Bool {
+    get
+  }
   final public var evaluationMode: SetgreetSDK.EvaluationMode
   final public var onPathSelected: ((_ nodeId: Swift.String, _ conditionResult: Swift.Bool?, _ properties: [Swift.String : Any]) -> Swift.Void)?
   final public var onConditionEvaluated: ((_ nodeId: Swift.String, _ result: Swift.Bool, _ properties: [Swift.String : Any]) -> Swift.Void)?
@@ -1194,6 +1197,8 @@ final public class FlowNavigationEngine {
   final public func updateUserData(_ data: [Swift.String : Any])
   final public func updateEventData(_ data: [Swift.String : Any])
   final public func setSelectedBranchValue(componentId: Swift.String, value: Swift.String)
+  final public func setSelectedBranchValue(componentId: Swift.String, value: Swift.String, recordAnswer: Swift.Bool)
+  final public func branchAnswer(forComponentId componentId: Swift.String) -> Swift.String?
   final public var isConditionalFlow: Swift.Bool {
     get
   }

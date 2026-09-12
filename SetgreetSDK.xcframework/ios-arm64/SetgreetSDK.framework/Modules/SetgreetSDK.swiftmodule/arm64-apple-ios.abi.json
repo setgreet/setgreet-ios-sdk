@@ -40657,7 +40657,7 @@
           {
             "kind": "Function",
             "name": "processBranchNodes",
-            "printedName": "processBranchNodes(flowId:screenId:branchNodes:endUserId:)",
+            "printedName": "processBranchNodes(flowId:screenId:branchNodes:endUserId:branchAnswerProvider:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -40703,11 +40703,47 @@
                   }
                 ],
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.String) -> Swift.String?)?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.String?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:11SetgreetSDK26ScreenInteractionCollectorC18processBranchNodes6flowId06screenJ006branchH007endUserJ0ySS_SSSayAA8FlowNodeVGSSSgtF",
-            "mangledName": "$s11SetgreetSDK26ScreenInteractionCollectorC18processBranchNodes6flowId06screenJ006branchH007endUserJ0ySS_SSSayAA8FlowNodeVGSSSgtF",
+            "usr": "s:11SetgreetSDK26ScreenInteractionCollectorC18processBranchNodes6flowId06screenJ006branchH007endUserJ00L14AnswerProviderySS_SSSayAA8FlowNodeVGSSSgAMSScSgtF",
+            "mangledName": "$s11SetgreetSDK26ScreenInteractionCollectorC18processBranchNodes6flowId06screenJ006branchH007endUserJ00L14AnswerProviderySS_SSSayAA8FlowNodeVGSSSgAMSScSgtF",
             "moduleName": "SetgreetSDK",
             "declAttributes": [
               "Final",
@@ -41270,6 +41306,56 @@
         "name": "FlowNavigationEngine",
         "printedName": "FlowNavigationEngine",
         "children": [
+          {
+            "kind": "Var",
+            "name": "isNavigatingBack",
+            "printedName": "isNavigatingBack",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK20FlowNavigationEngineC16isNavigatingBackSbvp",
+            "mangledName": "$s11SetgreetSDK20FlowNavigationEngineC16isNavigatingBackSbvp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK20FlowNavigationEngineC16isNavigatingBackSbvg",
+                "mangledName": "$s11SetgreetSDK20FlowNavigationEngineC16isNavigatingBackSbvg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
           {
             "kind": "Var",
             "name": "evaluationMode",
@@ -42576,6 +42662,83 @@
             "declKind": "Func",
             "usr": "s:11SetgreetSDK20FlowNavigationEngineC22setSelectedBranchValue11componentId5valueySS_SStF",
             "mangledName": "$s11SetgreetSDK20FlowNavigationEngineC22setSelectedBranchValue11componentId5valueySS_SStF",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setSelectedBranchValue",
+            "printedName": "setSelectedBranchValue(componentId:value:recordAnswer:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11SetgreetSDK20FlowNavigationEngineC22setSelectedBranchValue11componentId5value12recordAnswerySS_SSSbtF",
+            "mangledName": "$s11SetgreetSDK20FlowNavigationEngineC22setSelectedBranchValue11componentId5value12recordAnswerySS_SSSbtF",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "branchAnswer",
+            "printedName": "branchAnswer(forComponentId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11SetgreetSDK20FlowNavigationEngineC12branchAnswer14forComponentIdSSSgSS_tF",
+            "mangledName": "$s11SetgreetSDK20FlowNavigationEngineC12branchAnswer14forComponentIdSSSgSS_tF",
             "moduleName": "SetgreetSDK",
             "declAttributes": [
               "Final",
@@ -49245,7 +49408,7 @@
       "kind": "StringLiteral",
       "offset": 120,
       "length": 7,
-      "value": "\"1.2.0\""
+      "value": "\"1.3.0\""
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/DynamicScreenView.swift",
@@ -50370,21 +50533,35 @@
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Core\/Navigation\/FlowNavigationEngine.swift",
       "kind": "Dictionary",
-      "offset": 2780,
+      "offset": 1941,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Core\/Navigation\/FlowNavigationEngine.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2191,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Core\/Navigation\/FlowNavigationEngine.swift",
+      "kind": "Dictionary",
+      "offset": 3626,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Core\/Navigation\/FlowNavigationEngine.swift",
       "kind": "Dictionary",
-      "offset": 2820,
+      "offset": 3666,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Core\/Navigation\/FlowNavigationEngine.swift",
       "kind": "IntegerLiteral",
-      "offset": 25825,
+      "offset": 30152,
       "length": 2,
       "value": "50"
     },
