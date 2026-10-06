@@ -96,8 +96,13 @@ public enum EvaluationMode : Swift.String {
 }
 public struct SetgreetConfig {
   public let debugMode: Swift.Bool
-  public let evaluationMode: SetgreetSDK.EvaluationMode
-  public init(debugMode: Swift.Bool, evaluationMode: SetgreetSDK.EvaluationMode = .clientSide)
+  @available(*, deprecated, message: "Condition nodes are decided by the Setgreet server when the flow is delivered. This setting has no effect.")
+  public var evaluationMode: SetgreetSDK.EvaluationMode {
+    get
+  }
+  public init(debugMode: Swift.Bool)
+  @available(*, deprecated, message: "Use init(debugMode:). Condition nodes are decided by the Setgreet server when the flow is delivered, so evaluationMode has no effect.")
+  public init(debugMode: Swift.Bool, evaluationMode: SetgreetSDK.EvaluationMode)
 }
 public enum SetgreetContentScaleType : Swift.String, Swift.Codable {
   case scaleToFill
@@ -393,7 +398,9 @@ public struct TriggerCondition : Swift.Codable {
   public let value: SetgreetSDK.AnyCodable?
   public let dataType: Swift.String?
   public let conditions: [SetgreetSDK.TriggerCondition]?
-  public init(type: Swift.String, key: Swift.String? = nil, keyType: Swift.String? = nil, operator: Swift.String? = nil, value: SetgreetSDK.AnyCodable? = nil, dataType: Swift.String? = nil, conditions: [SetgreetSDK.TriggerCondition]? = nil)
+  public let segmentId: Swift.String?
+  public let segmentName: Swift.String?
+  public init(type: Swift.String, key: Swift.String? = nil, keyType: Swift.String? = nil, operator: Swift.String? = nil, value: SetgreetSDK.AnyCodable? = nil, dataType: Swift.String? = nil, conditions: [SetgreetSDK.TriggerCondition]? = nil, segmentId: Swift.String? = nil, segmentName: Swift.String? = nil)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -1180,6 +1187,7 @@ final public class FlowNavigationEngine {
   final public var isNavigatingBack: Swift.Bool {
     get
   }
+  @available(*, deprecated, message: "Condition nodes are decided by the Setgreet server when the flow is delivered. The SDK always navigates with navigateNext(), so this has no effect.")
   final public var evaluationMode: SetgreetSDK.EvaluationMode
   final public var onPathSelected: ((_ nodeId: Swift.String, _ conditionResult: Swift.Bool?, _ properties: [Swift.String : Any]) -> Swift.Void)?
   final public var onConditionEvaluated: ((_ nodeId: Swift.String, _ result: Swift.Bool, _ properties: [Swift.String : Any]) -> Swift.Void)?
@@ -1216,7 +1224,9 @@ final public class FlowNavigationEngine {
   final public var currentNode: Swift.String? {
     get
   }
+  @available(*, deprecated, message: "Use navigateNext(). Condition nodes arrive already decided by the Setgreet server.")
   final public func navigateNextAsync() async -> (screen: SetgreetSDK.ScreenWithComponents, nodeId: Swift.String, screenIndex: Swift.Int)?
+  @available(*, deprecated, message: "Use getFirstScreen(). Every evaluation mode resolves the first screen locally.")
   final public func getFirstScreenAsync() async -> (screen: SetgreetSDK.ScreenWithComponents, nodeId: Swift.String)?
   final public func hasNext() -> Swift.Bool
   final public func hasBack() -> Swift.Bool
