@@ -28870,7 +28870,8 @@
             "moduleName": "SetgreetSDK",
             "declAttributes": [
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "isLet": true,
             "hasStorage": true,
@@ -28922,7 +28923,8 @@
             "moduleName": "SetgreetSDK",
             "declAttributes": [
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "isLet": true,
             "hasStorage": true,
@@ -28993,6 +28995,63 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "action",
+            "printedName": "action",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SetgreetSDK.SetgreetActionType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SetgreetActionType",
+                    "printedName": "SetgreetSDK.SetgreetActionType",
+                    "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK20ActionTriggeredEventV6actionAA0aC4TypeOSgvp",
+            "mangledName": "$s11SetgreetSDK20ActionTriggeredEventV6actionAA0aC4TypeOSgvp",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "SetgreetSDK.SetgreetActionType?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SetgreetActionType",
+                        "printedName": "SetgreetSDK.SetgreetActionType",
+                        "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK20ActionTriggeredEventV6actionAA0aC4TypeOSgvg",
+                "mangledName": "$s11SetgreetSDK20ActionTriggeredEventV6actionAA0aC4TypeOSgvg",
+                "moduleName": "SetgreetSDK",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(flowId:actionType:actionName:screenIndex:timestamp:)",
@@ -29058,7 +29117,8 @@
         "mangledName": "$s11SetgreetSDK20ActionTriggeredEventV",
         "moduleName": "SetgreetSDK",
         "declAttributes": [
-          "AccessControl"
+          "AccessControl",
+          "RawDocComment"
         ],
         "conformances": [
           {
@@ -29100,7 +29160,8 @@
             "moduleName": "SetgreetSDK",
             "declAttributes": [
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "isLet": true,
             "hasStorage": true,
@@ -29188,7 +29249,8 @@
             "moduleName": "SetgreetSDK",
             "declAttributes": [
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "isLet": true,
             "hasStorage": true,
@@ -29310,7 +29372,8 @@
         "mangledName": "$s11SetgreetSDK14FlowErrorEventV",
         "moduleName": "SetgreetSDK",
         "declAttributes": [
-          "AccessControl"
+          "AccessControl",
+          "RawDocComment"
         ],
         "conformances": [
           {
@@ -29805,7 +29868,10 @@
             "declKind": "EnumElement",
             "usr": "s:11SetgreetSDK13FlowErrorTypeO7networkyA2CmF",
             "mangledName": "$s11SetgreetSDK13FlowErrorTypeO7networkyA2CmF",
-            "moduleName": "SetgreetSDK"
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
           },
           {
             "kind": "Var",
@@ -29842,7 +29908,10 @@
             "declKind": "EnumElement",
             "usr": "s:11SetgreetSDK13FlowErrorTypeO5parseyA2CmF",
             "mangledName": "$s11SetgreetSDK13FlowErrorTypeO5parseyA2CmF",
-            "moduleName": "SetgreetSDK"
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
           },
           {
             "kind": "Var",
@@ -29879,7 +29948,10 @@
             "declKind": "EnumElement",
             "usr": "s:11SetgreetSDK13FlowErrorTypeO7displayyA2CmF",
             "mangledName": "$s11SetgreetSDK13FlowErrorTypeO7displayyA2CmF",
-            "moduleName": "SetgreetSDK"
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
           },
           {
             "kind": "Var",
@@ -29916,7 +29988,10 @@
             "declKind": "EnumElement",
             "usr": "s:11SetgreetSDK13FlowErrorTypeO7unknownyA2CmF",
             "mangledName": "$s11SetgreetSDK13FlowErrorTypeO7unknownyA2CmF",
-            "moduleName": "SetgreetSDK"
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
           },
           {
             "kind": "Constructor",
@@ -30049,6 +30124,1000 @@
             ],
             "usr": "s:SY",
             "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SetgreetActionType",
+        "printedName": "SetgreetActionType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "next",
+            "printedName": "next",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.SetgreetActionType.Type) -> SetgreetSDK.SetgreetActionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SetgreetActionType",
+                    "printedName": "SetgreetSDK.SetgreetActionType",
+                    "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.SetgreetActionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SetgreetActionType",
+                        "printedName": "SetgreetSDK.SetgreetActionType",
+                        "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK0A10ActionTypeO4nextyA2CmF",
+            "mangledName": "$s11SetgreetSDK0A10ActionTypeO4nextyA2CmF",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "previous",
+            "printedName": "previous",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.SetgreetActionType.Type) -> SetgreetSDK.SetgreetActionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SetgreetActionType",
+                    "printedName": "SetgreetSDK.SetgreetActionType",
+                    "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.SetgreetActionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SetgreetActionType",
+                        "printedName": "SetgreetSDK.SetgreetActionType",
+                        "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK0A10ActionTypeO8previousyA2CmF",
+            "mangledName": "$s11SetgreetSDK0A10ActionTypeO8previousyA2CmF",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "skip",
+            "printedName": "skip",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.SetgreetActionType.Type) -> SetgreetSDK.SetgreetActionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SetgreetActionType",
+                    "printedName": "SetgreetSDK.SetgreetActionType",
+                    "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.SetgreetActionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SetgreetActionType",
+                        "printedName": "SetgreetSDK.SetgreetActionType",
+                        "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK0A10ActionTypeO4skipyA2CmF",
+            "mangledName": "$s11SetgreetSDK0A10ActionTypeO4skipyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "dismiss",
+            "printedName": "dismiss",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.SetgreetActionType.Type) -> SetgreetSDK.SetgreetActionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SetgreetActionType",
+                    "printedName": "SetgreetSDK.SetgreetActionType",
+                    "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.SetgreetActionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SetgreetActionType",
+                        "printedName": "SetgreetSDK.SetgreetActionType",
+                        "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK0A10ActionTypeO7dismissyA2CmF",
+            "mangledName": "$s11SetgreetSDK0A10ActionTypeO7dismissyA2CmF",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "remindLater",
+            "printedName": "remindLater",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.SetgreetActionType.Type) -> SetgreetSDK.SetgreetActionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SetgreetActionType",
+                    "printedName": "SetgreetSDK.SetgreetActionType",
+                    "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.SetgreetActionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SetgreetActionType",
+                        "printedName": "SetgreetSDK.SetgreetActionType",
+                        "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK0A10ActionTypeO11remindLateryA2CmF",
+            "mangledName": "$s11SetgreetSDK0A10ActionTypeO11remindLateryA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "url",
+            "printedName": "url",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.SetgreetActionType.Type) -> SetgreetSDK.SetgreetActionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SetgreetActionType",
+                    "printedName": "SetgreetSDK.SetgreetActionType",
+                    "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.SetgreetActionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SetgreetActionType",
+                        "printedName": "SetgreetSDK.SetgreetActionType",
+                        "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK0A10ActionTypeO3urlyA2CmF",
+            "mangledName": "$s11SetgreetSDK0A10ActionTypeO3urlyA2CmF",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "deeplink",
+            "printedName": "deeplink",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.SetgreetActionType.Type) -> SetgreetSDK.SetgreetActionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SetgreetActionType",
+                    "printedName": "SetgreetSDK.SetgreetActionType",
+                    "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.SetgreetActionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SetgreetActionType",
+                        "printedName": "SetgreetSDK.SetgreetActionType",
+                        "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK0A10ActionTypeO8deeplinkyA2CmF",
+            "mangledName": "$s11SetgreetSDK0A10ActionTypeO8deeplinkyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "requestNotificationPermission",
+            "printedName": "requestNotificationPermission",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.SetgreetActionType.Type) -> SetgreetSDK.SetgreetActionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SetgreetActionType",
+                    "printedName": "SetgreetSDK.SetgreetActionType",
+                    "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.SetgreetActionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SetgreetActionType",
+                        "printedName": "SetgreetSDK.SetgreetActionType",
+                        "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK0A10ActionTypeO29requestNotificationPermissionyA2CmF",
+            "mangledName": "$s11SetgreetSDK0A10ActionTypeO29requestNotificationPermissionyA2CmF",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "requestLocationPermission",
+            "printedName": "requestLocationPermission",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.SetgreetActionType.Type) -> SetgreetSDK.SetgreetActionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SetgreetActionType",
+                    "printedName": "SetgreetSDK.SetgreetActionType",
+                    "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.SetgreetActionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SetgreetActionType",
+                        "printedName": "SetgreetSDK.SetgreetActionType",
+                        "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK0A10ActionTypeO25requestLocationPermissionyA2CmF",
+            "mangledName": "$s11SetgreetSDK0A10ActionTypeO25requestLocationPermissionyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "requestCameraPermission",
+            "printedName": "requestCameraPermission",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.SetgreetActionType.Type) -> SetgreetSDK.SetgreetActionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SetgreetActionType",
+                    "printedName": "SetgreetSDK.SetgreetActionType",
+                    "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.SetgreetActionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SetgreetActionType",
+                        "printedName": "SetgreetSDK.SetgreetActionType",
+                        "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK0A10ActionTypeO23requestCameraPermissionyA2CmF",
+            "mangledName": "$s11SetgreetSDK0A10ActionTypeO23requestCameraPermissionyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "requestTrackingPermission",
+            "printedName": "requestTrackingPermission",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.SetgreetActionType.Type) -> SetgreetSDK.SetgreetActionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SetgreetActionType",
+                    "printedName": "SetgreetSDK.SetgreetActionType",
+                    "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.SetgreetActionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SetgreetActionType",
+                        "printedName": "SetgreetSDK.SetgreetActionType",
+                        "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK0A10ActionTypeO25requestTrackingPermissionyA2CmF",
+            "mangledName": "$s11SetgreetSDK0A10ActionTypeO25requestTrackingPermissionyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "requestMicrophonePermission",
+            "printedName": "requestMicrophonePermission",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.SetgreetActionType.Type) -> SetgreetSDK.SetgreetActionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SetgreetActionType",
+                    "printedName": "SetgreetSDK.SetgreetActionType",
+                    "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.SetgreetActionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SetgreetActionType",
+                        "printedName": "SetgreetSDK.SetgreetActionType",
+                        "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK0A10ActionTypeO27requestMicrophonePermissionyA2CmF",
+            "mangledName": "$s11SetgreetSDK0A10ActionTypeO27requestMicrophonePermissionyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "requestPhotoLibraryPermission",
+            "printedName": "requestPhotoLibraryPermission",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.SetgreetActionType.Type) -> SetgreetSDK.SetgreetActionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SetgreetActionType",
+                    "printedName": "SetgreetSDK.SetgreetActionType",
+                    "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.SetgreetActionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SetgreetActionType",
+                        "printedName": "SetgreetSDK.SetgreetActionType",
+                        "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK0A10ActionTypeO29requestPhotoLibraryPermissionyA2CmF",
+            "mangledName": "$s11SetgreetSDK0A10ActionTypeO29requestPhotoLibraryPermissionyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "requestReview",
+            "printedName": "requestReview",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.SetgreetActionType.Type) -> SetgreetSDK.SetgreetActionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SetgreetActionType",
+                    "printedName": "SetgreetSDK.SetgreetActionType",
+                    "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.SetgreetActionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SetgreetActionType",
+                        "printedName": "SetgreetSDK.SetgreetActionType",
+                        "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK0A10ActionTypeO13requestReviewyA2CmF",
+            "mangledName": "$s11SetgreetSDK0A10ActionTypeO13requestReviewyA2CmF",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "share",
+            "printedName": "share",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.SetgreetActionType.Type) -> SetgreetSDK.SetgreetActionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SetgreetActionType",
+                    "printedName": "SetgreetSDK.SetgreetActionType",
+                    "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.SetgreetActionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SetgreetActionType",
+                        "printedName": "SetgreetSDK.SetgreetActionType",
+                        "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK0A10ActionTypeO5shareyA2CmF",
+            "mangledName": "$s11SetgreetSDK0A10ActionTypeO5shareyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "openSettings",
+            "printedName": "openSettings",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.SetgreetActionType.Type) -> SetgreetSDK.SetgreetActionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SetgreetActionType",
+                    "printedName": "SetgreetSDK.SetgreetActionType",
+                    "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.SetgreetActionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SetgreetActionType",
+                        "printedName": "SetgreetSDK.SetgreetActionType",
+                        "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK0A10ActionTypeO12openSettingsyA2CmF",
+            "mangledName": "$s11SetgreetSDK0A10ActionTypeO12openSettingsyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "trackEvent",
+            "printedName": "trackEvent",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.SetgreetActionType.Type) -> SetgreetSDK.SetgreetActionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SetgreetActionType",
+                    "printedName": "SetgreetSDK.SetgreetActionType",
+                    "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.SetgreetActionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SetgreetActionType",
+                        "printedName": "SetgreetSDK.SetgreetActionType",
+                        "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK0A10ActionTypeO10trackEventyA2CmF",
+            "mangledName": "$s11SetgreetSDK0A10ActionTypeO10trackEventyA2CmF",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "custom",
+            "printedName": "custom",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.SetgreetActionType.Type) -> SetgreetSDK.SetgreetActionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SetgreetActionType",
+                    "printedName": "SetgreetSDK.SetgreetActionType",
+                    "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.SetgreetActionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SetgreetActionType",
+                        "printedName": "SetgreetSDK.SetgreetActionType",
+                        "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK0A10ActionTypeO6customyA2CmF",
+            "mangledName": "$s11SetgreetSDK0A10ActionTypeO6customyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "purchase",
+            "printedName": "purchase",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.SetgreetActionType.Type) -> SetgreetSDK.SetgreetActionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SetgreetActionType",
+                    "printedName": "SetgreetSDK.SetgreetActionType",
+                    "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.SetgreetActionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SetgreetActionType",
+                        "printedName": "SetgreetSDK.SetgreetActionType",
+                        "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK0A10ActionTypeO8purchaseyA2CmF",
+            "mangledName": "$s11SetgreetSDK0A10ActionTypeO8purchaseyA2CmF",
+            "moduleName": "SetgreetSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "restorePurchases",
+            "printedName": "restorePurchases",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SetgreetSDK.SetgreetActionType.Type) -> SetgreetSDK.SetgreetActionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SetgreetActionType",
+                    "printedName": "SetgreetSDK.SetgreetActionType",
+                    "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SetgreetSDK.SetgreetActionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SetgreetActionType",
+                        "printedName": "SetgreetSDK.SetgreetActionType",
+                        "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11SetgreetSDK0A10ActionTypeO16restorePurchasesyA2CmF",
+            "mangledName": "$s11SetgreetSDK0A10ActionTypeO16restorePurchasesyA2CmF",
+            "moduleName": "SetgreetSDK"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SetgreetSDK.SetgreetActionType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SetgreetActionType",
+                    "printedName": "SetgreetSDK.SetgreetActionType",
+                    "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11SetgreetSDK0A10ActionTypeO8rawValueACSgSS_tcfc",
+            "mangledName": "$s11SetgreetSDK0A10ActionTypeO8rawValueACSgSS_tcfc",
+            "moduleName": "SetgreetSDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK0A10ActionTypeO8rawValueSSvp",
+            "mangledName": "$s11SetgreetSDK0A10ActionTypeO8rawValueSSvp",
+            "moduleName": "SetgreetSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK0A10ActionTypeO8rawValueSSvg",
+                "mangledName": "$s11SetgreetSDK0A10ActionTypeO8rawValueSSvg",
+                "moduleName": "SetgreetSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[SetgreetSDK.SetgreetActionType]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SetgreetActionType",
+                    "printedName": "SetgreetSDK.SetgreetActionType",
+                    "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SetgreetSDK0A10ActionTypeO8allCasesSayACGvpZ",
+            "mangledName": "$s11SetgreetSDK0A10ActionTypeO8allCasesSayACGvpZ",
+            "moduleName": "SetgreetSDK",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Nonisolated"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[SetgreetSDK.SetgreetActionType]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SetgreetActionType",
+                        "printedName": "SetgreetSDK.SetgreetActionType",
+                        "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SetgreetSDK0A10ActionTypeO8allCasesSayACGvgZ",
+                "mangledName": "$s11SetgreetSDK0A10ActionTypeO8allCasesSayACGvgZ",
+                "moduleName": "SetgreetSDK",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:11SetgreetSDK0A10ActionTypeO",
+        "mangledName": "$s11SetgreetSDK0A10ActionTypeO",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[SetgreetSDK.SetgreetActionType]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SetgreetActionType",
+                        "printedName": "SetgreetSDK.SetgreetActionType",
+                        "usr": "s:11SetgreetSDK0A10ActionTypeO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
           }
         ]
       },
@@ -34244,6 +35313,16 @@
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SetgreetSDK",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -57626,21 +58705,21 @@
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Templates\/SetgreetViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 15137,
+      "offset": 16056,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Templates\/SetgreetViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 31355,
+      "offset": 32260,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Templates\/SetgreetViewModel.swift",
       "kind": "Array",
-      "offset": 42907,
+      "offset": 45155,
       "length": 38,
       "value": "[\"purchased\", \"restored\", \"hasAccess\"]"
     },
@@ -57675,7 +58754,7 @@
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/Setgreet.swift",
       "kind": "BooleanLiteral",
-      "offset": 9967,
+      "offset": 10112,
       "length": 5,
       "value": "false"
     },
@@ -57724,7 +58803,7 @@
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/SetgreetView.swift",
       "kind": "StringLiteral",
-      "offset": 679,
+      "offset": 885,
       "length": 14,
       "value": "\"preview-flow\""
     },
@@ -57878,7 +58957,7 @@
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/SetgreetViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3037,
+      "offset": 3350,
       "length": 5,
       "value": "false"
     },
@@ -57926,22 +59005,36 @@
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/FlowManager.swift",
+      "kind": "FloatLiteral",
+      "offset": 2333,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/FlowManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 1960,
+      "offset": 4097,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/FlowManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5699,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/FlowManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 8551,
+      "offset": 17671,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Managers\/FlowManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 11781,
+      "offset": 21798,
       "length": 4,
       "value": "true"
     },
@@ -58356,7 +59449,7 @@
       "kind": "StringLiteral",
       "offset": 120,
       "length": 7,
-      "value": "\"1.6.0\""
+      "value": "\"1.8.0\""
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/DynamicScreenView.swift",
@@ -58417,28 +59510,28 @@
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/DynamicScreenView.swift",
       "kind": "StringLiteral",
-      "offset": 33968,
+      "offset": 33964,
       "length": 9,
       "value": "\"granted\""
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/DynamicScreenView.swift",
       "kind": "Array",
-      "offset": 37507,
+      "offset": 37503,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/DynamicScreenView.swift",
       "kind": "BooleanLiteral",
-      "offset": 41469,
+      "offset": 41465,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Presentation\/Components\/DynamicScreenView.swift",
       "kind": "StringLiteral",
-      "offset": 41500,
+      "offset": 41496,
       "length": 2,
       "value": "\"\""
     },
@@ -58732,86 +59825,233 @@
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
       "kind": "StringLiteral",
-      "offset": 5700,
+      "offset": 7575,
       "length": 12,
       "value": "\"USER_CLOSE\""
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
       "kind": "StringLiteral",
-      "offset": 5733,
+      "offset": 7608,
       "length": 11,
       "value": "\"USER_SKIP\""
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
       "kind": "StringLiteral",
-      "offset": 5766,
+      "offset": 7641,
       "length": 12,
       "value": "\"BACK_PRESS\""
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
       "kind": "StringLiteral",
-      "offset": 5800,
+      "offset": 7675,
       "length": 12,
       "value": "\"SWIPE_DOWN\""
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
       "kind": "StringLiteral",
-      "offset": 5833,
+      "offset": 7708,
       "length": 10,
       "value": "\"REPLACED\""
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
       "kind": "StringLiteral",
-      "offset": 5868,
+      "offset": 7743,
       "length": 14,
       "value": "\"PROGRAMMATIC\""
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
       "kind": "StringLiteral",
-      "offset": 5906,
+      "offset": 7781,
       "length": 14,
       "value": "\"REMIND_LATER\""
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
       "kind": "StringLiteral",
-      "offset": 5942,
+      "offset": 7817,
       "length": 11,
       "value": "\"COMPLETED\""
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
       "kind": "StringLiteral",
-      "offset": 6012,
+      "offset": 8013,
       "length": 9,
       "value": "\"NETWORK\""
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
       "kind": "StringLiteral",
-      "offset": 6039,
+      "offset": 8166,
       "length": 7,
       "value": "\"PARSE\""
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
       "kind": "StringLiteral",
-      "offset": 6066,
+      "offset": 8339,
       "length": 9,
       "value": "\"DISPLAY\""
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
       "kind": "StringLiteral",
-      "offset": 6095,
+      "offset": 8391,
       "length": 9,
       "value": "\"UNKNOWN\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 8837,
+      "length": 6,
+      "value": "\"next\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 8908,
+      "length": 10,
+      "value": "\"previous\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 8935,
+      "length": 6,
+      "value": "\"skip\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 9027,
+      "length": 9,
+      "value": "\"dismiss\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 9060,
+      "length": 14,
+      "value": "\"remind_later\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 9107,
+      "length": 5,
+      "value": "\"url\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 9133,
+      "length": 10,
+      "value": "\"deeplink\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 9205,
+      "length": 33,
+      "value": "\"request_notification_permission\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 9276,
+      "length": 29,
+      "value": "\"request_location_permission\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 9341,
+      "length": 27,
+      "value": "\"request_camera_permission\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 9406,
+      "length": 29,
+      "value": "\"request_tracking_permission\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 9475,
+      "length": 31,
+      "value": "\"request_microphone_permission\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 9548,
+      "length": 34,
+      "value": "\"request_photo_library_permission\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 9623,
+      "length": 16,
+      "value": "\"request_review\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 9657,
+      "length": 7,
+      "value": "\"share\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 9689,
+      "length": 15,
+      "value": "\"open_settings\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 9754,
+      "length": 13,
+      "value": "\"track_event\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 9786,
+      "length": 8,
+      "value": "\"custom\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 9842,
+      "length": 10,
+      "value": "\"purchase\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/SetgreetFlowEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 9881,
+      "length": 19,
+      "value": "\"restore_purchases\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/FlowErrorReporter.swift",
+      "kind": "StringLiteral",
+      "offset": 4845,
+      "length": 5,
+      "value": "\"_id\""
     },
     {
       "filePath": "\/Users\/runner\/work\/setgreet-ios\/setgreet-ios\/setgreet-ios\/SetgreetSDK\/SetgreetSDK\/Listener\/FlowSession.swift",

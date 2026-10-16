@@ -804,6 +804,9 @@ public struct ActionTriggeredEvent {
   public let actionName: Swift.String?
   public let screenIndex: Swift.Int
   public let timestamp: Foundation.TimeInterval
+  public var action: SetgreetSDK.SetgreetActionType? {
+    get
+  }
   public init(flowId: Swift.String, actionType: Swift.String, actionName: Swift.String?, screenIndex: Swift.Int, timestamp: Foundation.TimeInterval = Date().timeIntervalSince1970)
 }
 public struct FlowErrorEvent {
@@ -835,6 +838,37 @@ public enum FlowErrorType : Swift.String {
   case unknown
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum SetgreetActionType : Swift.String, Swift.CaseIterable {
+  case next
+  case previous
+  case skip
+  case dismiss
+  case remindLater
+  case url
+  case deeplink
+  case requestNotificationPermission
+  case requestLocationPermission
+  case requestCameraPermission
+  case requestTrackingPermission
+  case requestMicrophonePermission
+  case requestPhotoLibraryPermission
+  case requestReview
+  case share
+  case openSettings
+  case trackEvent
+  case custom
+  case purchase
+  case restorePurchases
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [SetgreetSDK.SetgreetActionType]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [SetgreetSDK.SetgreetActionType] {
+    get
+  }
   public var rawValue: Swift.String {
     get
   }
@@ -1666,6 +1700,9 @@ extension SetgreetSDK.DismissReason : Swift.RawRepresentable {}
 extension SetgreetSDK.FlowErrorType : Swift.Equatable {}
 extension SetgreetSDK.FlowErrorType : Swift.Hashable {}
 extension SetgreetSDK.FlowErrorType : Swift.RawRepresentable {}
+extension SetgreetSDK.SetgreetActionType : Swift.Equatable {}
+extension SetgreetSDK.SetgreetActionType : Swift.Hashable {}
+extension SetgreetSDK.SetgreetActionType : Swift.RawRepresentable {}
 extension SetgreetSDK.ComponentEventType : Swift.Equatable {}
 extension SetgreetSDK.ComponentEventType : Swift.Hashable {}
 extension SetgreetSDK.ComponentEventType : Swift.RawRepresentable {}
