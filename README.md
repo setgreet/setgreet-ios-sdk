@@ -213,9 +213,12 @@ Listen to flow lifecycle events to track user interactions and flow completion.
 - `onFlowCompleted`: Called when user completes all screens in the flow
 - `onFlowDismissed`: Called when user dismisses the flow before completion
 - `onScreenChanged`: Called when user navigates between screens
-- `onActionTriggered`: Called when user interacts with buttons
+- `onActionTriggered`: Called when a button's action is triggered, just before it runs, so it arrives even when the action closes the flow, and even when required inputs on the screen then stop the action (see [Action Types](#action-types))
+- `onCustomAction`: Called when user taps a button whose action is Custom, with that action's data
+- `onTrackEvent`: Called when a button's Track Event action runs, with the event name and properties
 - `onPermissionRequested`: Called when a permission request completes
-- `onError`: Called when an error occurs during flow operations
+- `onPurchaseCompleted`, `onPurchaseCancelled`, `onPurchaseFailed`, `onPurchasePending`, `onRestoreCompleted`, `onRestoreFailed`: Called with the outcome of a paywall's purchase and restore buttons (see [Purchases and Paywalls](#purchases-and-paywalls))
+- `onError`: Called when a flow the SDK set out to show could not be shown (see [Flow Errors](#flow-errors))
 
 **Example:**
 
@@ -232,17 +235,17 @@ Setgreet.shared.setFlowCallbacks { callbacks in
         }
         .onFlowDismissed { event in
             print("Flow dismissed: \(event.flowId)")
-            print("Reason: \(event.reason.rawValue)")
+            print("Reason: \(event.reason)")
             print("Screen: \(event.screenIndex + 1)/\(event.screenCount)")
         }
         .onScreenChanged { event in
             print("Screen changed: \(event.fromIndex + 1) -> \(event.toIndex + 1)")
         }
         .onActionTriggered { event in
-            print("Action: \(event.actionType)")
-            if let name = event.actionName {
-                print("Custom event name: \(name)")
-            }
+            print("Action: \(event.actionType) on screen \(event.screenIndex + 1)")
+        }
+        .onCustomAction { event in
+            print("Custom action: \(event.data ?? [:])")
         }
         .onPermissionRequested { event in
             print("Permission \(event.permissionType): \(event.result)")
@@ -255,15 +258,17 @@ Setgreet.shared.setFlowCallbacks { callbacks in
 
 ### Event Types
 
-| Event                 | Description                      | Key Properties                    |
-| --------------------- | -------------------------------- | --------------------------------- |
-| `FlowStarted`         | Flow begins presenting           | `flowId`, `screenCount`           |
-| `FlowCompleted`       | User completes the flow          | `flowId`, `durationMs`            |
-| `FlowDismissed`       | Flow dismissed before completion | `flowId`, `reason`, `screenIndex` |
-| `ScreenChanged`       | User navigates between screens   | `fromIndex`, `toIndex`            |
-| `ActionTriggered`     | Button action triggered          | `actionType`, `actionName`        |
-| `PermissionRequested` | Permission request completed     | `permissionType`, `result`        |
-| `FlowError`           | Error during flow operations     | `errorType`, `message`            |
+| Event                 | Description                               | Key Properties                            |
+| --------------------- | ----------------------------------------- | ----------------------------------------- |
+| `FlowStarted`         | Flow begins presenting                    | `flowId`, `screenCount`                   |
+| `FlowCompleted`       | User completes the flow                   | `flowId`, `durationMs`                    |
+| `FlowDismissed`       | Flow dismissed before completion          | `flowId`, `reason`, `screenIndex`         |
+| `ScreenChanged`       | User navigates between screens            | `fromIndex`, `toIndex`                    |
+| `ActionTriggered`     | Button action ran (before its effect)     | `actionType`, `actionName`, `screenIndex` |
+| `CustomAction`        | Custom button action tapped               | `flowId`, `data`, `screenIndex`           |
+| `TrackEvent`          | Track Event button action ran             | `eventName`, `properties`                 |
+| `PermissionRequested` | Permission request completed              | `permissionType`, `result`                |
+| `FlowError`           | A flow failed to fetch, decode or present | `flowId`, `errorType`, `message`          |
 
 ### Dismiss Reasons
 
@@ -279,19 +284,43 @@ Setgreet.shared.setFlowCallbacks { callbacks in
 
 ### Action Types
 
-| Action                    | Description                     |
-| ------------------------- | ------------------------------- |
-| `next`                    | Navigate to next screen         |
-| `previous`                | Navigate to previous screen     |
-| `skip`                    | Skip the current screen         |
-| `close`                   | Close/dismiss the flow          |
-| `url`                     | Open a URL                      |
-| `notification_permission` | Request notification permission |
-| `location_permission`     | Request location permission     |
-| `camera_permission`       | Request camera permission       |
-| `request_review`          | Request app store review        |
-| `share`                   | Open share sheet                |
-| `open_settings`           | Open app settings               |
+`actionType` is one of these values, the same on every Setgreet SDK. `event.action` gives it as a `SetgreetActionType`. A `back` action reports `previous`, and a `close` action reports `dismiss`.
+
+| Action                             | Description                                        |
+| ---------------------------------- | -------------------------------------------------- |
+| `next`                             | Navigate to next screen                            |
+| `previous`                         | Navigate to previous screen                        |
+| `skip`                             | Skip the flow                                      |
+| `dismiss`                          | Close the flow                                     |
+| `url`                              | Open a URL                                         |
+| `request_notification_permission`  | Request notification permission                    |
+| `request_location_permission`      | Request location permission                        |
+| `request_camera_permission`        | Request camera permission                          |
+| `request_tracking_permission`      | Request App Tracking Transparency                  |
+| `request_microphone_permission`    | Request microphone permission                      |
+| `request_photo_library_permission` | Request photo library permission                   |
+| `request_review`                   | Request an App Store review                        |
+| `share`                            | Open the share sheet                               |
+| `open_settings`                    | Open app settings                                  |
+| `track_event`                      | Track an event; `actionName` is the event name     |
+| `custom`                           | Custom action (also delivered to `onCustomAction`) |
+| `purchase`                         | Purchase through your purchase provider            |
+| `restore_purchases`                | Restore purchases through your purchase provider   |
+
+`actionName` is set only for `track_event`. An action that does nothing is not reported: an unknown action type, a `url` action with no target, or a purchase or restore button without its action. Auto-advance and option selection are not button actions.
+
+### Flow Errors
+
+`onError` fires when a flow the SDK set out to show does not show:
+
+| `errorType` | When                                                            |
+| ----------- | --------------------------------------------------------------- |
+| `network`   | The request failed, or the server answered with an error status |
+| `parse`     | The response could not be decoded, or carried no flow           |
+| `display`   | The flow could not be presented, or had no screen to render     |
+| `unknown`   | Anything else                                                   |
+
+It covers `showFlow(flowId:)`, a flow returned by `trackEvent`, `trackScreen` or `identifyUser` that cannot be decoded or presented, and the presentation of every flow. A `trackEvent`, `trackScreen` or `identifyUser` request that fails before any response is only logged, because no flow is known to have matched. `flowId` is empty when the SDK never learned it. Purchase and restore failures have their own callbacks.
 
 ### Permission Types
 
@@ -300,6 +329,9 @@ Setgreet.shared.setFlowCallbacks { callbacks in
 | `notification` | Push notification permission |
 | `location`     | Location access permission   |
 | `camera`       | Camera access permission     |
+| `tracking`     | App Tracking Transparency    |
+| `microphone`   | Microphone access permission |
+| `photoLibrary` | Photo library access         |
 
 ### Permission Results
 
@@ -323,9 +355,45 @@ If your flows use permission buttons, add the required keys to your `Info.plist`
 <!-- For camera permission -->
 <key>NSCameraUsageDescription</key>
 <string>Your description for camera usage</string>
+
+<!-- For tracking permission (App Tracking Transparency) -->
+<key>NSUserTrackingUsageDescription</key>
+<string>Your description for tracking</string>
+
+<!-- For microphone permission -->
+<key>NSMicrophoneUsageDescription</key>
+<string>Your description for microphone usage</string>
+
+<!-- For photo library permission -->
+<key>NSPhotoLibraryUsageDescription</key>
+<string>Your description for photo library access</string>
 ```
 
-Note: Notification permission doesn't require an Info.plist key.
+Note: Notification permission doesn't require an Info.plist key. If a key is missing, the SDK reports `not_required` for that button instead of asking.
+
+## Purchases and Paywalls
+
+A paywall screen built in Setgreet sells through the purchase tool your app already uses, such as RevenueCat or StoreKit 2. Setgreet does not wrap that tool and never needs its API key: you implement `SetgreetPurchaseProvider` on top of it, then register it once, after configuring your tool and initializing Setgreet:
+
+```swift
+Setgreet.shared.setPurchaseProvider(MyPurchaseProvider())
+
+// Or read a specific offering when a paywall names no source:
+Setgreet.shared.setPurchaseProvider(MyPurchaseProvider(), defaultSource: .offering("onboarding"))
+```
+
+| Member                         | Purpose                                                                             |
+| ------------------------------ | ----------------------------------------------------------------------------------- |
+| `providerId`                   | A short name for your tool, such as `revenuecat`                                    |
+| `loadProducts(_:)`             | Returns the products of a source (the current offering, an offering or a placement) |
+| `purchase(productRef:source:)` | Buys a product: `purchased`, `cancelled`, `pending` or `failed`                     |
+| `restorePurchases()`           | Restores purchases: `restored`, `nothingToRestore` or `failed`                      |
+| `accessState()`                | What the user already has access to, or `nil` when your tool cannot say             |
+| `trackPaywallImpression(_:)`   | Forwards a paywall view to your tool                                                |
+| `setAttributes(_:)`            | Forwards user attributes to your tool                                               |
+| `identify(userId:)`, `reset()` | Optional: keep your tool's user in step with Setgreet                               |
+
+The paywall branches the flow on the outcome, and the purchase callbacks above report it to your app. The full guide, with a RevenueCat provider ready to copy, is at [setgreet.com/docs/sdk/purchases](https://setgreet.com/docs/sdk/purchases).
 
 ## Configuration
 
@@ -333,7 +401,7 @@ Note: Notification permission doesn't require an Info.plist key.
 
 ```swift
 SetgreetConfig(
-    debugMode: Bool     // Enable debug logging (default: false)
+    debugMode: Bool     // Enable debug logging
 )
 ```
 
