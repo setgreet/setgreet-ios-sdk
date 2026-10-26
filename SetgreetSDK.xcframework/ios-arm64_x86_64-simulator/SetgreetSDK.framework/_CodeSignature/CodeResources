@@ -14,43 +14,43 @@
 		</data>
 		<key>Modules/SetgreetSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		e/UXpidZc6i/W6y4ZgN75/BIdhw=
+		OgtabLjxoN1KmOhTtjfjBHWn3lw=
 		</data>
 		<key>Modules/SetgreetSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		r5KKBpvmvfiN9SEmP6r3ZqLrXAA=
+		A5/ptutbbGzDnvZruij4m4oP4YM=
 		</data>
 		<key>Modules/SetgreetSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		964GWIGOS1tQMeVZ9IVUcIOpSME=
+		7WttVIcScTXEM4ebN9F75q8bHLo=
 		</data>
 		<key>Modules/SetgreetSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		hyrjA7KcEvetrJoiPENAOQSLgKY=
+		F8jHB7xksMEzwdP4o9fEyJH4VPg=
 		</data>
 		<key>Modules/SetgreetSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		qJSxVIzoGcu75pomtF8knXSnWwk=
+		QavghZrr0S4IxHcXqMxlnesFNpg=
 		</data>
 		<key>Modules/SetgreetSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		e/UXpidZc6i/W6y4ZgN75/BIdhw=
+		OgtabLjxoN1KmOhTtjfjBHWn3lw=
 		</data>
 		<key>Modules/SetgreetSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		c7l3R22cTgnBNOh/HUx1BN5y7vY=
+		9PRXvSsfAl6BMG6IYiT5u0tbbUs=
 		</data>
 		<key>Modules/SetgreetSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		is3mJ9aV/wVqQL2tI80xOlNYrow=
+		r4iC+i2YBECzrbLVYV8qKnvzjpc=
 		</data>
 		<key>Modules/SetgreetSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		D2X3U4xiv5L3knWOc0AbFsQkq/M=
+		WlHHoTDYD1VxViP6SdnbFu8nPTs=
 		</data>
 		<key>Modules/SetgreetSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		e25v7epYRw+I5dytJQDo2qN9IZ0=
+		ts9hgnIaiAFiXTdc+qU/YUPBjQc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -74,70 +74,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1cqzUEesV8S3FsDknVZ6r+Qf9sifbPu74Pm6PSuU4OE=
+			4A5bLDSxsy1dMEy3Rvo4HUC6GmUaVVJIcSlO8b2TkDU=
 			</data>
 		</dict>
 		<key>Modules/SetgreetSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1a3I8JybFRYflT+93RbG0MPyf5+yuJOK/6MNhM4tOtE=
+			UYiDdXZcTrs4bXYz8aV1eC3+Eo4wH52KUBPXv3lSKok=
 			</data>
 		</dict>
 		<key>Modules/SetgreetSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Nj5jfSjvRyvdXIaGDrYSX6eOpxE9yPt+f6LtJ7kKIFQ=
+			YCoLw/x2sHah82KWUiQnkddGmj8pDRF9TGHJ4j4Ni7Y=
 			</data>
 		</dict>
 		<key>Modules/SetgreetSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Fwo6wcKnYTNoFkMOqHIrhSOLNjex1Otvvmvins3nJT0=
+			0oO8iNGNVL5LmHVRaVYSrEHVwkf1f6liXqSOp5xUjsU=
 			</data>
 		</dict>
 		<key>Modules/SetgreetSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IN29UEij7wxOrq+xRT0MaMEgVPB4uIeSRbjz1p1q6f4=
+			Zipz5KoefgkOrlqcTF0+PIgDJ33MsBGT0xRnWnZuGVg=
 			</data>
 		</dict>
 		<key>Modules/SetgreetSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1cqzUEesV8S3FsDknVZ6r+Qf9sifbPu74Pm6PSuU4OE=
+			4A5bLDSxsy1dMEy3Rvo4HUC6GmUaVVJIcSlO8b2TkDU=
 			</data>
 		</dict>
 		<key>Modules/SetgreetSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LgoAxAgnr8Dgj2b0zNKMTTZH8nDfAPg8STbOy+mBsTs=
+			FYUEzJA4Dj7OEqJX8iizSB57upX4kyYOwHzumju6IAQ=
 			</data>
 		</dict>
 		<key>Modules/SetgreetSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BgdhYmUztmBgAh5wTSIBo1My5jhmXX4xNABz6b5xu2o=
+			JQHuPQBapquI8y7MUZTD0NxlFKz4TNpmY6YFOwebh4A=
 			</data>
 		</dict>
 		<key>Modules/SetgreetSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cwX2nl8V/qDGCpPmML5w7KE5C1nedUBq0pGcVz0YWcI=
+			g0x91j+S1clVOLxzMtUVfEqwlZIrBYkYo4XkjOo5HSI=
 			</data>
 		</dict>
 		<key>Modules/SetgreetSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NeeKvrLRW0JAFCU5nx/hjYTW8ukb+iXUaYcQyvOO8gQ=
+			y+gElc8octixZYoqFjB7H51cqG0XFZmBZuTDelmL9nM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
