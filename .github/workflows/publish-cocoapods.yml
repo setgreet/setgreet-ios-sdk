@@ -55,6 +55,29 @@ jobs:
               || { echo "::error::$spec version does not match tag ${VERSION}"; exit 1; }
           done
 
+      # `pod trunk push` lints SetgreetSDKLottie by building it against the
+      # newest lottie-ios its `~> 4.6` constraint allows, inside the step that
+      # holds the trunk token. Only publish against a lottie-ios version someone
+      # has looked at: when a newer one appears, review it, then raise
+      # REVIEWED_LOTTIE_VERSION. Runs before the token is in the environment.
+      - name: Check lottie-ios resolves to the reviewed version
+        env:
+          REVIEWED_LOTTIE_VERSION: "4.6.1"
+        run: |
+          shard=$(printf lottie-ios | md5 | cut -c1-3 | sed 's/./&_/g; s/_$//')
+          versions=$(curl -fsS "https://cdn.cocoapods.org/all_pods_versions_${shard}.txt" \
+            | grep '^lottie-ios/' | tr '/' '\n' | tail -n +2)
+          resolved=$(echo "$versions" | grep -E '^4\.([6-9]|[1-9][0-9])\.[0-9]+$' | sort -V | tail -1)
+          if [ -z "$resolved" ]; then
+            echo "::error::Could not read lottie-ios versions from the CocoaPods CDN"
+            exit 1
+          fi
+          if [ "$resolved" != "$REVIEWED_LOTTIE_VERSION" ]; then
+            echo "::error::lottie-ios resolves to ${resolved}, reviewed version is ${REVIEWED_LOTTIE_VERSION}. Review it, update REVIEWED_LOTTIE_VERSION, then rerun on the tag."
+            exit 1
+          fi
+          echo "lottie-ios resolves to the reviewed ${resolved}"
+
       # Idempotent, so a retry ("Run workflow" on the tag) finishes a half-done
       # publish: a pod version already on trunk is skipped rather than failing
       # the run as a duplicate before the companion gets its turn.
