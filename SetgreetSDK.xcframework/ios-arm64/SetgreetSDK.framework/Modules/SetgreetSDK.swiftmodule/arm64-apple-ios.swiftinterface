@@ -11,6 +11,7 @@ import CoreText
 import DeveloperToolsSupport
 import Foundation
 import Photos
+import SafariServices
 @_exported import SetgreetSDK
 import StoreKit
 import Swift
@@ -75,8 +76,8 @@ extension Foundation.Data {
   }
   public func setLocale(_ locale: Swift.String?)
   public func initialize(appKey: Swift.String, config: SetgreetSDK.SetgreetConfig)
-  public func identifyUser(userId: Swift.String, attributes: [Swift.String : Any]? = nil, operation: SetgreetSDK.Operation = .create, locale: Swift.String? = nil)
-  public func identifyUser(userId: Swift.String, attributes: [Swift.String : Any]? = nil, locale: Swift.String? = nil)
+  public func identifyUser(userId: Swift.String, attributes: [Swift.String : Any]? = nil, operation: SetgreetSDK.Operation = .create, locale: Swift.String? = nil, userHash: Swift.String? = nil)
+  public func identifyUser(userId: Swift.String, attributes: [Swift.String : Any]? = nil, locale: Swift.String? = nil, userHash: Swift.String? = nil)
   public func showFlow(flowId: Swift.String)
   public func trackEvent(eventName: Swift.String, properties: [Swift.String : Any]? = nil)
   public func trackScreen(screenName: Swift.String, properties: [Swift.String : Any]? = nil)
@@ -1283,13 +1284,19 @@ public struct ComponentInteraction {
   public let inputName: Swift.String
   public let value: Any
   public let timestamp: Foundation.Date
+  public let isSecret: Swift.Bool
+  public let hasValue: Swift.Bool
+  public init(componentId: Swift.String, componentType: Swift.String, inputName: Swift.String, value: Any, timestamp: Foundation.Date = Date(), isSecret: Swift.Bool)
+  @available(*, deprecated, message: "Say whether the input is a password field: init(componentId:componentType:inputName:value:timestamp:isSecret:)")
   public init(componentId: Swift.String, componentType: Swift.String, inputName: Swift.String, value: Any, timestamp: Foundation.Date = Date())
 }
 @_hasMissingDesignatedInitializers final public class ScreenInteractionCollector {
   public static let shared: SetgreetSDK.ScreenInteractionCollector
   final public func onScreenEnter(screenId: Swift.String)
   final public func onScreenExit()
+  @available(*, deprecated, message: "Say whether the input is a password field: recordInteraction(screenId:componentId:componentType:inputName:value:isSecret:)")
   final public func recordInteraction(screenId: Swift.String? = nil, componentId: Swift.String, componentType: Swift.String, inputName: Swift.String, value: Any)
+  final public func recordInteraction(screenId: Swift.String? = nil, componentId: Swift.String, componentType: Swift.String, inputName: Swift.String, value: Any, isSecret: Swift.Bool)
   final public func flushCurrentScreen(flowId: Swift.String, screenId: Swift.String? = nil, endUserId: Swift.String?)
   final public func processBranchNodes(flowId: Swift.String, screenId: Swift.String, branchNodes: [SetgreetSDK.FlowNode], endUserId: Swift.String?, branchAnswerProvider: ((Swift.String) -> Swift.String?)? = nil)
   final public var currentDwellTimeMs: Swift.Int64 {
