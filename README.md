@@ -1,6 +1,6 @@
 # Setgreet iOS SDK
 
-[![CocoaPods](https://img.shields.io/cocoapods/v/SetgreetSDK.svg?label=CocoaPods)](https://cocoapods.org/pods/SetgreetSDK)
+[![Release](https://img.shields.io/github/v/release/setgreet/setgreet-ios-sdk?label=release)](https://github.com/setgreet/setgreet-ios-sdk/releases)
 
 Setgreet iOS SDK allows you to show Setgreet flows in your iOS app.
 
@@ -12,7 +12,13 @@ Setgreet iOS SDK allows you to show Setgreet flows in your iOS app.
 
 ### Swift Package Manager
 
-You can add Setgreet to your project using Swift Package Manager. Add the following to your `Package.swift` file:
+Swift Package Manager is the primary way to add Setgreet. In Xcode:
+
+1. Open your project and go to `File` > `Add Package Dependencies`.
+2. Enter the URL `https://github.com/setgreet/setgreet-ios-sdk.git`.
+3. Pick a version rule, click `Add Package` and add the `SetgreetSDK` product to your app target.
+
+Or declare it in your `Package.swift`:
 
 ```swift
 dependencies: [
@@ -20,20 +26,17 @@ dependencies: [
 ]
 ```
 
-Or you can add it directly within Xcode:
-
-1. Open your project in Xcode.
-2. Go to `File` > `Add Packages`.
-3. Enter the URL: `https://github.com/setgreet/setgreet-ios-sdk.git`.
-4. Select the version rule and click `Add Package`.
-
 ### CocoaPods
 
-Add to your `Podfile`:
+CocoaPods projects install Setgreet from this repository by podspec URL. The podspec points at the prebuilt framework at the matching release tag, so no pod registry is involved:
 
 ```ruby
-pod 'SetgreetSDK', '~> LATEST_VERSION'
+pod 'SetgreetSDK', :podspec => 'https://raw.githubusercontent.com/setgreet/setgreet-ios-sdk/LATEST_VERSION/SetgreetSDK.podspec'
 ```
+
+Replace `LATEST_VERSION` with a release from the [releases page](https://github.com/setgreet/setgreet-ios-sdk/releases), for example `1.11.0`, then run `pod install`. To update, change the version in the URL and run `pod install` again.
+
+CocoaPods Trunk, the registry behind a plain `pod 'SetgreetSDK'` line, is not accepting new podspecs during its read-only trial week (until Friday, November 6, 2026, 12:00 ET) and becomes permanently read-only on December 2, 2026. Versions already on Trunk keep installing from there; the podspec URL above is how to install any release, including those published after that date.
 
 ### Lottie animations (optional)
 
@@ -58,11 +61,13 @@ targets: [
 ]
 ```
 
-**CocoaPods** — add the companion pod (it pulls in `lottie-ios` automatically):
+In Xcode, add the same two packages through `File` > `Add Package Dependencies` and add the `SetgreetSDKLottie` and `Lottie` products to your app target.
+
+**CocoaPods** — add the companion podspec next to the core one. Both URLs must name the same version, since the companion requires that exact core build; it pulls in `lottie-ios` automatically:
 
 ```ruby
-pod 'SetgreetSDK', '~> LATEST_VERSION'
-pod 'SetgreetSDKLottie', '~> LATEST_VERSION'
+pod 'SetgreetSDK', :podspec => 'https://raw.githubusercontent.com/setgreet/setgreet-ios-sdk/LATEST_VERSION/SetgreetSDK.podspec'
+pod 'SetgreetSDKLottie', :podspec => 'https://raw.githubusercontent.com/setgreet/setgreet-ios-sdk/LATEST_VERSION/SetgreetSDKLottie.podspec'
 ```
 
 **Register at startup** — call this once before the first Setgreet flow is shown (e.g. in your `AppDelegate` / `App.init()`):

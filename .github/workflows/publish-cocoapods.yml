@@ -1,29 +1,36 @@
 name: Publish CocoaPods
 
+# LEGACY, manual only. CocoaPods Trunk stopped accepting new podspecs during its
+# read-only trial week (until Friday 2026-11-06 12:00 ET) and becomes permanently
+# read-only on 2026-12-02, so a release no longer publishes to Trunk. Install
+# paths that need nothing from Trunk:
+#   - Swift Package Manager (Package.swift in this repo, binary targets).
+#   - CocoaPods by podspec URL from this repo (see README "CocoaPods"), e.g.
+#     pod 'SetgreetSDK', :podspec => 'https://raw.githubusercontent.com/setgreet/setgreet-ios-sdk/<version>/SetgreetSDK.podspec'
+#   - The React Native and Flutter wrappers vendor the XCFrameworks and ship a
+#     Package.swift of their own, so they do not depend on the SetgreetSDK pod.
+#
+# The tag trigger was removed: setgreet-ios's release workflow still commits the
+# XCFrameworks + bumped podspecs here and pushes the version tag, but that tag
+# starts nothing. This workflow stays only for a courtesy publish of a release
+# while Trunk still accepts pushes (for example 1.11.0 after 2026-11-06): run it
+# by hand from the Actions tab AGAINST THE VERSION TAG. The body is unchanged.
+#
 # Runs HERE, in the public distribution repo, because GitHub-hosted runners are
 # free for public repositories. `pod trunk push` lints each podspec by building
-# against it on macOS: ~14 minutes a release, which the private setgreet-ios
-# release job used to pay for at the 10x macOS rate (~140 of the org's 2,000
-# free monthly minutes, per release).
-#
-# Trigger: setgreet-ios's release workflow commits the new XCFrameworks + bumped
-# podspecs here and pushes the version tag with SDK_RELEASE_PAT. A tag pushed
-# with a PAT (unlike GITHUB_TOKEN) starts workflows in this repo.
+# against it on macOS: ~14 minutes a release.
 #
 # The token can publish new versions of the SDK every customer installs, so it
 # is NOT a repository secret: it lives in the `cocoapods` GitHub Environment,
 # whose deployment policy admits only version tags ([0-9]*.[0-9]*.[0-9]*). A run
-# from any branch (a manual dispatch, or a workflow edited on a branch) cannot
-# read it, and fork PRs never trigger this workflow at all.
+# from any branch (a dispatch on a branch, or a workflow edited on a branch)
+# cannot read it, and fork PRs never trigger this workflow at all.
 #
 # Setup: Settings -> Environments -> cocoapods -> add secret COCOAPODS_TRUNK_TOKEN.
 
 on:
-  push:
-    tags:
-      - "[0-9]+.[0-9]+.[0-9]+"
-  # Manual retry for a tag whose publish failed: run it against that tag (a run
-# from a branch is refused by the environment's tag-only policy).
+  # Manual only: choose the version tag as the ref when running it (a run from
+  # a branch is refused by the environment's tag-only policy).
   workflow_dispatch:
 
 concurrency:
